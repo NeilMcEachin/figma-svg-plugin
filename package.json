@@ -1,26 +1,73 @@
 {
-  "name": "gyg-design-base-template",
-  "version": "1.0.0",
-  "description": "Your Figma plugin",
-  "main": "src/code.js",
-  "scripts": {
-    "start": "concurrently --kill-others -p \"{name}\" -n \"ui  ,code\" -c \"cyan.bold,green.bold\" \"npm run start:ui\" \"npm run start:code\"",
-    "start:ui": "vite build --watch --config vite-ui.config.js",
-    "start:code": "vite build --watch --config vite-code.config.js",
-    "build": "vite build --config vite-ui.config.js && vite build --config vite-code.config.js"
+  "name": "figma-variable-exporter",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Ishan Sharma <ishan@flek.ai>",
+  "description": "Quick start a Figma plugin using Vite",
+  "repository": "git@github.com:ishan-flek-ai/figma-plugin-vite.git",
+  "publishConfig": {
+    "access": "public"
   },
-  "author": "",
-  "license": "",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",
+    "dev:prepare": "esno scripts/prepare.ts",
+    "dev:ui": "vite build --mode=development --config=vite.config.ui.ts",
+    "dev:code": "vite build --mode=development --config=vite.config.code.ts",
+    "---------": "",
+    "build": "cross-env NODE_ENV=production run-s clear build:*",
+    "build:prepare": "esno scripts/prepare.ts",
+    "build:ui": "vite build --config=vite.config.ui.ts",
+    "build:code": "vite build --config=vite.config.code.ts",
+    "----------": "",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx,json}\"",
+    "clear": "rimraf plugin/**",
+    "prepare": "husky install",
+    "postinstall": "npm run build"
+  },
   "dependencies": {
-    "@figma/plugin-typings": "^1.40.0",
-    "typescript": "^4.5.4",
-    "vue": "^3.2.26"
+    "@twentyfourg/grimoire": "^2.5.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "chroma-js": "^2.4.2",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "lodash-es": "^4.17.21",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.0.1",
-    "@vue/compiler-sfc": "^3.2.26",
-    "concurrently": "^7.6.0",
-    "vite": "^2.7.10",
-    "vite-plugin-singlefile": "^0.6.3"
+    "@figma/plugin-typings": "^1.39.1",
+    "@types/chroma-js": "^2.4.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/lodash-es": "^4.17.5",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "chokidar": "^3.5.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-define-config": "^1.0.9",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.27.1",
+    "esno": "0.10.0",
+    "fs-extra": "^10.0.0",
+    "husky": "^7.0.2",
+    "kolorist": "^1.5.0",
+    "lint-staged": "^11.1.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "sass-embedded": "^1.79.1",
+    "typescript": "^4.4.3",
+    "vite": "^5",
+    "vite-plugin-singlefile": "^2"
   }
 }
