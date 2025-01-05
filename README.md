@@ -28,3 +28,4 @@ pnpm install
 ## 📄 License
 
 [MIT License](https://github.com/yingpengsha/figma-plugin-vite-react-template/blob/main/LICENSE) &copy; 2023-PRESENT [Ishan Sharma](https://github.com/ishan-flek-ai)
+# figma-variables-plugin
