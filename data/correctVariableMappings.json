@@ -1,0 +1,3578 @@
+[
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Default, Label=No / VECTOR:checkmark",
+    "id": "753:41202",
+    "variable": "component/checkbox/fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Default, Label=No / VECTOR:checkbox",
+    "id": "753:41201",
+    "variable": "component/checkbox/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Default, Label=No / VECTOR:checkbox",
+    "id": "753:41201",
+    "variable": "component/checkbox/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Hover, Width=Default, Label=No / VECTOR:checkbox",
+    "id": "753:41205",
+    "variable": "component/checkbox/hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Hover, Width=Default, Label=No / VECTOR:checkbox",
+    "id": "753:41205",
+    "variable": "component/checkbox/hover-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "499:31189",
+    "variable": "component/checkbox/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "499:31189",
+    "variable": "component/checkbox/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Hover, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "499:31195",
+    "variable": "component/checkbox/hover-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Error, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "753:41209",
+    "variable": "component/checkbox/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Error, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "753:41209",
+    "variable": "core/signal/error",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Error, Width=Default, Label=Yes / TEXT:text",
+    "id": "1085:39741",
+    "variable": "core/disabled/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Error, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "1085:39739",
+    "variable": "component/checkbox/disabled-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Error, Width=Default, Label=Yes / VECTOR:checkbox",
+    "id": "1085:39739",
+    "variable": "component/checkbox/disabled-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Login, Label=Yes / VECTOR:checkbox",
+    "id": "693:19382",
+    "variable": "component/checkbox/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Inactive, Width=Login, Label=Yes / VECTOR:checkbox",
+    "id": "693:19382",
+    "variable": "component/checkbox/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Default, Label=No / GROUP:checkbox / VECTOR:checkmark",
+    "id": "753:41198",
+    "variable": "component/checkbox/checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Default, Label=No / GROUP:checkbox / VECTOR:checkbox",
+    "id": "753:41197",
+    "variable": "component/checkbox/checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Default, Label=No / GROUP:checkbox / VECTOR:checkbox",
+    "id": "753:41197",
+    "variable": "component/checkbox/checked-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Default, Label=Yes / GROUP:checkbox / VECTOR:checkmark",
+    "id": "240:4227",
+    "variable": "component/checkbox/checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Default, Label=Yes / GROUP:checkbox / VECTOR:checkbox",
+    "id": "240:4225",
+    "variable": "component/checkbox/checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Default, Label=Yes / GROUP:checkbox / VECTOR:checkbox",
+    "id": "240:4225",
+    "variable": "component/checkbox/checked-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Login, Label=Yes / GROUP:checkbox / VECTOR:checkmark",
+    "id": "747:38014",
+    "variable": "component/checkbox/checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Login, Label=Yes / GROUP:checkbox / VECTOR:checkbox",
+    "id": "747:38013",
+    "variable": "component/checkbox/checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:checkboxes / COMPONENT:Property 1=Active, Width=Login, Label=Yes / GROUP:checkbox / VECTOR:checkbox",
+    "id": "747:38013",
+    "variable": "component/checkbox/checked-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=Off / GROUP:switch / VECTOR:bg",
+    "id": "520:35187",
+    "variable": "component/switch/track-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=Off / GROUP:switch / VECTOR:bg",
+    "id": "520:35187",
+    "variable": "component/switch/track-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=Off / GROUP:switch / VECTOR:ball",
+    "id": "520:35188",
+    "variable": "component/switch/thumb-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=Off / GROUP:switch / VECTOR:ball",
+    "id": "520:35188",
+    "variable": "component/switch/thumb-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=On / GROUP:switch / VECTOR:bg",
+    "id": "1254:74804",
+    "variable": "component/switch/track-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=On / GROUP:switch / VECTOR:bg",
+    "id": "1254:74804",
+    "variable": "component/switch/track-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=On / GROUP:switch / VECTOR:ball",
+    "id": "1254:74805",
+    "variable": "component/switch/thumb-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=Off, Disabled=On / GROUP:switch / VECTOR:ball",
+    "id": "1254:74805",
+    "variable": "component/switch/thumb-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=Off / GROUP:switch / VECTOR:bg",
+    "id": "520:35196",
+    "variable": "component/switch/track-checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=Off / GROUP:switch / VECTOR:bg",
+    "id": "520:35196",
+    "variable": "component/switch/track-border-checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=Off / GROUP:switch / VECTOR:ball",
+    "id": "520:35197",
+    "variable": "component/switch/thumb-checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=Off / GROUP:switch / VECTOR:ball",
+    "id": "520:35197",
+    "variable": "component/switch/thumb-border-checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=On / GROUP:switch / VECTOR:bg",
+    "id": "1254:74809",
+    "variable": "component/switch/track-checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=On / GROUP:switch / VECTOR:bg",
+    "id": "1254:74809",
+    "variable": "component/switch/track-border-checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=On / GROUP:switch / VECTOR:ball",
+    "id": "1254:74810",
+    "variable": "component/switch/thumb-checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=Off, Disabled=On / GROUP:switch / VECTOR:ball",
+    "id": "1254:74810",
+    "variable": "component/switch/thumb-border-checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:bg",
+    "id": "1149:27898",
+    "variable": "component/switch/track-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:bg",
+    "id": "1149:27898",
+    "variable": "component/switch/track-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:ball",
+    "id": "1149:27899",
+    "variable": "component/switch/thumb-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=Off, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:ball",
+    "id": "1149:27899",
+    "variable": "component/switch/thumb-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:bg",
+    "id": "1149:27919",
+    "variable": "component/switch/track-checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:bg",
+    "id": "1149:27919",
+    "variable": "component/switch/thumb-border-checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:ball",
+    "id": "1149:27920",
+    "variable": "component/switch/thumb-checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:toggle / switch / COMPONENT:State=On, Label=On, Disabled=Off / FRAME:Frame 52819 / GROUP:switch / VECTOR:ball",
+    "id": "1149:27920",
+    "variable": "component/switch/thumb-border-checked-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=Off / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50323",
+    "variable": "component/radio/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=Off / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50323",
+    "variable": "component/radio/stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=State2 / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50336",
+    "variable": "component/radio/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=State2 / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50336",
+    "variable": "component/radio/hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=State3 / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50345",
+    "variable": "component/radio/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=State3 / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50343",
+    "variable": "component/radio/checked-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Toggles, Checkboxes and Radio Buttons / COMPONENT_SET:radio btn / COMPONENT:State=State3 / GROUP:Group 52800 / GROUP:switch / VECTOR:ball",
+    "id": "1135:50343",
+    "variable": "component/radio/checked-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT:channel table: invited / FRAME:Frame 52814",
+    "id": "1859:97135",
+    "variable": "component/table/stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT:channel table: members / FRAME:Frame 52814",
+    "id": "1859:97119",
+    "variable": "component/table/stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT:channel table: requests / FRAME:Frame 52814",
+    "id": "1859:97028",
+    "variable": "component/table/stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19300",
+    "id": "1075:44175",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19231",
+    "id": "1075:44166",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19302",
+    "id": "1078:45105",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19303",
+    "id": "1078:45138",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19301",
+    "id": "1078:44699",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19231",
+    "id": "1075:44177",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19231",
+    "id": "1078:44325",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1075:44167",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1075:44168",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1075:44169",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44332",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44335",
+    "variable": "component/settings/table-disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44336",
+    "variable": "component/settings/table-disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44337",
+    "variable": "component/settings/table-disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44333",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44334",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1075:44178",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / TEXT:completion #",
+    "id": "1078:44326",
+    "variable": "component/settings/table-disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 428",
+    "id": "1078:44323",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 438",
+    "id": "1078:44624",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 435",
+    "id": "1078:44621",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 439",
+    "id": "1078:44625",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 436",
+    "id": "1078:44622",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 440",
+    "id": "1078:44626",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 437",
+    "id": "1078:44623",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 441",
+    "id": "1078:44627",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / VECTOR:Line 433",
+    "id": "1078:44556",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / VECTOR:Line 442",
+    "id": "1078:44667",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 429",
+    "id": "1078:44329",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 432",
+    "id": "1078:44555",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 434",
+    "id": "1078:44557",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 430",
+    "id": "1078:44330",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / LINE:Line 431",
+    "id": "1078:44331",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Default / FRAME:input / TEXT:input header (can turn off)",
+    "id": "1078:45273",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19300",
+    "id": "1079:45525",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19231",
+    "id": "1079:45526",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19302",
+    "id": "1079:45527",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19303",
+    "id": "1079:45528",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19301",
+    "id": "1079:45529",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19231",
+    "id": "1079:45530",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19231",
+    "id": "1079:45531",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45532",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45533",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45534",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45535",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45536",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45537",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45538",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45539",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45540",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45541",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / TEXT:completion #",
+    "id": "1079:45542",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 428",
+    "id": "1079:45543",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 438",
+    "id": "1079:45544",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 435",
+    "id": "1079:45545",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 439",
+    "id": "1079:45546",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 436",
+    "id": "1079:45547",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 440",
+    "id": "1079:45548",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 437",
+    "id": "1079:45549",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 441",
+    "id": "1079:45550",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / VECTOR:Line 433",
+    "id": "1079:45551",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / VECTOR:Line 442",
+    "id": "1079:45552",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 429",
+    "id": "1079:45553",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 432",
+    "id": "1079:45554",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 434",
+    "id": "1079:45555",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 430",
+    "id": "1079:45556",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant2 / LINE:Line 431",
+    "id": "1079:45557",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19300",
+    "id": "1079:45561",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19231",
+    "id": "1079:45562",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19302",
+    "id": "1079:45563",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19303",
+    "id": "1079:45564",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19301",
+    "id": "1079:45565",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19231",
+    "id": "1079:45566",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19231",
+    "id": "1079:45567",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45568",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45569",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45570",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45571",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45572",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45573",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45574",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45575",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45576",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45577",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / TEXT:completion #",
+    "id": "1079:45578",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 428",
+    "id": "1079:45579",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 438",
+    "id": "1079:45580",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 435",
+    "id": "1079:45581",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 439",
+    "id": "1079:45582",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 436",
+    "id": "1079:45583",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 440",
+    "id": "1079:45584",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 437",
+    "id": "1079:45585",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 441",
+    "id": "1079:45586",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / VECTOR:Line 433",
+    "id": "1079:45587",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / VECTOR:Line 442",
+    "id": "1079:45588",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 429",
+    "id": "1079:45589",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 432",
+    "id": "1079:45590",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 434",
+    "id": "1079:45591",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 430",
+    "id": "1079:45592",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant3 / LINE:Line 431",
+    "id": "1079:45593",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19300",
+    "id": "2107:89877",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19231",
+    "id": "2107:89878",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19302",
+    "id": "2107:89879",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19303",
+    "id": "2107:89880",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19301",
+    "id": "2107:89881",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19231",
+    "id": "2107:89882",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19231",
+    "id": "2107:89883",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / RECTANGLE:Rectangle 19304",
+    "id": "2107:89948",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89884",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89885",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89886",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89887",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89888",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89949",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89889",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89950",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89890",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89951",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89891",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89892",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89893",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89894",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / TEXT:completion #",
+    "id": "2107:89952",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 428",
+    "id": "2107:89895",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 438",
+    "id": "2107:89896",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 435",
+    "id": "2107:89897",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 439",
+    "id": "2107:89898",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 436",
+    "id": "2107:89899",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 440",
+    "id": "2107:89900",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 437",
+    "id": "2107:89901",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 441",
+    "id": "2107:89902",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / VECTOR:Line 433",
+    "id": "2107:89903",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / VECTOR:Line 442",
+    "id": "2107:89904",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 429",
+    "id": "2107:89905",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 432",
+    "id": "2107:89906",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 434",
+    "id": "2107:89907",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 430",
+    "id": "2107:89908",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:settings: job role table / COMPONENT:Property 1=Variant5 / GROUP:Group 52832 / LINE:Line 431",
+    "id": "2107:89909",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19231",
+    "id": "1254:66109",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / RECTANGLE:Rectangle 19231",
+    "id": "1254:66109",
+    "variable": "component/table/header-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:66113",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:66117",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:66115",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:66116",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Default / GROUP:Group 52716 / GROUP:Card header / TEXT:completion #",
+    "id": "1254:66112",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19231",
+    "id": "1254:71928",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / RECTANGLE:Rectangle 19231",
+    "id": "1254:71928",
+    "variable": "component/table/header-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:71932",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:71933",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:71934",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:71935",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant3 / GROUP:Group 52716 / GROUP:Card header / TEXT:completion #",
+    "id": "1254:71931",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19231",
+    "id": "1254:67227",
+    "variable": "component/table/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / RECTANGLE:Rectangle 19231",
+    "id": "1254:67227",
+    "variable": "component/table/header-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:67231",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:67232",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:67429",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:67233",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / GROUP:Group 52716 / TEXT:completion #",
+    "id": "1254:67234",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:table-headers: channels / COMPONENT:Property 1=Variant2 / GROUP:Group 52716 / GROUP:Card header / TEXT:completion #",
+    "id": "1254:67230",
+    "variable": "component/table/header-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / FRAME:Frame 52809 / FRAME:Frame 52799",
+    "id": "1122:23857",
+    "variable": "component/card/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / FRAME:Frame 52809 / FRAME:Frame 52799",
+    "id": "1122:23857",
+    "variable": "component/card/stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Default",
+    "id": "1254:66136",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Default",
+    "id": "1254:66136",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Default / FRAME:Frame 52805 / TEXT:text",
+    "id": "1254:65953",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Default / FRAME:Frame 52804 / TEXT:text",
+    "id": "1254:65924",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Default / FRAME:Frame 52806 / TEXT:text",
+    "id": "1254:65954",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Default / FRAME:Frame 52804 / LINE:Line 458",
+    "id": "1254:66162",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant3",
+    "id": "1254:71902",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant3",
+    "id": "1254:71902",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant3 / FRAME:Frame 52805 / TEXT:text",
+    "id": "1254:71905",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant3 / FRAME:Frame 52804 / TEXT:text",
+    "id": "1254:71907",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant3 / FRAME:Frame 52806 / TEXT:text",
+    "id": "1254:71909",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant3 / FRAME:Frame 52804 / LINE:Line 458",
+    "id": "1254:71913",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant2",
+    "id": "1254:66138",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant2",
+    "id": "1254:66138",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant2 / FRAME:Frame 52804 / TEXT:text",
+    "id": "1254:66141",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant2 / FRAME:Frame 52805 / TEXT:text",
+    "id": "1254:66143",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant2 / FRAME:Frame 52806 / TEXT:12/31/23",
+    "id": "1254:66145",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant4",
+    "id": "1254:74764",
+    "variable": "component/table/row-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant4",
+    "id": "1254:74764",
+    "variable": "component/table/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant4 / FRAME:Frame 52804 / TEXT:text",
+    "id": "1254:74767",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant4 / FRAME:Frame 52805 / TEXT:text",
+    "id": "1254:74769",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Tables / COMPONENT_SET:Frame 52801 / COMPONENT:Property 1=Variant4 / FRAME:Frame 52806 / TEXT:12/31/23",
+    "id": "1254:74771",
+    "variable": "component/table/row-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Default, Button=Bold",
+    "id": "1145:50781",
+    "variable": "component/editor/button-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Default, Button=Bold",
+    "id": "1145:50781",
+    "variable": "component/editor/button-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant10, Button=Italics",
+    "id": "1146:51287",
+    "variable": "component/editor/button-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant10, Button=Italics",
+    "id": "1146:51287",
+    "variable": "component/editor/button-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant11, Button=Underline",
+    "id": "1146:51295",
+    "variable": "component/editor/button-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant11, Button=Underline",
+    "id": "1146:51295",
+    "variable": "component/editor/button-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant12, Button=Bullets",
+    "id": "1146:51303",
+    "variable": "component/editor/button-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant12, Button=Bullets",
+    "id": "1146:51303",
+    "variable": "component/editor/button-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant4, Button=List",
+    "id": "1146:51239",
+    "variable": "component/editor/button-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Variant4, Button=List",
+    "id": "1146:51239",
+    "variable": "component/editor/button-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Bold",
+    "id": "1145:51051",
+    "variable": "component/editor/button-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Bold",
+    "id": "1145:51051",
+    "variable": "component/editor/button-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Italics",
+    "id": "1146:51311",
+    "variable": "component/editor/button-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Italics",
+    "id": "1146:51311",
+    "variable": "component/editor/button-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Underline",
+    "id": "1146:51319",
+    "variable": "component/editor/button-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Underline",
+    "id": "1146:51319",
+    "variable": "component/editor/button-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Bullets",
+    "id": "1146:51327",
+    "variable": "component/editor/button-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=Bullets",
+    "id": "1146:51327",
+    "variable": "component/editor/button-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=List",
+    "id": "1146:51247",
+    "variable": "component/editor/button-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Hover, Button=List",
+    "id": "1146:51247",
+    "variable": "component/editor/button-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Bold",
+    "id": "1146:51059",
+    "variable": "component/editor/button-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Bold",
+    "id": "1146:51059",
+    "variable": "component/editor/button-active-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Italics",
+    "id": "1146:51255",
+    "variable": "component/editor/button-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Italics",
+    "id": "1146:51255",
+    "variable": "component/editor/button-active-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Underline",
+    "id": "1146:51263",
+    "variable": "component/editor/button-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Underline",
+    "id": "1146:51263",
+    "variable": "component/editor/button-active-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Bullets",
+    "id": "1146:51271",
+    "variable": "component/editor/button-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=Bullets",
+    "id": "1146:51271",
+    "variable": "component/editor/button-active-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=List",
+    "id": "1146:51279",
+    "variable": "component/editor/button-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Classroom Features: Notepad / COMPONENT_SET:notes components: rtf button / COMPONENT:Property 1=Active, Button=List",
+    "id": "1146:51279",
+    "variable": "component/editor/button-active-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Default / FRAME:Layer_1 / VECTOR:Vector",
+    "id": "1115:46800",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Default / FRAME:Frame 52798",
+    "id": "1115:46785",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Default / FRAME:Frame 52798 / FRAME:Frame 52798 / TEXT:text",
+    "id": "1115:46730",
+    "variable": "component/tooltip/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Variant2 / FRAME:Layer_1 / VECTOR:Vector",
+    "id": "1115:46823",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Variant2 / FRAME:Frame 52798",
+    "id": "1115:46819",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Variant2 / FRAME:Frame 52798 / FRAME:Frame 52798 / TEXT:text",
+    "id": "1115:46821",
+    "variable": "component/tooltip/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Variant3 / FRAME:Layer_1 / VECTOR:Vector",
+    "id": "1125:31003",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Variant3 / FRAME:Frame 52798",
+    "id": "1125:30999",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT_SET:tooltip / COMPONENT:Property 1=Variant3 / FRAME:Frame 52798 / FRAME:Frame 52798 / TEXT:text",
+    "id": "1125:31001",
+    "variable": "component/tooltip/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Annotations / COMPONENT:change language / FRAME:Frame 52798",
+    "id": "1115:47171",
+    "variable": "component/tooltip/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Default / TEXT:This is the helper text.",
+    "id": "1334:136006",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Default / FRAME:text field / TEXT:input header",
+    "id": "1334:136001",
+    "variable": "component/form/field-label-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Variant2 / TEXT:This is the helper text.",
+    "id": "1334:136019",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Variant2 / FRAME:text field / TEXT:input header",
+    "id": "1334:136017",
+    "variable": "component/form/field-label-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Variant3 / TEXT:This is the helper text.",
+    "id": "1334:136190",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Variant3 / TEXT:This is the error validation text.",
+    "id": "1764:78364",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:alt input field / COMPONENT:Property 1=Variant3 / FRAME:text field / TEXT:input header",
+    "id": "1334:136188",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=no, width=315 / TEXT:This is the helper text.",
+    "id": "1068:30490",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=no, width=315 / FRAME:content / LINE:div",
+    "id": "429:4625",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=no, width=315 / FRAME:content / FRAME:input content / TEXT:text",
+    "id": "429:4628",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=315 / TEXT:This is the helper text.",
+    "id": "1068:30415",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=315 / FRAME:content / TEXT:input header (can turn off)",
+    "id": "256:10075",
+    "variable": "component/form/field-label-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=315 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "256:10073",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=315 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "256:10074",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=315 / TEXT:This is the helper text.",
+    "id": "1068:30488",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=315 / FRAME:content / TEXT:input header (can turn off)",
+    "id": "429:4583",
+    "variable": "component/form/field-label-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=315 / FRAME:content / GROUP:input / LINE:div",
+    "id": "429:4587",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=315 / FRAME:content / GROUP:input / FRAME:input content / TEXT:text",
+    "id": "429:4586",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=yes, width=315 / FRAME:content / TEXT:error validation",
+    "id": "429:4602",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=yes, width=315 / FRAME:content / TEXT:input header (can turn off)",
+    "id": "429:4590",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=yes, width=315 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "429:4594",
+    "variable": "core/signal/error",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=yes, width=315 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "429:4593",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error filled, header=yes, width=315 / TEXT:error validation",
+    "id": "1068:30285",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error filled, header=yes, width=315 / FRAME:content / TEXT:input header (can turn off)",
+    "id": "747:27774",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error filled, header=yes, width=315 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "747:27770",
+    "variable": "core/signal/error",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error filled, header=yes, width=315 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "747:27773",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=disabled, header=yes, width=315 / TEXT:This is the helper text.",
+    "id": "1068:30489",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=no, width=315 / TEXT:This is the helper text.",
+    "id": "1068:30533",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=no, width=315 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "429:4633",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=no, width=315 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "429:4636",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=no, width=315 / FRAME:content / TEXT:error validation",
+    "id": "429:4651",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=no, width=315 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "429:4647",
+    "variable": "core/signal/error",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=error empty, header=no, width=315 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "429:4650",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=disabled, header=no, width=315 / TEXT:This is the helper text.",
+    "id": "1068:30576",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=disabled, header=no, width=315 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "435:6057",
+    "variable": "component/input/border-disabled-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=disabled, header=no, width=315 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "435:6060",
+    "variable": "component/input/disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=500 / TEXT:If updated, you will receive all future communications at this email. Please note: you will still need to sign in with your account email.",
+    "id": "1068:30296",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=500 / FRAME:content / TEXT:input header (can turn off)",
+    "id": "1068:30295",
+    "variable": "component/form/field-label-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=500 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "1068:30291",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=placeholder, header=yes, width=500 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "1068:30294",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=500 / TEXT:If updated, you will receive all future communications at this email. Please note: you will still need to sign in with your account email.",
+    "id": "1075:43071",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=500 / FRAME:content / TEXT:input header (can turn off)",
+    "id": "1075:43070",
+    "variable": "component/form/field-label-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=500 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "1075:43066",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:input / COMPONENT:content=filled, header=yes, width=500 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:text",
+    "id": "1075:43069",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=Default",
+    "id": "373:883",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=Default",
+    "id": "373:883",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=Default / TEXT:Search",
+    "id": "248:7312",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=Variant3",
+    "id": "1130:59127",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=Variant3",
+    "id": "1130:59127",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=Variant3 / TEXT:Search",
+    "id": "1130:59128",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=filled",
+    "id": "486:15802",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=filled",
+    "id": "486:15802",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:search bar / COMPONENT:Property 1=filled / TEXT:Search",
+    "id": "486:15806",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Default / FRAME:content / FRAME:Frame 52754 / TEXT:127/127",
+    "id": "690:17523",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Default / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "497:18769",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Default / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:Password",
+    "id": "497:18772",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant4 / FRAME:content / FRAME:Frame 52754 / TEXT:127/127",
+    "id": "1068:30657",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant4 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "1068:30652",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant4 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:Password",
+    "id": "1068:30655",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant5 / FRAME:content / FRAME:Frame 52754 / TEXT:115/127",
+    "id": "1083:31720",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant5 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "1083:31715",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant5 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:••••••••••••",
+    "id": "1083:31718",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant6 / FRAME:content / FRAME:Frame 52754 / TEXT:115/127",
+    "id": "1083:32484",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant6 / FRAME:content / FRAME:Frame 52754 / TEXT:text",
+    "id": "1083:32488",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant6 / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "1083:32479",
+    "variable": "core/signal/error",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Variant6 / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••",
+    "id": "1083:32482",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=filled / FRAME:content / FRAME:Frame 52754 / TEXT:117/127",
+    "id": "499:19923",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=filled / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "499:19919",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=filled / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:••••••••••",
+    "id": "499:19922",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Error / GROUP:Group 52731 / FRAME:Frame 52754 / TEXT:text",
+    "id": "497:18785",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Error / GROUP:Group 52731 / FRAME:Frame 52754 / TEXT:140/127",
+    "id": "497:18784",
+    "variable": "core/signal/error",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Error / FRAME:content / GROUP:Group 52712 / LINE:div",
+    "id": "497:18780",
+    "variable": "core/signal/error",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:password input / COMPONENT:Property 1=Error / FRAME:content / GROUP:Group 52712 / FRAME:input content / TEXT:••••••••••••••••••••••••••••••••••••",
+    "id": "497:18783",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Comments, State=Placeholder",
+    "id": "1064:32815",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Comments, State=Placeholder",
+    "id": "1064:32815",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Comments, State=Placeholder / TEXT:Search",
+    "id": "1064:32053",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Placeholder",
+    "id": "1064:33407",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Placeholder",
+    "id": "1064:33407",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Placeholder / TEXT:Search",
+    "id": "1064:33409",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Disconnected",
+    "id": "1064:34495",
+    "variable": "component/input/disabled-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Disconnected",
+    "id": "1064:34495",
+    "variable": "component/input/border-disabled-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Disconnected / TEXT:Search",
+    "id": "1064:34497",
+    "variable": "component/input/disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Connection required",
+    "id": "1064:34656",
+    "variable": "component/input/disabled-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Connection required",
+    "id": "1064:34656",
+    "variable": "component/input/border-disabled-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Connection required / TEXT:Search",
+    "id": "1064:34658",
+    "variable": "component/input/disabled-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat search, State=Placeholder",
+    "id": "1064:33807",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat search, State=Placeholder",
+    "id": "1064:33807",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat search, State=Placeholder / TEXT:Search",
+    "id": "1064:33809",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat search, State=Filled",
+    "id": "1064:34120",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat search, State=Filled",
+    "id": "1064:34120",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat search, State=Filled / TEXT:Search",
+    "id": "1064:34122",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Filled",
+    "id": "1064:33412",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Filled",
+    "id": "1064:33412",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Chat, State=Filled / TEXT:Search",
+    "id": "1064:33414",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Comments, State=Filled",
+    "id": "1064:32817",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Comments, State=Filled",
+    "id": "1064:32817",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text bar / COMPONENT:Size=Comments, State=Filled / TEXT:Search",
+    "id": "1064:32819",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:rtf header / COMPONENT:Property 1=dashboard",
+    "id": "1764:78791",
+    "variable": "component/editor/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:rtf header / COMPONENT:Property 1=dashboard",
+    "id": "1764:78791",
+    "variable": "component/editor/header-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:rtf header / COMPONENT:Property 1=Variant2",
+    "id": "1764:79867",
+    "variable": "component/editor/header-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:rtf header / COMPONENT:Property 1=Variant2",
+    "id": "1764:79867",
+    "variable": "component/editor/header-border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Default / FRAME:Frame 52788",
+    "id": "1068:29123",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Default / FRAME:Frame 52788",
+    "id": "1068:29123",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Default / FRAME:Frame 52788 / TEXT:Search",
+    "id": "1068:29108",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant3 / FRAME:Frame 52788",
+    "id": "1530:70425",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant3 / FRAME:Frame 52788",
+    "id": "1530:70425",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant3 / FRAME:Frame 52788 / TEXT:Search",
+    "id": "1530:70427",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant2 / FRAME:Frame 52788",
+    "id": "1078:45484",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant2 / FRAME:Frame 52788",
+    "id": "1078:45484",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant2 / FRAME:Frame 52788 / TEXT:Search",
+    "id": "1078:45486",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant4 / FRAME:Frame 52814 / FRAME:Frame 52788",
+    "id": "1571:69066",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant4 / FRAME:Frame 52814 / FRAME:Frame 52788",
+    "id": "1571:69066",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant4 / FRAME:Frame 52814 / FRAME:Frame 52788 / TEXT:Search",
+    "id": "1571:69067",
+    "variable": "component/input/placeholder-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant5 / FRAME:Frame 52814 / FRAME:Frame 52788",
+    "id": "1653:75049",
+    "variable": "component/input/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant5 / FRAME:Frame 52814 / FRAME:Frame 52788",
+    "id": "1653:75049",
+    "variable": "component/input/border-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Forms & Fields / COMPONENT_SET:text field / COMPONENT:Property 1=Variant5 / FRAME:Frame 52814 / FRAME:Frame 52788 / TEXT:Search",
+    "id": "1653:75050",
+    "variable": "component/input/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Default, Icon=+",
+    "id": "517:33487",
+    "variable": "component/button/primary-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Default, Icon=+ / TEXT:text",
+    "id": "517:33488",
+    "variable": "component/button/primary-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Disabled, Icon=None",
+    "id": "224:12",
+    "variable": "component/button/disabled-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Disabled, Icon=None / TEXT:text",
+    "id": "224:13",
+    "variable": "component/button/disabled-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Default, Icon=None",
+    "id": "220:7",
+    "variable": "component/button/primary-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Default, Icon=None / FRAME:Frame 52809 / TEXT:text",
+    "id": "217:3",
+    "variable": "component/button/primary-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=None",
+    "id": "1341:138198",
+    "variable": "component/button/primary-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=None / FRAME:Frame 52809",
+    "id": "1341:138200",
+    "variable": "component/button/primary-hover-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=None / FRAME:Frame 52809 / TEXT:text",
+    "id": "1341:138199",
+    "variable": "component/button/primary-hover-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=+",
+    "id": "517:33501",
+    "variable": "component/button/primary-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:Frame 52798",
+    "id": "1104:70118",
+    "variable": "component/button/primary-hover-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:Frame 52798 / TEXT:text",
+    "id": "517:33503",
+    "variable": "component/button/primary-hover-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=+",
+    "id": "1772:83795",
+    "variable": "component/button/disabled-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:Frame 52798",
+    "id": "1772:83797",
+    "variable": "component/button/disabled-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:primary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:Frame 52798 / TEXT:text",
+    "id": "1772:83798",
+    "variable": "component/button/disabled-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=default / FRAME:Frame 2",
+    "id": "1104:73026",
+    "variable": "component/button/danger-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=default / FRAME:Frame 2 / FRAME:Frame 52799 / TEXT:text",
+    "id": "1104:73027",
+    "variable": "component/button/danger-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=With icon / FRAME:Frame 2",
+    "id": "1115:55144",
+    "variable": "component/button/danger-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=With icon / FRAME:Frame 2 / FRAME:Frame 52799 / TEXT:text",
+    "id": "1115:55145",
+    "variable": "component/button/danger-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=hover with icon / FRAME:Frame 2",
+    "id": "1115:55154",
+    "variable": "component/button/danger-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=hover with icon / FRAME:Frame 2 / FRAME:Frame 52799",
+    "id": "1115:55162",
+    "variable": "component/button/danger-hover-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=hover with icon / FRAME:Frame 2 / FRAME:Frame 52799 / TEXT:text",
+    "id": "1115:55156",
+    "variable": "component/button/danger-hover-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=hover / FRAME:Frame 2",
+    "id": "1104:73024",
+    "variable": "component/button/danger-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=hover / FRAME:Frame 2 / FRAME:Frame 52798",
+    "id": "1104:73032",
+    "variable": "component/button/danger-hover-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:failed btn / COMPONENT:Property 1=hover / FRAME:Frame 2 / FRAME:Frame 52798 / TEXT:text",
+    "id": "1104:73025",
+    "variable": "component/button/danger-hover-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:in progress btn / COMPONENT:Property 1=default / FRAME:Frame 2",
+    "id": "1104:73019",
+    "variable": "component/button/highlight-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:in progress btn / COMPONENT:Property 1=default / FRAME:Frame 2 / TEXT:text",
+    "id": "1104:73020",
+    "variable": "component/button/highlight-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:in progress btn / COMPONENT:Property 1=hover / FRAME:Frame 2",
+    "id": "1104:73021",
+    "variable": "component/button/highlight-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:in progress btn / COMPONENT:Property 1=hover / FRAME:Frame 2 / FRAME:Frame 52798",
+    "id": "1104:73023",
+    "variable": "component/button/highlight-hover-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:in progress btn / COMPONENT:Property 1=hover / FRAME:Frame 2 / FRAME:Frame 52798 / TEXT:text",
+    "id": "1104:73022",
+    "variable": "component/button/highlight-hover-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=disabled, color=Default, size=Default / FRAME:Frame 52798 / TEXT:text",
+    "id": "435:7034",
+    "variable": "component/button/disabled-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=Default, size=Default",
+    "id": "435:7029",
+    "variable": "component/button/primary-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=Default, size=Default / FRAME:Frame 52798 / TEXT:text",
+    "id": "435:7024",
+    "variable": "component/button/primary-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=Default, size=small",
+    "id": "520:35996",
+    "variable": "component/button/primary-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=Default, size=small / FRAME:Frame 52798 / TEXT:text",
+    "id": "520:35997",
+    "variable": "component/button/primary-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=error, size=small",
+    "id": "1147:50982",
+    "variable": "component/button/danger-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=error, size=small / FRAME:Frame 52798 / TEXT:text",
+    "id": "1147:50984",
+    "variable": "component/button/danger-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=error, size=Default",
+    "id": "747:31132",
+    "variable": "component/button/danger-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=Default, color=error, size=Default / FRAME:Frame 52798 / TEXT:text",
+    "id": "747:31133",
+    "variable": "component/button/danger-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=Default, size=Default",
+    "id": "435:7031",
+    "variable": "component/button/primary-hover-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=Default, size=Default / FRAME:Frame 52798 / TEXT:text",
+    "id": "435:7032",
+    "variable": "component/button/primary-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=Default, size=small",
+    "id": "520:35998",
+    "variable": "component/button/primary-hover-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=Default, size=small / FRAME:Frame 52798 / TEXT:text",
+    "id": "520:35999",
+    "variable": "component/button/primary-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=error, size=small",
+    "id": "1147:50985",
+    "variable": "component/button/danger-hover-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=error, size=small / FRAME:Frame 52798 / TEXT:text",
+    "id": "1147:50987",
+    "variable": "component/button/danger-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=error, size=Default",
+    "id": "747:31134",
+    "variable": "component/button/danger-hover-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:text btn / COMPONENT:state=hover, color=error, size=Default / FRAME:Frame 52798 / TEXT:text",
+    "id": "747:31135",
+    "variable": "component/button/danger-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=Default, client=Google / FRAME:Frame 3",
+    "id": "435:2461",
+    "variable": "component/button/primary-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=Default, client=Google / FRAME:Frame 3 / GROUP:Group 52715 / TEXT:login with Google",
+    "id": "435:2462",
+    "variable": "component/button/primary-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=Default, client=Google / FRAME:Frame 3",
+    "id": "1764:78354",
+    "variable": "component/button/primary-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=Default, client=Google / FRAME:Frame 3 / GROUP:Group 52715 / TEXT:sign in with Porsche",
+    "id": "1764:78363",
+    "variable": "component/button/primary-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=hover, client=Google / FRAME:Frame 3",
+    "id": "452:10580",
+    "variable": "component/button/primary-hover-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=hover, client=Google / FRAME:Frame 3 / GROUP:Group 52715 / FRAME:Frame 52798",
+    "id": "1104:73033",
+    "variable": "component/button/primary-hover-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:sso btn / COMPONENT:state=hover, client=Google / FRAME:Frame 3 / GROUP:Group 52715 / FRAME:Frame 52798 / TEXT:login with Google",
+    "id": "452:10589",
+    "variable": "component/button/primary-hover-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Default, Icon=None",
+    "id": "484:13524",
+    "variable": "component/button/secondary-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Default, Icon=None / FRAME:secondary button",
+    "id": "484:13522",
+    "variable": "component/button/secondary-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Default, Icon=None / FRAME:secondary button / TEXT:text",
+    "id": "484:13523",
+    "variable": "component/button/secondary-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Default, Icon=+",
+    "id": "1095:68780",
+    "variable": "component/button/secondary-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Default, Icon=+ / FRAME:secondary button",
+    "id": "1095:68781",
+    "variable": "component/button/secondary-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Default, Icon=+ / FRAME:secondary button / TEXT:text",
+    "id": "1095:68782",
+    "variable": "component/button/secondary-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=disabled, Icon=None",
+    "id": "497:16286",
+    "variable": "component/button/disabled-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=disabled, Icon=None / FRAME:secondary button",
+    "id": "497:16287",
+    "variable": "component/button/disabled-main",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=disabled, Icon=None / FRAME:secondary button / TEXT:text",
+    "id": "497:16288",
+    "variable": "component/button/disabled-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:secondary button",
+    "id": "1772:83801",
+    "variable": "component/button/disabled-main",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:secondary button / FRAME:Frame 52798",
+    "id": "1772:83803",
+    "variable": "component/button/disabled-accent",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:secondary button / FRAME:Frame 52798 / TEXT:text",
+    "id": "1772:83804",
+    "variable": "component/button/disabled-accent",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+",
+    "id": "1095:68786",
+    "variable": "component/button/secondary-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:secondary button",
+    "id": "1095:68787",
+    "variable": "component/button/secondary-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:secondary button / FRAME:Frame 52798",
+    "id": "1104:70129",
+    "variable": "component/button/secondary-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=+ / FRAME:secondary button / FRAME:Frame 52798 / TEXT:text",
+    "id": "1095:68789",
+    "variable": "component/button/secondary-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=None",
+    "id": "484:13526",
+    "variable": "component/button/secondary-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=None / FRAME:secondary button",
+    "id": "484:13527",
+    "variable": "component/button/secondary-hover-stroke",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=None / FRAME:secondary button / FRAME:Frame 52798",
+    "id": "1104:70117",
+    "variable": "component/button/secondary-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Buttons and Links / COMPONENT_SET:secondary button / COMPONENT:Property 1=Hover, Icon=None / FRAME:secondary button / FRAME:Frame 52798 / TEXT:text",
+    "id": "484:13528",
+    "variable": "component/button/secondary-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:breadcrumbs / COMPONENT:Crumb #=2 crumbs / TEXT:→",
+    "id": "499:30496",
+    "variable": "component/breadcrumbs/separator-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:breadcrumbs / COMPONENT:Crumb #=3 crumbs / TEXT:→",
+    "id": "520:34862",
+    "variable": "component/breadcrumbs/separator-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:breadcrumbs / COMPONENT:Crumb #=3 crumbs / TEXT:→",
+    "id": "520:34869",
+    "variable": "component/breadcrumbs/separator-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=mobile / LINE:div",
+    "id": "2209:69575",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=mobile / TEXT:version#",
+    "id": "2209:70521",
+    "variable": "core/meta/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=Default / FRAME:link group / LINE:Line 350",
+    "id": "467:10790",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=Default / FRAME:link group / LINE:Line 352",
+    "id": "467:10804",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=Default / FRAME:link group / LINE:Line 351",
+    "id": "467:10801",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=Default / FRAME:link group / LINE:Line 353",
+    "id": "467:10807",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=with side panel / FRAME:link group / LINE:Line 350",
+    "id": "503:31963",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=with side panel / FRAME:link group / LINE:Line 352",
+    "id": "503:31965",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=with side panel / FRAME:link group / LINE:Line 351",
+    "id": "503:31967",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:footer / COMPONENT:Property 1=with side panel / FRAME:link group / LINE:Line 353",
+    "id": "503:31969",
+    "variable": "component/footer/link-divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:pagination / COMPONENT:Property 1=10 / FRAME:Frame 52729 / TEXT:2",
+    "id": "503:31269",
+    "variable": "component/pagination/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / GROUP:Group 52542 / FRAME:Frame 52757 / TEXT:Challenges",
+    "id": "252:8383",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / GROUP:Group 52542 / RECTANGLE:Rectangle 19189",
+    "id": "252:8267",
+    "variable": "component/header/bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / LINE:Line 343",
+    "id": "252:8382",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / LINE:Line 342",
+    "id": "252:8381",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / LINE:Line 341",
+    "id": "252:8348",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / LINE:Line 340",
+    "id": "252:8336",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / LINE:Line 344",
+    "id": "410:4060",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52809 / TEXT:Welcome, Daniel Roberts",
+    "id": "252:8178",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52543 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "252:8350",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52543 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "252:8351",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52544 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "252:8344",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52544 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "252:8338",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52547 / FRAME:Frame 52546 / TEXT:97,209 points",
+    "id": "252:8372",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Default / FRAME:Frame 52543 / FRAME:Frame 52547 / FRAME:Frame 52546 / FRAME:Frame 52545 / TEXT:97,209 points",
+    "id": "252:8373",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / GROUP:Group 52542 / FRAME:Frame 52757 / TEXT:Challenges",
+    "id": "1392:158450",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / TEXT:Welcome, Daniel Roberts",
+    "id": "1392:158453",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / LINE:Line 343",
+    "id": "1392:158454",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / LINE:Line 342",
+    "id": "1392:158461",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / LINE:Line 341",
+    "id": "1392:158467",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / LINE:Line 340",
+    "id": "1392:158473",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / LINE:Line 344",
+    "id": "1392:158475",
+    "variable": "component/header/divider-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / FRAME:Frame 52543 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "1392:158465",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / FRAME:Frame 52543 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "1392:158466",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / FRAME:Frame 52544 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "1392:158471",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / FRAME:Frame 52544 / FRAME:Frame 52543 / TEXT:97,209 points",
+    "id": "1392:158472",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / FRAME:Frame 52547 / FRAME:Frame 52546 / TEXT:97,209 points",
+    "id": "1392:158460",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:top nav / COMPONENT:Property 1=Variant2 / FRAME:Frame 52543 / FRAME:Frame 52547 / FRAME:Frame 52546 / FRAME:Frame 52545 / TEXT:97,209 points",
+    "id": "1392:158459",
+    "variable": "component/header/fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=My Profile / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9272",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Dashboard / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9803",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=People / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9764",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Store / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9738",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Learning Paths / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9777",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Challenges / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9751",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Leaderboard / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9790",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Training Library / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9855",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Favorites / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9842",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Channels / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9868",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Live Campus / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9816",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Automations / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9829",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=My Profile / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9257",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=My Profile / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9260",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Dashboard / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9381",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Dashboard / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9384",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=People / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9324",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=People / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9327",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Store / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9295",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Store / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9298",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Learning Paths / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9335",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Learning Paths / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9338",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Challenges / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9312",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Challenges / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9315",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Leaderboard / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9346",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Leaderboard / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9349",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Training Library / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9462",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Training Library / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9465",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Favorites / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9449",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Favorites / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9452",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Channels / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9642",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Channels / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9645",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Channels: Live / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "2209:83873",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Channels: Live / GROUP:Group 52549 / FRAME:Frame 52774 / FRAME:Frame 52545 / TEXT:My Profile",
+    "id": "2209:83877",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Live Campus / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9392",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Live Campus / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9395",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Live Campus: Live / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9990",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Live Campus: Live / GROUP:Group 52549 / FRAME:Frame 52774 / FRAME:Frame 52545 / TEXT:My Profile",
+    "id": "546:9993",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Automations / GROUP:Group 52549 / VECTOR:highlight",
+    "id": "546:9403",
+    "variable": "component/sidenav/link-active-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Active, Page=Automations / GROUP:Group 52549 / FRAME:Frame 52545 / FRAME:Frame 52775 / TEXT:My Profile",
+    "id": "546:9406",
+    "variable": "component/sidenav/link-active-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=My Profile",
+    "id": "546:9261",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=My Profile / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9265",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Channels: Live / FRAME:Frame 52756 / GROUP:Group 52755 / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "2209:83895",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Inactive, Page=Live Campus: Live / FRAME:Frame 52756 / GROUP:Group 52755 / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:10037",
+    "variable": "component/sidenav/link-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Dashboard",
+    "id": "546:9510",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Dashboard / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9514",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Dashboard / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9514",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=People",
+    "id": "546:9575",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=People / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9579",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=People / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9579",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Store",
+    "id": "546:9523",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Store / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9527",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Store / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9527",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Learning Paths",
+    "id": "546:9601",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Learning Paths / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9605",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Learning Paths / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9605",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Challenges",
+    "id": "546:9484",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Challenges / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9488",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Challenges / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9488",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Leaderboard",
+    "id": "546:9588",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Leaderboard / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9592",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Leaderboard / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9592",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Training Library",
+    "id": "546:9614",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Training Library / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9618",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Training Library / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9618",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Favorites",
+    "id": "546:9549",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Favorites / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9553",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Favorites / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9553",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Channels",
+    "id": "546:9562",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Channels / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9566",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Channels / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9566",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Live Campus",
+    "id": "546:9497",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Live Campus / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9501",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Live Campus / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9501",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Automations",
+    "id": "546:9536",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Automations / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9540",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Automations / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:9540",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Channels: Live",
+    "id": "2209:83879",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Channels: Live / FRAME:Frame 52755 / GROUP:Group 52754 / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "2209:83885",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Channels: Live / FRAME:Frame 52755 / GROUP:Group 52754 / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "2209:83885",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Live Campus: Live",
+    "id": "546:10010",
+    "variable": "component/sidenav/link-hover-bg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Live Campus: Live / FRAME:Frame 52755 / GROUP:Group 52754 / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:10014",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "fills"
+  },
+  {
+    "name": "PAGE:Components / FRAME:Navigation Components / COMPONENT_SET:left nav item / COMPONENT:State=Hover, Page=Live Campus: Live / FRAME:Frame 52755 / GROUP:Group 52754 / FRAME:Frame 52688 / GROUP:Group 52545 / TEXT:My Profile",
+    "id": "546:10014",
+    "variable": "component/sidenav/link-hover-fg",
+    "type": "strokes"
+  }
+]

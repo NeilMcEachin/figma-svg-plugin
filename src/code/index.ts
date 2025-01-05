@@ -1,293 +1,1101 @@
 // Import sample module
-import * as fs from 'fs';
-import {rgbToHex} from './utils.js';
-import cssVarMap from './final-map.json';
-import variableGroups from './variables.js';
+import * as fs from 'fs'
+import cssVarMap from './final-map.json'
+import varsToDelete from './data/varsToDelete.json'
+import variableGroups from './variables.js'
+import { nodeToObject } from './helpers/nodeToObject.ts'
+import {
+  getFullName,
+  setNodeAttributeToVariable,
+} from './composables/nodeHelpers.js'
+import { getPrediction } from './composables/getPrediction.js'
+import {
+  getVariables,
+  getFilteredVariables,
+  getNodesWithBoundVariables,
+  getCollectionVariables,
+  getRawValue,
+  getNodeTree,
+} from './composables/variableData.js'
+import { exportVariablestoSCSS } from './composables/exportVariables.js'
+import { getModes } from './composables/collectionHelpers.js'
+import { deleteVariables } from './composables/deleteVariables.js'
+import { createLinearGradient } from './helpers/linearGradient.ts'
+import { extractLinearGradientParamsFromTransform } from './helpers/extractLinearGradientStartEnd.ts'
+import { figmaGradientToCSS } from './helpers/gptAttempt.js'
+import {
+  migrateNodeVariables,
+  variableCheck,
+  createVariableSet,
+} from './composables/migrateVariables.js'
+// import './composables/variableData.js'
+import {
+  exportNodesBoundToCollection,
+  exportCollectionVariables,
+  importCollectionVariables,
+  // importStyles,
+  importBoundNodes,
+} from './migrate.js'
+import { log } from 'scripts/utils'
+import messageBridge from './composables/messageBridge.js'
 
-// This file holds the main code for the plugins. It has access to the *document*.
-// You can access browser APIs in the <script> tag inside "ui.html" which has a
-// full browser environment (see documentation).
+let windowWidth = 1200
+let windowHeight = 600
+let previousWidth = windowWidth
 
+let previousHeight = windowHeight
+const minimizedHeight = 32 // Height of just the title bar
+const minimizedWidth = 342 // Width of collapses die bar
+
+// Function to load window size from client storage
+async function loadWindowSize() {
+  const storedWidth = await figma.clientStorage.getAsync('windowWidth')
+  const storedHeight = await figma.clientStorage.getAsync('windowHeight')
+  if (storedWidth && storedHeight) {
+    windowWidth = storedWidth
+    windowHeight = storedHeight
+  }
+  figma.ui.resize(windowWidth, windowHeight)
+}
+figma.showUI(__html__, {
+  width: windowWidth,
+  height: windowHeight,
+  themeColors: true,
+  title: 'Variable Manager',
+})
+// Function to save window size to client storage
+async function saveWindowSize(width: number, height: number) {
+  await figma.clientStorage.setAsync('windowWidth', width)
+  await figma.clientStorage.setAsync('windowHeight', height)
+}
+
+loadWindowSize()
 // This shows the HTML page in "ui.html".
-figma.showUI(__html__, { width: 600, height: 600, themeColors: true, /* other options */ });
-figma.clientStorage.getAsync('size').then(size => {
-  if(size) figma.ui.resize(size.w,size.h);
-}).catch(err=>{});
 
-// figma.on('stylechange', async () => {
-//   console.log('hello');
-  
-// })
-
-async function getAllVariables(){
-  const localVariables = await figma.variables.getLocalVariablesAsync();
-  const filteredVariables = localVariables.filter(v => v.variableCollectionId === 'VariableCollectionId:3432:16828').map(c => ({id: c.id, name: c.name}));
-  figma.ui.postMessage({ type: 'localVariablesUpdated', variables: filteredVariables });
-  return localVariables;
-}
-
-// getAllVariables();
-
-
-
-async function exportToJSON() {
-  const collections = await figma.variables.getLocalVariableCollectionsAsync();
-  const files = [];
-  for (const collection of collections) {
-    files.push(...(await processCollection(collection)));
-  }
-  // figma.ui.postMessage({ type: "EXPORT_RESULT", files });
-  // console.log(files);
-  
-}
-
-async function getCollections(){
-  const collections = await figma.variables.getLocalVariableCollectionsAsync();
-  figma.ui.postMessage({ type: 'collectionsUpdated', collections: collections.map(c => ({id: c.id, name: c.name, modes: [...c.modes]})) });
-  
-}
-getCollections();
-
-
-async function processCollection({ name, modes, variableIds }) {
-  const files = [];
-  // for (const mode of modes) {
-  const mode = modes[0];
-  const file = { fileName: `${name}.${mode.name}.tokens.json`, body: {} };
-  for (const variableId of variableIds) {
-    const { name, resolvedType, valuesByMode } = await figma.variables.getVariableByIdAsync(variableId);
-    const value = valuesByMode[mode.modeId];
-    // console.log(name.split('/').pop(), resolvedType);
-    console.log(name);
-    
-    
-    // if (value !== undefined && ["COLOR", "FLOAT"].includes(resolvedType)) {
-    //   let obj = file.body;
-    //   name.split("/").forEach((groupName) => {
-    //     obj[groupName] = obj[groupName] || {};
-    //     obj = obj[groupName];
-    //   });
-    //   obj.$type = resolvedType === "COLOR" ? "color" : "number";
-    //   if (value.type === "VARIABLE_ALIAS") {
-    //     const currentVar = await figma.variables.getVariableByIdAsync(
-    //       value.id
-    //     );
-    //     obj.$value = `{${currentVar.name.replace(/\//g, ".")}}`;
-    //   } else {
-    //     obj.$value = resolvedType === "COLOR" ? rgbToHex(value) : value;
-    //   }
-    // }
-  }
-  files.push(file);
-  // }
-  return files;
-}
-
-const paintStyles = figma.getLocalPaintStyles();
-// console.log(paintStyles);
-
-function createLinearCollection(){
-  const collection = figma.variables.createVariableCollection('Linear Collection w/o --');
-  const cssVarNames = Object.keys(cssVarMap);
-  cssVarNames.forEach(name => {
-    const newName = name.slice(`--`.length)
-        try{
-          const colorVariable = figma.variables.createVariable(`${newName}`, collection, "COLOR");
-          colorVariable.setValueForMode(collection.modes[0].modeId, {r: 1, g: 1, b: 1, a: 1});
-        } catch(e){
-          console.log(`${newName}`,e);
-        }
+async function getCollections() {
+  const collections = await figma.variables.getLocalVariableCollectionsAsync()
+  figma.ui.postMessage({
+    type: 'returnCollections',
+    payload: JSON.stringify(
+      collections.map((c) => ({
+        id: c.id,
+        name: c.name,
+        modes: [...c.modes],
+      }))
+    ),
   })
 }
-function createSuperNestedCollection(){
-  const collection = figma.variables.createVariableCollection('Super Nested Collection');
-  const cssVarNames = Object.keys(cssVarMap);
-  cssVarNames.forEach(name => {
-    const newName = name.slice(`--`.length).replaceAll('-','/');
-        try{
-          const colorVariable = figma.variables.createVariable(`${newName}`, collection, "COLOR");
-          colorVariable.setValueForMode(collection.modes[0].modeId, {r: 1, g: 1, b: 1, a: 1});
-        } catch(e){
-          console.log(`${newName}`,e);
-        }
-  })
+getCollections()
+
+async function getVariable(id) {
+  const variables = await getVariables()
+  return variables.find((variable) => variable.id === id)
 }
-function createNestedCollection(){
-  // I'll give it a list of all variables names as keys in css var format
-  // and I'll give it an array of each variable group that should exist in figma or does in lxp variables
-  // loop through list of array check for keys that have that name and create a variable for each key in that group
-  // I have to make sure I don't match words that have the start of a word in them. for example
-  // classroom would match --classroom and --classroom-card. 
-  // I need to check if there is a my version again version that include mine in them and confirm they don't get in the way
-  const newMap = {};
-  const collection = figma.variables.createVariableCollection('Nested Collection');
-  const cssVarNames = Object.keys(cssVarMap);
-  variableGroups.forEach(group => {
-    // get list of groups that include this groups name
-    const listOfSimilarNames = variableGroups.filter(varGroup => {
-      return varGroup.startsWith(group) && varGroup !== group;
-    })
-    cssVarNames.forEach(name => {
-      
-      if(name.startsWith(`--${group}`) && !listOfSimilarNames.some(similarName => name.startsWith(`--${similarName}`))){
-        const newName = name.slice(`--${group}-`.length);
-        if(!newMap[group]){
-          newMap[group] = {};
-        }
-        newMap[group][newName] = {r: 1, g: 1, b: 1, a: 1};
-        try{
-          const colorVariable = figma.variables.createVariable(`${group}/${newName}`, collection, "COLOR");
-          colorVariable.setValueForMode(collection.modes[0].modeId, newMap[group][newName]);
-        } catch(e){
-          console.log(`${group}/${newName}`,e);
-        }
+
+async function getUniqueIds(node) {
+  const uniqueIds = new Set()
+
+  async function traverse(node) {
+    if (node.boundVariables) {
+      if (node.boundVariables.fills) {
+        node.boundVariables.fills.forEach((fill) => {
+          if (fill.id) {
+            uniqueIds.add(fill.id)
+          }
+        })
       }
-    })
+      if (node.boundVariables.strokes) {
+        node.boundVariables.strokes.forEach((stroke) => {
+          if (stroke.id) {
+            uniqueIds.add(stroke.id)
+          }
+        })
+      }
+    }
+
+    if (node.children?.length) {
+      for (const child of node.children) {
+        await traverse(child)
+      }
+    }
+  }
+
+  await traverse(node)
+  return Array.from(uniqueIds)
+}
+
+function condenseNodes(nodes) {
+  const condensed = {}
+
+  nodes.forEach((node) => {
+    const { name, variable, type, id, imageData } = node
+
+    if (!condensed[name]) {
+      condensed[name] = { name, id, imageData }
+    }
+
+    if (type === 'fills') {
+      condensed[name].fills = variable
+    }
+
+    if (type === 'strokes') {
+      condensed[name].strokes = variable
+    }
   })
 
-
-  // console.log(newMap);
-  
-
+  return Object.values(condensed)
 }
-async function getVariable(id){
-  const variables = await getAllVariables();
-  return variables.find(variable => variable.id === id);
-}
+
 async function getSelection() {
-  const selectedNodes = figma.currentPage.selection;
-  console.log(selectedNodes[0]);
-  
-  if(selectedNodes.length){
-    const node = selectedNodes[0];
-    if(!node) return;
-    let nodeObject = {id: node.id};
-    if(node.fills?.length){
-      const fill = node.fills[0];
-      if(fill.boundVariables?.color){
-        const variable = await getVariable(fill.boundVariables.color.id); 
-        nodeObject.fill = {id: variable.id, name: variable.name};
-      }
-    }
-    if(node.strokes?.length){
-      const stroke = node.strokes[0];
-      if(stroke.boundVariables?.color){
-        const variable = await getVariable(stroke.boundVariables.color.id); 
-        // console.log(variable);
-        nodeObject.stroke = {id: variable.id, name: variable.name};
+  return
+  const selectedNodes = figma.currentPage.selection
+  console.log(selectedNodes)
 
-      }
+  if (selectedNodes.length && selectedNodes[0].type !== 'PAGE') {
+    const nodes = []
+    for (const node of selectedNodes) {
+      const boundNodes = await getNodesWithBoundVariables(
+        node,
+        (name) => !name.startsWith('core/') && !name.startsWith('component/')
+      )
+      nodes.push(...condenseNodes(boundNodes))
     }
-    // console.log(nodeObject);
-    figma.ui.postMessage({type: 'selectionUpdated', node: JSON.stringify(nodeObject) });
+    for (const node of nodes) {
+      node.variablePrediction = await getPrediction(node)
+    }
+    // console.log(nodes)
+    figma.ui.postMessage({
+      type: 'returnNodes',
+      payload: JSON.stringify(selectedNodes),
+    })
+
+    figma.ui.postMessage({
+      type: 'returnColorNodes',
+      payload: JSON.stringify(nodes),
+    })
   }
-  
 }
-if(figma.currentPage.selection.length) getSelection();
 
+async function setRawValuesForVariable(variableId, attributeValue, modeMap) {
+  const variable = await figma.variables.getVariableByIdAsync(variableId)
+  const modes = await getModes(variable.variableCollectionId)
 
-// async function addPluginData(data){
-//   const node = figma.currentPage.selection[0];
-//   node.setPluginData('test', JSON.stringify(data));
+  // if there is a bound variable. Grab raw value for each mode
+  for (const mode of modes) {
+    const rawValue = await getRawValue(attributeValue, mode, modeMap)
+    // Assign raw value to variable for each mode
+    variable.setValueForMode(mode.modeId, rawValue)
+  }
+}
+
+// async function setNodeAttributeToVariable(node, attributeName, variableId) {
+//   const variable = await figma.variables.getVariableByIdAsync(variableId)
+//   const nodeAttributeCopy = JSON.parse(JSON.stringify(node[attributeName]))
+
+//   nodeAttributeCopy[0] = figma.variables.setBoundVariableForPaint(
+//     nodeAttributeCopy[0],
+//     'color',
+//     variable
+//   )
+//   node[attributeName] = nodeAttributeCopy
 // }
 
+async function updateCorrectMappings(nodes) {
+  const correctMappings = JSON.parse(
+    await figma.root.getPluginData('correctMappings')
+  )
+  nodes.forEach((node) => {
+    const index = correctMappings.findIndex((mapping) => mapping.id === node.id)
+    if (index > -1) {
+      correctMappings[index] = node
+    } else {
+      correctMappings.push(node)
+    }
+  })
+  // console.log(correctMappings);
+
+  figma.root.setPluginData('correctMappings', JSON.stringify(correctMappings))
+}
+
+async function dfsRecursiveFind(node, results = {}, visited = new Set()) {
+  if (!node || visited.has(node) || node.name.startsWith('ignore--'))
+    return results
+
+  // Mark the node as visited
+  visited.add(node)
+
+  function setResults(variable, node) {
+    if (!results.hasOwnProperty(variable.name)) {
+      results[variable.name] = {
+        id: variable.id,
+        name: variable.name,
+        resolvedType: variable.resolvedType,
+      }
+      results[variable.name].nodes = []
+    }
+    results[variable.name].nodes.push({ id: node.id, name: node.name })
+  }
+
+  if (node.visible && node.boundVariables) {
+    const boundVariables = Object.entries(node.boundVariables)
+
+    for (const [key, value] of boundVariables) {
+      if (value.type) {
+        const variable = await figma.variables.getVariableByIdAsync(value.id)
+        setResults(variable, node)
+      } else if (Array.isArray(value)) {
+        for (const boundV of value) {
+          const variable = await figma.variables.getVariableByIdAsync(boundV.id)
+          if (variable?.name) {
+            setResults(variable, node)
+          }
+        }
+      }
+      // else
+      //   // const varDef = await figma.variables.getVariableByIdAsync(value.Spinoff.id)
+      //   // console.log(varDef.name);
+      //   console.log(node);
+      // }
+    }
+  }
+  // // Check if the node's value matches the target value
+  // if (node.value === targetValue) {
+  //     result.push(node);
+  // }
+
+  // Recur for each child
+  if (node.children) {
+    for (const child of node.children) {
+      await dfsRecursiveFind(child, results, visited)
+    }
+  }
+
+  return results
+}
 
 figma.on('selectionchange', async () => {
-  getSelection();
+  getSelection()
 })
 
 // Calls to "parent.postMessage" from within the HTML page will trigger this
 // callback. The callback will be passed the "pluginMessage" property of the
 // posted message.
 figma.ui.onmessage = async (msg) => {
-
-  // if (msg.type === 'getSelection') {
-  //   figma.ui.postMessage({ type: 'updateSelection', svgs: await getSelection() })
-  // }
-
-  // if (msg.type === 'sendOptimize') {
-  //   svgOptimize = JSON.parse(msg.data);
-
-  //   // figma.ui.postMessage({ type: 'save-file', svg: msg.data });
-  // }
-
-  if (msg.type === "cancel") {
-    figma.closePlugin();
+  if (msg.type === 'refreshCollections') {
+    getCollections()
   }
+  if (msg.type === 'getCollectionVariables') {
+    const collections = await figma.variables.getLocalVariableCollectionsAsync()
 
-  
-  // if (msg.type === 'organize-selection') {
-  //   sortInGrid(figma.currentPage.selection, msg.config);
-  // }
+    const variables = await getCollectionVariables(collections[1].id)
+    // console.log(variables);
 
-  // if (msg.type === 'export-iconify-set'){
-    // createIconSet(msg.svgs);
-  // }
-
-  if(msg.type === 'getVariables'){
-    // const localCollections = await figma.variables.getLocalVariableCollectionsAsync();
-    // figma.ui.postMessage({ type: 'log', message: 'hello!'})
-    // console.log(localCollections);
-    exportToJSON();
+    figma.ui.postMessage({
+      type: 'returnCollectionVariables',
+      payload: JSON.stringify(variables),
+    })
+  }
+  if (msg.type === 'getCollectionModes') {
+    const collections = await figma.variables.getLocalVariableCollectionsAsync()
+    const modes = await getModes(collections[1].id)
     
+    figma.ui.postMessage({
+      type: 'returnCollectionModes',
+      payload: JSON.stringify(modes)
+    })
   }
+  if (msg.type === 'deleteVariables') {
+    const boundVariables = await dfsRecursiveFind(figma.currentPage)
+    deleteVariables(varsToDelete, boundVariables)
+  }
+  if (msg.type === 'swapVariable') {
+    const { attributeName, nodeId, replacementVariableId } = JSON.parse(
+      msg.payload
+    )
 
-  if(msg.type === 'refreshCollections'){
-    getCollections();
-  }
-  if(msg.type === 'getStyles'){
-    const styles = await figma.getLocalPaintStylesAsync();
-    console.log(styles);
-    
-  }
-  if(msg.type === 'setValueForVariable'){
-    // console.log(msg.payload);
-    const sourceVariable = figma.variables.getVariableById(msg.payload.currentVariableId);
-    const targetVariable = figma.variables.getVariableById(msg.payload.replacementVariableId);
+    const node = await figma.getNodeByIdAsync(nodeId)
 
-    console.log(sourceVariable);
-    const alias = figma.variables.createVariableAlias(sourceVariable);
-    
-    targetVariable.setValueForMode(msg.payload.modeId, alias);
-    // console.log(sourceVariable, targetVariable);
-  }
-  if(msg.type === 'swapVariable'){
-    const {attribute, variableId} = JSON.parse(msg.payload);
-    const replacementVariable = figma.variables.getVariableById(variableId);
-    console.log(replacementVariable);
-    // Fills and strokes must be set via their immutable arrays
-    const node = figma.currentPage.selection[0];
-    if(attribute === 'fill'){
-      let fillsCopy = JSON.parse(JSON.stringify(node.fills));
-      fillsCopy[0] = figma.variables.setBoundVariableForPaint(fillsCopy[0], 'color', replacementVariable)
-      node.fills = fillsCopy
+    const modeMap = {
+      'Drive--dark': 'Drive Base',
+      'Drive--light': 'Light Mode',
+      'Cadi--dark': 'Cadillac test',
     }
-    if(attribute === 'stroke'){
-      let strokesCopy = JSON.parse(JSON.stringify(node.strokes));
-      strokesCopy[0] = figma.variables.setBoundVariableForPaint(strokesCopy[0], 'color', replacementVariable)
-      node.strokes = strokesCopy
+
+    // Check if bound variable exists then bind value to that else bind to attribute e.g .boundVariable:{fills} || .fills
+    const attributeValue =
+      node.boundVariables[attributeName] || node[attributeName]
+
+    if (attributeValue) {
+      await setRawValuesForVariable(
+        replacementVariableId,
+        attributeValue[0],
+        modeMap
+      )
     }
-    // figma.currentPage.selection[0].setBoundVariable(attribute, replacementVariable);
+    await setNodeAttributeToVariable(node, attributeName, replacementVariableId)
+    const boundNodes = await getNodesWithBoundVariables(node, () => true, false)
+    updateCorrectMappings(boundNodes)
+
+    getSelection()
   }
-  if(msg.type === 'createLinearCollection'){
-    createLinearCollection();
+  if (msg.type === 'createNestedCollection') {
+    // createNestedCollection()
+    const collection =
+      figma.variables.createVariableCollection('Nested Collection')
+    collection.renameMode(collection.modes[0].modeId, 'Drive--dark')
+    collection.addMode('Drive--light')
+    collection.addMode('Cadi--dark')
+    getCollections()
   }
-  if(msg.type === 'createNestedCollection'){
-    createNestedCollection();
-  }
-  if(msg.type === 'createSuperNestedCollection'){
-    createSuperNestedCollection();
-  }
-  if(msg.type === 'addPluginData'){
-    addPluginData(msg.data);
-  }
-  if(msg.type === 'resize'){
-    figma.ui.resize(msg.size.w,msg.size.h);      
-    figma.clientStorage.setAsync('size', msg.size).catch(err=>{});// save size
+  if (msg.type === 'deleteNestedCollection') {
+    const collection = await figma.variables.getVariableCollectionByIdAsync(
+      msg.payload
+    )
+    collection.remove()
+    getCollections()
   }
 
+  if (msg.type === 'exportVariablestoSCSS') {
+    const { collectionId } = JSON.parse(msg.payload)
 
+    const modeMap = {
+      'Drive--dark': 'Drive Base',
+      'Drive--light': 'Light Mode',
+      'Cadi--dark': 'Cadillac test',
+    }
+    const variableConfig = await exportVariablestoSCSS(collectionId, modeMap)
+    // console.log(variableConfig);
 
+    const fileData = JSON.stringify({
+      data: variableConfig,
+      name: 'variables.scss',
+      type: 'text/scss',
+    })
+    figma.ui.postMessage({ type: 'saveFile', payload: fileData })
+  }
+
+  if (msg.type === 'getStyles') {
+    const paintStyles = await figma.getLocalPaintStylesAsync()
+    const effectStyles = await figma.getLocalEffectStylesAsync()
+    console.log('paintStyles:')
+    const node = figma.currentPage.selection[0]
+    console.log(node.fills[0], node.width, node.height)
+    const css = await node.getCSSAsync()
+    console.log(css.background || css.fill)
+    const gradient = figmaGradientToCSS(node.fills[0], node.width, node.height)
+    console.log(gradient)
+
+    // console.log(paintStyles)
+    // console.log(extractLinearGradientParamsFromTransform)
+    // for (const paintStyle of paintStyles) {
+    // if (
+    //   paintStyle.paints.length &&
+    //   paintStyle.paints[0].type === 'GRADIENT_LINEAR'
+    // ) {
+    //   const node = paintStyle.consumers[0].node
+    // for (const { node } of paintStyle.consumers) {
+    // console.log(node.fills[0].gradientTransform)
+    // const gradient = extractLinearGradientParamsFromTransform(node.width, node.height, node.fills[0].gradientTransform)
+    // const css = await node.getCSSAsync()
+    // console.log(css)
+    // }
+    // }
+    // }
+    console.log('effectStyles:')
+    console.log(effectStyles)
+  }
+
+  if (msg.type === 'getUnusedVariables') {
+    const paintStyles = await figma.getLocalPaintStylesAsync()
+    const effectStyles = await figma.getLocalEffectStylesAsync()
+    // console.log(paintStyles)
+    // console.log(effectStyles)
+    const styles = [...paintStyles, ...effectStyles]
+
+    const results = {}
+
+    function setResults(variable, node) {
+      if (!results.hasOwnProperty(variable.name)) {
+        results[variable.name] = {
+          id: variable.id,
+          name: variable.name,
+          resolvedType: variable.resolvedType,
+        }
+        results[variable.name].nodes = []
+      }
+      results[variable.name].nodes.push({ id: node.id, name: node.name })
+    }
+
+    for (const node of styles) {
+      if (node.boundVariables) {
+        const boundVariables = Object.entries(node.boundVariables)
+
+        for (const [key, value] of boundVariables) {
+          if (value.type) {
+            const variable = await figma.variables.getVariableByIdAsync(
+              value.id
+            )
+            setResults(variable, node)
+          } else if (Array.isArray(value)) {
+            for (const boundV of value) {
+              const variable = await figma.variables.getVariableByIdAsync(
+                boundV.id
+              )
+              if (variable?.name) {
+                setResults(variable, node)
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // const img = figma.getImageByHash('ac583f21bfc97f4575bae178535257c55089d47c');
+    // const bytes = await img.getBytesAsync();
+    // const url = URL.createObjectURL(new Blob([bytes]))
+    // console.log(url);
+    // console.log(results)
+
+    // return
+    let boundVariables = await dfsRecursiveFind(figma.currentPage)
+    // console.log(nodesWithBoundVariables)
+    Object.keys(results).forEach((key) => {
+      const variable = results[key]
+      if (!boundVariables.hasOwnProperty(variable.name)) {
+        boundVariables[variable.name] = {
+          id: variable.id,
+          name: variable.name,
+          resolvedType: variable.resolvedType,
+        }
+        boundVariables[variable.name].nodes = []
+      }
+      for (const node of variable.nodes) {
+        boundVariables[variable.name].nodes.push(node)
+      }
+    })
+
+    const unusedVars = []
+    const usedVars = {}
+    const variables = await getFilteredVariables()
+    // Get nodes with bound variables, get all variables possible
+    // Check variables that are not in bound variables list
+    // Then check variables that are assigned to a variable alias
+    variables.forEach((variable) => {
+      if (variable.resolvedType === 'COLOR') {
+        const name = `--${variable.name.split('/').slice(1).join('-')}`
+        if (!boundVariables.hasOwnProperty(variable.name)) {
+          unusedVars.push(name)
+        } else {
+          usedVars[name] = []
+        }
+        // if (variable.name.includes('card')) {
+        // }
+      }
+    })
+    //     const values = Object.values(variable.valuesByMode)
+    //     if (
+    //       values.every((value) => {
+    //         return (
+    //           value.hasOwnProperty('r') &&
+    //           value.r === 1 &&
+    //           value.hasOwnProperty('g') &&
+    //           value.g === 1 &&
+    //           value.hasOwnProperty('b') &&
+    //           value.b === 1 &&
+    //           (!value.hasOwnProperty('a') || value.a === 0 || value.a === 1)
+    //         )
+    //       })
+    //     ) {
+    //       unusedVars.push(variable.name)
+    //       console.log(variable.name)
+    //       console.log(variable)
+    //     }
+    //   }
+    // })
+
+    console.log('unusedVars:')
+    console.log(unusedVars.sort((a, b) => a.localeCompare(b)))
+    console.log('usedVars:')
+    console.log(usedVars)
+
+    const variableNames = Object.keys(boundVariables)
+    const filteredNodes = {}
+    variableNames.forEach((name) => {
+      if (
+        !name.startsWith('component/') &&
+        !name.startsWith('core/') &&
+        boundVariables[name].resolvedType === 'COLOR'
+      ) {
+        filteredNodes[name] = boundVariables[name]
+      }
+    })
+    // console.log(filteredNodes)
+
+    // let ignoredVariables = await figma.root.getPluginData('ignoredVariables')
+    // if (ignoredVariables) ignoredVariables = JSON.parse(ignoredVariables)
+    // const filteredVariables = variables.filter((variable) => {
+    //   const values = Object.values(variable.valuesByMode)
+    //   if (ignoredVariables.hasOwnProperty(variable.id))
+    //     return ignoredVariables[variable.id]
+    //   return values.every(
+    //     ({ r, g, b, a }) =>
+    //       !!r && r === 1 && g && g === 1 && b && b === 1 && (!a || a === 1)
+    //   )
+    // })
+
+    figma.ui.postMessage({
+      type: 'returnUnusedVariables',
+      payload: JSON.stringify(filteredNodes),
+    })
+    // console.log(filteredVariables)
+  }
+
+  if (msg.type === 'deleteUnusedVariables') {
+    const variableIds = JSON.parse(msg.payload)
+    for (const id of variableIds) {
+      const variable = await figma.variables.getVariableByIdAsync(id)
+      console.log(variable)
+
+      try {
+        variable.remove()
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  }
+
+  async function getStyles() {
+    const paintStyles = await figma.getLocalPaintStylesAsync()
+    const effectStyles = await figma.getLocalEffectStylesAsync()
+    // console.log(paintStyles)
+    // console.log(effectStyles)
+    const styles = [...paintStyles, ...effectStyles]
+
+    const results = {}
+
+    function setResults(variable, node) {
+      if (!results.hasOwnProperty(variable.name)) {
+        results[variable.name] = {
+          id: variable.id,
+          name: variable.name,
+          resolvedType: variable.resolvedType,
+        }
+        results[variable.name].nodes = []
+      }
+      results[variable.name].nodes.push({ id: node.id, name: node.name })
+    }
+
+    for (const node of styles) {
+      if (node.boundVariables) {
+        const boundVariables = Object.entries(node.boundVariables)
+
+        for (const [key, value] of boundVariables) {
+          if (value.type) {
+            try {
+              const variable = await figma.variables.getVariableByIdAsync(
+                value.id
+              )
+              setResults(variable, node)
+            } catch (e) {
+              console.log(`cant find variable ${value.name}`)
+            }
+          } else if (Array.isArray(value)) {
+            for (const boundV of value) {
+              try {
+                const variable = await figma.variables.getVariableByIdAsync(
+                  boundV.id
+                )
+                if (variable?.name) {
+                  setResults(variable, node)
+                }
+              } catch (e) {
+                console.log(`cant find variable ${value.name}`)
+              }
+            }
+          }
+        }
+      }
+    }
+    return results
+  }
+
+  if (msg.type === 'getUnusedVariables2') {
+    // const results = await getStyles()
+    // console.log(results)
+    // return
+
+    const ignoreList = [
+      // Showcase
+      'component/datepicker/bg',
+      'component/datepicker/fg',
+      'component/datepicker/cell-active-bg',
+      'component/datepicker/cell-active-fg',
+      'component/datepicker/cell-hover-bg',
+      'component/datepicker/cell-hover-fg',
+      'component/datepicker/cell-secondary-bg',
+      'component/datepicker/cell-secondary-fg',
+      'component/datepicker/cell-secondary-hover-bg',
+      'component/base-video-player/control-bg',
+      'component/base-video-player/control-fg',
+      'component/base-video-player/volume-slider-fg',
+      'component/base-video-chat/livestream-controls-bg',
+      'component/base-video-chat/placeholder-bg',
+      'component/base-video-chat/placeholder-fg',
+      'component/dropdown/option-selected-hovered-bg',
+      'component/dropdown/option-selected-hovered-fg',
+      'component/dropdown/options-stroke',
+      'component/input/border-focus-fg',
+      'component/skeleton/bg',
+      'component/skeleton/fg',
+      'component/footer/version-fg',
+      // Inquire
+      'component/avatar/instructor-border-fg',
+      'component/people-grid/admin-border-fg',
+      // Implement
+      'component/collapsible/bg',
+      'component/collapsible/header-bg',
+      'component/collapsible/fg',
+      'component/button/user/bg',
+      'component/page/fg',
+      'component/sidenav/bg',
+      // Refactor
+      'component/login/bg-image',
+      'component/login/mobile-bg-image',
+      'component/registration/bg-image',
+      'component/registration/mobile-bg-image',
+      'component/channel-card/banner-image',
+      'component/not-found/fg',
+      'component/verify-email/fg',
+      'component/registration/bg',
+      'component/registration/mobile-bg',
+      'component/profile-banner/bg-image',
+      'component/profile-banner/mobile-bg-image',
+      'component/channel-header/banner-default-image',
+    ]
+    const collections = await figma.variables.getLocalVariableCollectionsAsync()
+    console.log(collections)
+    // return
+    let collectionVariables = await getCollectionVariables(collections[1].id)
+    collectionVariables = collectionVariables.filter(
+      (variable) =>
+        !ignoreList.includes(variable.name) && variable.resolvedType === 'COLOR'
+    )
+    let nodes = await getNodesWithBoundVariables(
+      figma.currentPage,
+      () => true,
+      false,
+      msg.payload.includeInstanceNodes
+    )
+
+    const unusedVars = []
+    for (const variable of collectionVariables) {
+      if (
+        !nodes.some((node) => {
+          return node.variable.id === variable.id
+        }) &&
+        !collectionVariables.some((v) =>
+          Object.values(v.valuesByMode).some(
+            (value) => value.id && value.id === variable.id
+          )
+        )
+      ) {
+        unusedVars.push(variable)
+      }
+    }
+    console.log(unusedVars)
+
+    figma.ui.postMessage({
+      type: 'returnUnusedVariables2',
+      payload: JSON.stringify(unusedVars),
+    })
+  }
+
+  if (msg.type === 'remapVariables') {
+    const remap = {
+      'buttons, links/Primary button/primary-btn-text':
+        'component/button/primary-fg',
+      'buttons, links/Primary button/primary-btn-fill':
+        'component/button/primary-bg',
+      'buttons, links/Primary button/primary-btn-text-hover':
+        'component/button/primary-hover-fg',
+      'buttons, links/Primary button/primary-btn-fill-hover':
+        'component/button/primary-hover-bg',
+      'buttons, links/Text button or body copy link/text-btn-hover':
+        'component/button/text/primary-hover-fg',
+      'buttons, links/Disabled button/disabled-btn-text':
+        'component/button/disabled-fg',
+      'control colors/Error/signal-error': 'core/signal/error',
+      'control colors/main-text': 'core/primary/fg',
+      'divs, borders/divs-borders': 'core/border/primary-fg',
+      'control colors/icons-primary': 'core/primary/icon-fg',
+      'tags/Tag or Keyword/keyword-bg': 'component/tag/bg',
+      'navigation/left-nav-bg': 'component/sidenav/bg',
+      'navigation/left-nav-text-inactive': 'component/sidenav/link-fg',
+      'navigation/left-nav-text-active': 'component/sidenav/link-active-fg',
+      'navigation/nav-active-highlight': 'component/sidenav/link-active-bg',
+      // 'navigation/nav-item-text-active': '',
+      'tags/New/new-tag-bg': 'component/tag/primary-bg',
+      'tags/New/new-tag-text': 'component/tag/primary-fg',
+      // 'profile-photo-ring': '',
+      'control colors/Accent 1/accent1-stop2': 'core/accent1-stop-2',
+      'tags/Tag or Keyword/keyword-text': 'component/tag/fg',
+      // 'buttons, links/Text button or body copy link/text-btn-disabled': 'component/button/text/disabled-bg',
+      // 'text colors/components-pages-text': '',
+      // 'filter, dropdowns & fields/filter-bg': '',
+      // 'bg, overlay, flyouts/blurred-modal-bg': '',
+      highlight: 'core/highlight',
+      'control colors/Error/error-notification-stop-1': 'core/error-stop-1',
+      'control colors/Error/error-notification-stop-2': 'core/error-stop-2',
+      'control colors/Success/success-notification-stop-1':
+        'core/success-stop-1',
+      'control colors/Success/success-notification-stop-2':
+        'core/success-stop-2',
+      'divs, borders/optional-border': 'core/border/optional-fg',
+      'control colors/Success/signal-success': 'core/signal/success',
+      // 'email variables/divs':'',
+      'control colors/Success/signal-success-hover':
+        'core/signal/success-hover',
+      'control colors/Error/signal-error-fg': 'core/signal/error-fg',
+      'control colors/Success/signal-success-foreground':
+        'core/signal/success-fg',
+      'control colors/Error/signal-error-hover': 'core/signal/error-hover',
+      'control colors/Success/success-notification-fg':
+        'core/signal/success-fg',
+      'control colors/Accent 4/accent4-stop-1': 'core/accent4-stop-1',
+      'control colors/Accent 4/accent4-stop-2': 'core/accent4-stop-2',
+      'buttons, links/Text button or body copy link/text-btn':
+        'component/button/text/primary-fg',
+      'cards/card-bg': 'component/card/bg',
+      'cards/card-stroke': 'component/card/stroke',
+      'text colors/helper-text': 'core/meta/fg',
+      'bg, overlay, flyouts/page BG/bg-gradient-stop-1':
+        'component/page/gradient-stop-1',
+      'bg, overlay, flyouts/page BG/bg-gradient-stop-2':
+        'component/page/gradient-stop-2',
+    }
+
+    const collections = await figma.variables.getLocalVariableCollectionsAsync()
+    let oldCollection = await getCollectionVariables(collections[0].id)
+    let newCollection = await getCollectionVariables(collections[1].id)
+
+    const idMap = {}
+    const oldCollectionKeys = Object.keys(remap)
+    for (const key of oldCollectionKeys) {
+      const oldVar = oldCollection.find((v) => v.name === key)
+      const newVar = newCollection.find((v) => v.name === remap[key])
+      idMap[oldVar.id] = newVar.id
+    }
+
+    let nodes = await getNodesWithBoundVariables(
+      figma.currentPage,
+      () => true,
+      false
+    )
+
+    for (const node of nodes) {
+      // console.log(node)
+      if (idMap.hasOwnProperty(node.variable.id)) {
+        const figmaNode = await figma.getNodeByIdAsync(node.id)
+        if (figmaNode) {
+          // console.log(figmaNode)
+
+          try {
+            await setNodeAttributeToVariable(
+              figmaNode,
+              node.type,
+              idMap[node.variable.id]
+            )
+          } catch (e) {
+            console.log(
+              `cant bind node ${figmaNode.name}:${figmaNode.id} with variable ${
+                idMap[node.variable.id]
+              }`
+            )
+          }
+        }
+      }
+    }
+  }
+  if (msg.type === 'getVariablesToRemap') {
+    // const results = await getStyles()
+    const ignoreList = [
+      'url bar (ignore)/url-bar-bg',
+      'url bar (ignore)/url-bar-black',
+      'url bar (ignore)/url-bar-red',
+      'url bar (ignore)/url-bar-yellow',
+      'url bar (ignore)/url-bar-green',
+      'url bar (ignore)/url-bar',
+    ]
+
+    const collections = await figma.variables.getLocalVariableCollectionsAsync()
+    let nestedCollection = await getCollectionVariables(collections[1].id)
+    let collectionVariables = await getCollectionVariables(collections[0].id)
+    collectionVariables = collectionVariables.filter(
+      (variable) =>
+        variable.resolvedType === 'COLOR' && !ignoreList.includes(variable.name)
+    )
+    let nodes = await getNodesWithBoundVariables(
+      figma.currentPage,
+      () => true,
+      false,
+      msg.payload.includeInstanceNodes
+    )
+
+    const unusedVars = []
+    for (const variable of collectionVariables) {
+      const obj = variable
+      obj.nodes = []
+
+      nodes.forEach((node) => {
+        if (node.variable.id === variable.id) {
+          obj.nodes.push(node)
+        }
+      })
+      nestedCollection.forEach((v) => {
+        if (
+          Object.values(v.valuesByMode).some(
+            (value) => value.id && value.id === variable.id
+          )
+        ) {
+          obj.nodes.push(v)
+        }
+      })
+      if (obj.nodes.length) {
+        unusedVars.push(obj)
+      }
+    }
+    // console.log(unusedVars)
+
+    figma.ui.postMessage({
+      type: 'returnVariablesToRemap',
+      payload: JSON.stringify(unusedVars),
+    })
+  }
+  if (msg.type === 'getBoundNodes') {
+    console.log(figma.currentPage)
+    let nodes = await getNodesWithBoundVariables(
+      figma.currentPage,
+      () => true,
+      false
+    )
+    // nodes = nodes.filter((node) => !node.name.includes('ignore--'))
+    console.log(nodes)
+    figma.ui.postMessage({
+      type: 'returnBoundNodes',
+      payload: JSON.stringify(nodes),
+    })
+    console.log(nodes)
+  }
+
+  if (msg.type === 'ignoreUnusedVariable') {
+    const ignoredVariables = JSON.parse(
+      await figma.root.getPluginData('ignoredVariables')
+    )
+    const { id } = JSON.parse(msg.payload)
+    ignoredVariables[id] = ignoredVariables[id] ? !ignoredVariables[id] : true
+    figma.root.setPluginData(
+      'ignoredVariables',
+      JSON.stringify(ignoredVariables)
+    )
+  }
+
+  if (msg.type === 'getFrames') {
+    console.log(figma.currentPage)
+
+    const frameNodes = figma.currentPage.children.map((child) => ({
+      name: child.name,
+      id: child.id,
+    }))
+    const nodes = await getNodesWithBoundVariables(
+      figma.currentPage,
+      () => true,
+      false
+    )
+    const filteredNodes = nodes.filter(
+      (node) =>
+        !node.variable.name.startsWith('component/') &&
+        !node.variable.name.startsWith('core/')
+    )
+    // console.log(filteredNodes);
+
+    function findFrame(node, frameNodes) {
+      const frame = node.name.split('/')[1].trim().split(':')[1]
+      return frameNodes.find((f) => f.name === frame)
+    }
+
+    function hasFrame(frames, node) {
+      return frames.some((f) => f.name === node.name)
+    }
+
+    const frames = {}
+    for (const node of nodes) {
+      const frameNode = findFrame(node, frameNodes)
+      const frameName = frameNode?.name
+      if (frameName) {
+        if (!frames.hasOwnProperty(frameNode.id))
+          frames[frameNode.id] = {
+            id: frameNode.id,
+            name: frameName,
+            nodesToChange: [],
+            totalNodes: 0,
+            progress: 0,
+          }
+        if (
+          !node.variable.name.startsWith('component/') &&
+          !node.variable.name.startsWith('core/')
+        ) {
+          frames[frameNode.id].nodesToChange.push(node)
+        }
+        const frame = frames[frameNode.id]
+        frames[frameNode.id].totalNodes++
+        frames[frameNode.id].progress =
+          (frame.totalNodes - frame.nodesToChange.length) / frame.totalNodes
+      }
+    }
+
+    // console.log(frames)
+
+    figma.ui.postMessage({
+      type: 'returnFrames',
+      payload: frames,
+    })
+  }
+
+  if (msg.type === 'createVariableSet') {
+    await createVariableSet(msg.payload)
+  }
+
+  if (msg.type === 'migrateNodeVariables') {
+    await migrateNodeVariables(msg.payload)
+  }
+
+  if (msg.type === 'assignVariableToNodes') {
+    const data = JSON.parse(msg.payload)
+    for (const node of data.nodes) {
+      const figmaNode = await figma.getNodeByIdAsync(node.id)
+      await setNodeAttributeToVariable(figmaNode, node.type, data.variableId)
+    }
+  }
+
+  if (msg.type === 'focusNode') {
+    const { nodeId } = JSON.parse(msg.payload)
+
+    const node = await figma.getNodeByIdAsync(nodeId)
+    if (!node) return
+
+    let parentNode = node.parent
+    while (parentNode && parentNode.type !== 'PAGE') {
+      parentNode = parentNode.parent
+    }
+    if (parentNode) {
+      await figma.setCurrentPageAsync(parentNode)
+    }
+    // console.log(node);
+    figma.currentPage.selection = [node]
+    figma.viewport.scrollAndZoomIntoView([node])
+  }
+
+  if (msg.type === 'getNodesBoundToCollection') {
+    exportNodesBoundToCollection()
+  }
+
+  if (msg.type === 'exportCollectionVariables') {
+    exportCollectionVariables()
+  }
+
+  if (msg.type === 'importCollectionVariables') {
+    importCollectionVariables(JSON.parse(msg.payload))
+    // importStyles(JSON.parse(msg.payload))
+  }
+  if (msg.type === 'importBoundNodes') {
+    importBoundNodes(JSON.parse(msg.payload))
+  }
+
+  if (msg.type === 'migrateVariables') {
+  }
+
+  if (msg.type === 'toggleMinimize') {
+    if (windowHeight === minimizedHeight) {
+      // Restore previous size
+      windowWidth = previousWidth
+      windowHeight = previousHeight
+    } else {
+      // Store current size and minimize
+      previousWidth = windowWidth
+      previousHeight = windowHeight
+      windowWidth = minimizedWidth
+      windowHeight = minimizedHeight
+    }
+    figma.ui.resize(windowWidth, windowHeight)
+    await saveWindowSize(windowWidth, windowHeight)
+  }
   // Make sure to close the plugin when you're done. Otherwise the plugin will
   // keep running, which shows the cancel button at the bottom of the screen.
-};
+  if (msg.type === 'cancel') {
+    figma.closePlugin()
+  }
+  if (msg.type === 'testMessage') {
+    console.log('hello')
+  }
+  if (msg.type === 'resize') {
+    const { width, height } = msg
+    windowWidth = width
+    windowHeight = height
+    figma.ui.resize(windowWidth, windowHeight)
+    // Save new dimensions
+    await saveWindowSize(windowWidth, windowHeight)
+  }
+
+  await messageBridge(msg)
+}
+
+async function loadMappings() {
+  const nodes = await getNodesWithBoundVariables(
+    figma.currentPage,
+    () => true,
+    false
+  )
+  // console.log(nodes)
+
+  const filteredNodes = nodes.filter(
+    (node) =>
+      node.variable.name.startsWith('component/') ||
+      node.variable.name.startsWith('core/')
+  )
+  await figma.root.setPluginData(
+    'correctMappings',
+    JSON.stringify(filteredNodes)
+  )
+  console.log(filteredNodes)
+}
+// Init
+;(async () => {
+  // Run on launch as well
+  // console.log(figma.currentPage)
+
+  if (figma.currentPage.selection.length) getSelection()
+
+  // await loadMappings()
+  // await migrateVariables();
+  // await variableCheck();
+
+  // const collectionId = 'VariableCollectionId:3410:21870'
+  // const modes = await getModes(collectionId)
+  // const modeObject = {};
+  // const collectionVariables = await getCollectionVariables(collectionId)
+  // console.log(collectionVariables);
+
+  // console.log(JSON.parse(await figma.root.getPluginData('correctMappings')))
+
+  // Get all nodes with a fill or stroke
+  // const nodes = await getNodeTree(figma.currentPage)
+  // console.log(nodes);
+
+  // console.log(nodes)
+  // Get all nodes with bound variables that start with 'component/' or 'core/'
+  // console.log(filteredNodes)
+
+  // // Get all variables that start with 'component/' or 'core/'
+  // const filteredVariables = await getFilteredVariables(figma.currentPage)
+  // console.log(filteredVariables.map((v) => ({ name: v.name, id: v.id })))
+})()

@@ -1,0 +1,2690 @@
+[
+  {
+    "name": "core/light/main",
+    "id": "VariableID:3410:21871"
+  },
+  {
+    "name": "core/light/opacity-25",
+    "id": "VariableID:3410:21872"
+  },
+  {
+    "name": "core/light/opacity-40",
+    "id": "VariableID:3410:21873"
+  },
+  {
+    "name": "core/light/opacity-50",
+    "id": "VariableID:3410:21874"
+  },
+  {
+    "name": "core/light/opacity-80",
+    "id": "VariableID:3410:21875"
+  },
+  {
+    "name": "core/light/gray",
+    "id": "VariableID:3410:21876"
+  },
+  {
+    "name": "core/very-light/gray",
+    "id": "VariableID:3410:21877"
+  },
+  {
+    "name": "core/medium/gray",
+    "id": "VariableID:3410:21878"
+  },
+  {
+    "name": "core/medium/gray-opacity-50",
+    "id": "VariableID:3410:21879"
+  },
+  {
+    "name": "core/dark/gray-opacity-80",
+    "id": "VariableID:3410:21880"
+  },
+  {
+    "name": "core/dark/main",
+    "id": "VariableID:3410:21881"
+  },
+  {
+    "name": "core/dark/opacity-10",
+    "id": "VariableID:3410:21882"
+  },
+  {
+    "name": "core/dark/opacity-25",
+    "id": "VariableID:3410:21883"
+  },
+  {
+    "name": "core/dark/opacity-35",
+    "id": "VariableID:3410:21884"
+  },
+  {
+    "name": "core/dark/opacity-50",
+    "id": "VariableID:3410:21885"
+  },
+  {
+    "name": "core/dark/opacity-60",
+    "id": "VariableID:3410:21886"
+  },
+  {
+    "name": "core/dark/opacity-65",
+    "id": "VariableID:3410:21887"
+  },
+  {
+    "name": "core/dark/opacity-75",
+    "id": "VariableID:3410:21888"
+  },
+  {
+    "name": "core/dark/opacity-80",
+    "id": "VariableID:3410:21889"
+  },
+  {
+    "name": "core/radius/sm",
+    "id": "VariableID:3410:21890"
+  },
+  {
+    "name": "core/radius/lg",
+    "id": "VariableID:3410:21891"
+  },
+  {
+    "name": "core/gradient/1",
+    "id": "VariableID:3410:21892"
+  },
+  {
+    "name": "core/gradient/2",
+    "id": "VariableID:3410:21893"
+  },
+  {
+    "name": "core/gradient/3",
+    "id": "VariableID:3410:21894"
+  },
+  {
+    "name": "core/gradient/4",
+    "id": "VariableID:3410:21895"
+  },
+  {
+    "name": "core/gradient/5",
+    "id": "VariableID:3410:21896"
+  },
+  {
+    "name": "core/gradient/6",
+    "id": "VariableID:3410:21897"
+  },
+  {
+    "name": "core/gradient/7",
+    "id": "VariableID:3410:21898"
+  },
+  {
+    "name": "core/gradient/8",
+    "id": "VariableID:3410:21899"
+  },
+  {
+    "name": "core/gradient/9",
+    "id": "VariableID:3410:21900"
+  },
+  {
+    "name": "core/gradient/10",
+    "id": "VariableID:3410:21901"
+  },
+  {
+    "name": "core/gradient/11",
+    "id": "VariableID:3410:21902"
+  },
+  {
+    "name": "core/gradient/12",
+    "id": "VariableID:3410:21903"
+  },
+  {
+    "name": "core/gradient/13",
+    "id": "VariableID:3410:21904"
+  },
+  {
+    "name": "core/gradient/14",
+    "id": "VariableID:3410:21905"
+  },
+  {
+    "name": "core/gradient/15",
+    "id": "VariableID:3410:21906"
+  },
+  {
+    "name": "core/gradient/16",
+    "id": "VariableID:3410:21907"
+  },
+  {
+    "name": "core/gradient/17",
+    "id": "VariableID:3410:21908"
+  },
+  {
+    "name": "core/gradient/18",
+    "id": "VariableID:3410:21909"
+  },
+  {
+    "name": "core/accent/main",
+    "id": "VariableID:3410:21910"
+  },
+  {
+    "name": "core/primary/fg",
+    "id": "VariableID:3410:21911"
+  },
+  {
+    "name": "core/meta/fg",
+    "id": "VariableID:3410:21912"
+  },
+  {
+    "name": "core/signal/error",
+    "id": "VariableID:3410:21913"
+  },
+  {
+    "name": "core/signal/error-opacity-25",
+    "id": "VariableID:3410:21914"
+  },
+  {
+    "name": "core/signal/error-opacity-80",
+    "id": "VariableID:3410:21915"
+  },
+  {
+    "name": "core/signal/success",
+    "id": "VariableID:3410:21916"
+  },
+  {
+    "name": "core/signal/success-opacity-80",
+    "id": "VariableID:3410:21917"
+  },
+  {
+    "name": "core/border/primary-fg",
+    "id": "VariableID:3410:21918"
+  },
+  {
+    "name": "component/card/bg",
+    "id": "VariableID:3410:21919"
+  },
+  {
+    "name": "component/popover/primary-bg",
+    "id": "VariableID:3410:21920"
+  },
+  {
+    "name": "component/shadow/1",
+    "id": "VariableID:3410:21921"
+  },
+  {
+    "name": "component/shadow/2",
+    "id": "VariableID:3410:21922"
+  },
+  {
+    "name": "component/shadow/3",
+    "id": "VariableID:3410:21923"
+  },
+  {
+    "name": "component/body/fg",
+    "id": "VariableID:3410:21924"
+  },
+  {
+    "name": "component/body/bg",
+    "id": "VariableID:3410:21925"
+  },
+  {
+    "name": "component/page/bg",
+    "id": "VariableID:3410:21926"
+  },
+  {
+    "name": "component/page/bg-image",
+    "id": "VariableID:3410:21927"
+  },
+  {
+    "name": "component/page/tablet-bg-image",
+    "id": "VariableID:3410:21928"
+  },
+  {
+    "name": "component/page/mobile-bg-image",
+    "id": "VariableID:3410:21929"
+  },
+  {
+    "name": "component/badge/bg",
+    "id": "VariableID:3410:21930"
+  },
+  {
+    "name": "component/badge/fg",
+    "id": "VariableID:3410:21931"
+  },
+  {
+    "name": "component/table/header-bg",
+    "id": "VariableID:3410:21932"
+  },
+  {
+    "name": "component/table/header-fg",
+    "id": "VariableID:3410:21933"
+  },
+  {
+    "name": "component/table/row-bg",
+    "id": "VariableID:3410:21934"
+  },
+  {
+    "name": "component/table/row-fg",
+    "id": "VariableID:3410:21935"
+  },
+  {
+    "name": "component/table/divider-fg",
+    "id": "VariableID:3410:21936"
+  },
+  {
+    "name": "component/add-to-calendar-modal/bg",
+    "id": "VariableID:3410:21937"
+  },
+  {
+    "name": "component/add-to-calendar-modal/cal-link-bg",
+    "id": "VariableID:3410:21938"
+  },
+  {
+    "name": "component/add-to-calendar-modal/cal-link-border-fg",
+    "id": "VariableID:3410:21939"
+  },
+  {
+    "name": "component/add-to-calendar-modal/fg",
+    "id": "VariableID:3410:21940"
+  },
+  {
+    "name": "component/add-to-calendar-modal/shadow-fg",
+    "id": "VariableID:3410:21941"
+  },
+  {
+    "name": "component/animation-spinner/fg",
+    "id": "VariableID:3410:21942"
+  },
+  {
+    "name": "component/asset-card/badge-completed-bg",
+    "id": "VariableID:3410:21943"
+  },
+  {
+    "name": "component/asset-card/badge-completed-fg",
+    "id": "VariableID:3410:21944"
+  },
+  {
+    "name": "component/asset-card/badge-locked-bg",
+    "id": "VariableID:3410:21945"
+  },
+  {
+    "name": "component/asset-card/badge-locked-fg",
+    "id": "VariableID:3410:21946"
+  },
+  {
+    "name": "component/asset-card/fg",
+    "id": "VariableID:3410:21947"
+  },
+  {
+    "name": "component/avatar/instructor-border-fg",
+    "id": "VariableID:3410:21948"
+  },
+  {
+    "name": "component/base-banner/bg",
+    "id": "VariableID:3410:21949"
+  },
+  {
+    "name": "component/base-banner/ended-bg",
+    "id": "VariableID:3410:21950"
+  },
+  {
+    "name": "component/base-banner/ended-fg",
+    "id": "VariableID:3410:21951"
+  },
+  {
+    "name": "component/base-banner/expired-fg",
+    "id": "VariableID:3410:21952"
+  },
+  {
+    "name": "component/base-banner/fg",
+    "id": "VariableID:3410:21953"
+  },
+  {
+    "name": "component/base-banner/live-bg",
+    "id": "VariableID:3410:21954"
+  },
+  {
+    "name": "component/base-banner/locked-bg",
+    "id": "VariableID:3410:21955"
+  },
+  {
+    "name": "component/base-banner/locked-fg",
+    "id": "VariableID:3410:21956"
+  },
+  {
+    "name": "component/base-banner/past-bg",
+    "id": "VariableID:3410:21957"
+  },
+  {
+    "name": "component/base-banner/replay-bg",
+    "id": "VariableID:3410:21958"
+  },
+  {
+    "name": "component/base-banner/replay-fg",
+    "id": "VariableID:3410:21959"
+  },
+  {
+    "name": "component/base-banner/transcribing-bg",
+    "id": "VariableID:3410:21960"
+  },
+  {
+    "name": "component/base-banner/transcribing-fg",
+    "id": "VariableID:3410:21961"
+  },
+  {
+    "name": "component/base-filter-builder/tag-border-fg",
+    "id": "VariableID:3410:21962"
+  },
+  {
+    "name": "component/base-video-chat/livestream-controls-bg",
+    "id": "VariableID:3410:21963"
+  },
+  {
+    "name": "component/base-video-chat/placeholder-bg",
+    "id": "VariableID:3410:21964"
+  },
+  {
+    "name": "component/base-video-chat/placeholder-fg",
+    "id": "VariableID:3410:21965"
+  },
+  {
+    "name": "component/base-video-player/control-bg",
+    "id": "VariableID:3410:21966"
+  },
+  {
+    "name": "component/base-video-player/control-fg",
+    "id": "VariableID:3410:21967"
+  },
+  {
+    "name": "component/base-video-player/volume-slider-fg",
+    "id": "VariableID:3410:21968"
+  },
+  {
+    "name": "component/breadcrumbs/breadcrumb-current-fg",
+    "id": "VariableID:3410:21969"
+  },
+  {
+    "name": "component/breadcrumbs/breadcrumb-fg",
+    "id": "VariableID:3410:21970"
+  },
+  {
+    "name": "component/breadcrumbs/breadcrumb-hover-fg",
+    "id": "VariableID:3410:21971"
+  },
+  {
+    "name": "component/breadcrumbs/separator-fg",
+    "id": "VariableID:3410:21972"
+  },
+  {
+    "name": "component/button/danger-accent",
+    "id": "VariableID:3410:21973"
+  },
+  {
+    "name": "component/button/danger-hover-accent",
+    "id": "VariableID:3410:21974"
+  },
+  {
+    "name": "component/button/danger-hover-main",
+    "id": "VariableID:3410:21975"
+  },
+  {
+    "name": "component/button/danger-main",
+    "id": "VariableID:3410:21976"
+  },
+  {
+    "name": "component/button/disabled-accent",
+    "id": "VariableID:3410:21977"
+  },
+  {
+    "name": "component/button/disabled-main",
+    "id": "VariableID:3410:21978"
+  },
+  {
+    "name": "component/button/highlight-accent",
+    "id": "VariableID:3410:21979"
+  },
+  {
+    "name": "component/button/highlight-hover-accent",
+    "id": "VariableID:3410:21980"
+  },
+  {
+    "name": "component/button/highlight-hover-main",
+    "id": "VariableID:3410:21981"
+  },
+  {
+    "name": "component/button/highlight-main",
+    "id": "VariableID:3410:21982"
+  },
+  {
+    "name": "component/button/primary-accent",
+    "id": "VariableID:3410:21983"
+  },
+  {
+    "name": "component/button/primary-hover-accent",
+    "id": "VariableID:3410:21984"
+  },
+  {
+    "name": "component/button/primary-hover-main",
+    "id": "VariableID:3410:21985"
+  },
+  {
+    "name": "component/button/primary-main",
+    "id": "VariableID:3410:21986"
+  },
+  {
+    "name": "component/button/secondary-accent",
+    "id": "VariableID:3410:21987"
+  },
+  {
+    "name": "component/button/secondary-hover-accent",
+    "id": "VariableID:3410:21988"
+  },
+  {
+    "name": "component/button/secondary-hover-main",
+    "id": "VariableID:3410:21989"
+  },
+  {
+    "name": "component/button/secondary-main",
+    "id": "VariableID:3410:21990"
+  },
+  {
+    "name": "component/carousel-badges/arrow-fg",
+    "id": "VariableID:3410:21991"
+  },
+  {
+    "name": "component/carousel-badges/badge-info-fg",
+    "id": "VariableID:3410:21992"
+  },
+  {
+    "name": "component/challenge-card/annotation-bg",
+    "id": "VariableID:3410:21993"
+  },
+  {
+    "name": "component/challenge-card/annotation-fg",
+    "id": "VariableID:3410:21994"
+  },
+  {
+    "name": "component/challenge-card/bg",
+    "id": "VariableID:3410:21995"
+  },
+  {
+    "name": "component/challenge-card/fg",
+    "id": "VariableID:3410:21996"
+  },
+  {
+    "name": "component/challenge-card/meta-fg",
+    "id": "VariableID:3410:21997"
+  },
+  {
+    "name": "component/challenge-card/progress-bar-bg",
+    "id": "VariableID:3410:21998"
+  },
+  {
+    "name": "component/challenge-card/progress-bar-failed-bg",
+    "id": "VariableID:3410:21999"
+  },
+  {
+    "name": "component/challenge-card/progress-bar-failed-fg",
+    "id": "VariableID:3410:22000"
+  },
+  {
+    "name": "component/challenge-card/progress-bar-fg",
+    "id": "VariableID:3410:22001"
+  },
+  {
+    "name": "component/challenge-card/progress-bar-percentage-fg",
+    "id": "VariableID:3410:22002"
+  },
+  {
+    "name": "component/channel-about/card-bg",
+    "id": "VariableID:3410:22003"
+  },
+  {
+    "name": "component/channel-about/card-shadow-fg",
+    "id": "VariableID:3410:22004"
+  },
+  {
+    "name": "component/channel-about/divider-fg",
+    "id": "VariableID:3410:22005"
+  },
+  {
+    "name": "component/channel-admin/divider-fg",
+    "id": "VariableID:3410:22006"
+  },
+  {
+    "name": "component/channel-admin/table-bg",
+    "id": "VariableID:3410:22007"
+  },
+  {
+    "name": "component/channel-admin/table-header-bg",
+    "id": "VariableID:3410:22008"
+  },
+  {
+    "name": "component/channel-admin/table-header-fg",
+    "id": "VariableID:3410:22009"
+  },
+  {
+    "name": "component/channel-admin/table-row-bg",
+    "id": "VariableID:3410:22010"
+  },
+  {
+    "name": "component/channel-admin/table-row-border-fg",
+    "id": "VariableID:3410:22011"
+  },
+  {
+    "name": "component/channel-admin/table-row-fg",
+    "id": "VariableID:3410:22012"
+  },
+  {
+    "name": "component/channel-admin/table-shadow-fg",
+    "id": "VariableID:3410:22013"
+  },
+  {
+    "name": "component/channel-card/banner-image",
+    "id": "VariableID:3410:22014"
+  },
+  {
+    "name": "component/channel-card/bg",
+    "id": "VariableID:3410:22015"
+  },
+  {
+    "name": "component/channel-card/fg",
+    "id": "VariableID:3410:22016"
+  },
+  {
+    "name": "component/channel-card/status-fg",
+    "id": "VariableID:3410:22017"
+  },
+  {
+    "name": "component/channel-card/status-private-bg",
+    "id": "VariableID:3410:22018"
+  },
+  {
+    "name": "component/channel-live-comments/bg",
+    "id": "VariableID:3410:22019"
+  },
+  {
+    "name": "component/channel-live-comments/fg",
+    "id": "VariableID:3410:22020"
+  },
+  {
+    "name": "component/channel-live-comments/input-container-bg",
+    "id": "VariableID:3410:22021"
+  },
+  {
+    "name": "component/channel-live-comments/input-container-shadow-fg",
+    "id": "VariableID:3410:22022"
+  },
+  {
+    "name": "component/channel-live-comments/shadow-fg",
+    "id": "VariableID:3410:22023"
+  },
+  {
+    "name": "component/channel-live-participation/bg",
+    "id": "VariableID:3410:22024"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-bg",
+    "id": "VariableID:3410:22025"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-border-fg",
+    "id": "VariableID:3410:22026"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-active-bg",
+    "id": "VariableID:3410:22027"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-active-border-fg",
+    "id": "VariableID:3410:22028"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-badge-bg",
+    "id": "VariableID:3410:22029"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-badge-fg",
+    "id": "VariableID:3410:22030"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-badge-qa-bg",
+    "id": "VariableID:3410:22031"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-bg",
+    "id": "VariableID:3410:22032"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-border-fg",
+    "id": "VariableID:3410:22033"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-hover-bg",
+    "id": "VariableID:3410:22034"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-hover-border-fg",
+    "id": "VariableID:3410:22035"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-shadow-fg",
+    "id": "VariableID:3410:22036"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-tooltip-bg",
+    "id": "VariableID:3410:22037"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-icon-tooltip-shadow-fg",
+    "id": "VariableID:3410:22038"
+  },
+  {
+    "name": "component/channel-live-participation/navigation-shadow-fg",
+    "id": "VariableID:3410:22039"
+  },
+  {
+    "name": "component/channel-live-participation/shadow-fg",
+    "id": "VariableID:3410:22040"
+  },
+  {
+    "name": "component/channel-moderation/annotation-bg",
+    "id": "VariableID:3410:22041"
+  },
+  {
+    "name": "component/channel-moderation/annotation-fg",
+    "id": "VariableID:3410:22042"
+  },
+  {
+    "name": "component/channel-moderation/divider-fg",
+    "id": "VariableID:3410:22043"
+  },
+  {
+    "name": "component/channel-moderation/table-bg",
+    "id": "VariableID:3410:22044"
+  },
+  {
+    "name": "component/channel-moderation/table-header-bg",
+    "id": "VariableID:3410:22045"
+  },
+  {
+    "name": "component/channel-moderation/table-header-fg",
+    "id": "VariableID:3410:22046"
+  },
+  {
+    "name": "component/channel-moderation/table-row-bg",
+    "id": "VariableID:3410:22047"
+  },
+  {
+    "name": "component/channel-moderation/table-row-border-fg",
+    "id": "VariableID:3410:22048"
+  },
+  {
+    "name": "component/channel-moderation/table-row-fg",
+    "id": "VariableID:3410:22049"
+  },
+  {
+    "name": "component/channel-moderation/table-shadow-fg",
+    "id": "VariableID:3410:22050"
+  },
+  {
+    "name": "component/channel-post-card/bg",
+    "id": "VariableID:3410:22051"
+  },
+  {
+    "name": "component/channel-post-card/deleted-fg",
+    "id": "VariableID:3410:22052"
+  },
+  {
+    "name": "component/channel-post-card/divider-fg",
+    "id": "VariableID:3410:22053"
+  },
+  {
+    "name": "component/channel-post-card/fg",
+    "id": "VariableID:3410:22054"
+  },
+  {
+    "name": "component/channel-post-comment/disabled-fg",
+    "id": "VariableID:3410:22055"
+  },
+  {
+    "name": "component/channel-post-comment/divider-fg",
+    "id": "VariableID:3410:22056"
+  },
+  {
+    "name": "component/channel-post-comment/indent-border-fg",
+    "id": "VariableID:3410:22057"
+  },
+  {
+    "name": "component/channel-post-live/bg",
+    "id": "VariableID:3410:22058"
+  },
+  {
+    "name": "component/channel-post-live/top-nav-bg",
+    "id": "VariableID:3410:22059"
+  },
+  {
+    "name": "component/channel-post-live/top-nav-fg",
+    "id": "VariableID:3410:22060"
+  },
+  {
+    "name": "component/channel-post-new/divider-fg",
+    "id": "VariableID:3410:22061"
+  },
+  {
+    "name": "component/channel-post-new/media-thumbnail-preview-bg",
+    "id": "VariableID:3410:22062"
+  },
+  {
+    "name": "component/channel-post-new/post-bg",
+    "id": "VariableID:3410:22063"
+  },
+  {
+    "name": "component/channel-post-new/thumbnail-post-bg",
+    "id": "VariableID:3410:22064"
+  },
+  {
+    "name": "component/channel-post-pending/bg",
+    "id": "VariableID:3410:22065"
+  },
+  {
+    "name": "component/channel-post-pending/divider-fg",
+    "id": "VariableID:3410:22066"
+  },
+  {
+    "name": "component/channel-post/deleted-fg",
+    "id": "VariableID:3410:22067"
+  },
+  {
+    "name": "component/channel-post/divider-fg",
+    "id": "VariableID:3410:22068"
+  },
+  {
+    "name": "component/channel-post/thumbnail-bg",
+    "id": "VariableID:3410:22069"
+  },
+  {
+    "name": "component/channel-post/-list-no-results-fg",
+    "id": "VariableID:3410:22070"
+  },
+  {
+    "name": "component/channel-header/banner-default-image",
+    "id": "VariableID:3410:22071"
+  },
+  {
+    "name": "component/channel-header/bg",
+    "id": "VariableID:3410:22072"
+  },
+  {
+    "name": "component/channel-header/divider-fg",
+    "id": "VariableID:3410:22073"
+  },
+  {
+    "name": "component/channel/shadow",
+    "id": "VariableID:3410:22074"
+  },
+  {
+    "name": "component/chat-messages/another-bg",
+    "id": "VariableID:3410:22075"
+  },
+  {
+    "name": "component/chat-messages/avatar-bg",
+    "id": "VariableID:3410:22076"
+  },
+  {
+    "name": "component/chat-messages/channel-header-arrow-hover-bg",
+    "id": "VariableID:3410:22077"
+  },
+  {
+    "name": "component/chat-messages/channel-header-bg",
+    "id": "VariableID:3410:22078"
+  },
+  {
+    "name": "component/chat-messages/channel-header-shadow-fg",
+    "id": "VariableID:3410:22079"
+  },
+  {
+    "name": "component/chat-messages/input-bg",
+    "id": "VariableID:3410:22080"
+  },
+  {
+    "name": "component/chat-messages/input-border-fg",
+    "id": "VariableID:3410:22081"
+  },
+  {
+    "name": "component/chat-messages/input-border-focus-fg",
+    "id": "VariableID:3410:22082"
+  },
+  {
+    "name": "component/chat-messages/input-fg",
+    "id": "VariableID:3410:22083"
+  },
+  {
+    "name": "component/chat-messages/input-placeholder-fg",
+    "id": "VariableID:3410:22084"
+  },
+  {
+    "name": "component/chat-messages/many-users-bg",
+    "id": "VariableID:3410:22085"
+  },
+  {
+    "name": "component/chat-messages/many-users-border-fg",
+    "id": "VariableID:3410:22086"
+  },
+  {
+    "name": "component/chat-messages/mine-bg",
+    "id": "VariableID:3410:22087"
+  },
+  {
+    "name": "component/chat-messages/mine-fg",
+    "id": "VariableID:3410:22088"
+  },
+  {
+    "name": "component/chat-user/row-border-fg",
+    "id": "VariableID:3410:22089"
+  },
+  {
+    "name": "component/chat-user/row-fg",
+    "id": "VariableID:3410:22090"
+  },
+  {
+    "name": "component/chat-user/row-hover-bg",
+    "id": "VariableID:3410:22091"
+  },
+  {
+    "name": "component/chat/badge-bg",
+    "id": "VariableID:3410:22092"
+  },
+  {
+    "name": "component/chat/badge-fg",
+    "id": "VariableID:3410:22093"
+  },
+  {
+    "name": "component/chat/channel-avatar-bg",
+    "id": "VariableID:3410:22094"
+  },
+  {
+    "name": "component/chat/channel-bg",
+    "id": "VariableID:3410:22095"
+  },
+  {
+    "name": "component/chat/channel-border-fg",
+    "id": "VariableID:3410:22096"
+  },
+  {
+    "name": "component/chat/channel-hover-bg",
+    "id": "VariableID:3410:22097"
+  },
+  {
+    "name": "component/chat/channel-many-users-bg",
+    "id": "VariableID:3410:22098"
+  },
+  {
+    "name": "component/chat/channel-many-users-border-fg",
+    "id": "VariableID:3410:22099"
+  },
+  {
+    "name": "component/chat/channel-time-fg",
+    "id": "VariableID:3410:22100"
+  },
+  {
+    "name": "component/chat/channel-unread-bg",
+    "id": "VariableID:3410:22101"
+  },
+  {
+    "name": "component/chat/channel-unread-fg",
+    "id": "VariableID:3410:22102"
+  },
+  {
+    "name": "component/chat/collapsed-bg",
+    "id": "VariableID:3410:22103"
+  },
+  {
+    "name": "component/chat/collapsed-hover-bg",
+    "id": "VariableID:3410:22104"
+  },
+  {
+    "name": "component/chat/expanded-add-chat-bg",
+    "id": "VariableID:3410:22105"
+  },
+  {
+    "name": "component/chat/expanded-add-chat-fg",
+    "id": "VariableID:3410:22106"
+  },
+  {
+    "name": "component/chat/expanded-body-bg",
+    "id": "VariableID:3410:22107"
+  },
+  {
+    "name": "component/chat/expanded-header-bg",
+    "id": "VariableID:3410:22108"
+  },
+  {
+    "name": "component/chat/expanded-header-dash-bg",
+    "id": "VariableID:3410:22109"
+  },
+  {
+    "name": "component/chat/expanded-header-fg",
+    "id": "VariableID:3410:22110"
+  },
+  {
+    "name": "component/chat/expanded-header-hover-bg",
+    "id": "VariableID:3410:22111"
+  },
+  {
+    "name": "component/chat/fg",
+    "id": "VariableID:3410:22112"
+  },
+  {
+    "name": "component/chat/message-channel-log-bg",
+    "id": "VariableID:3410:22113"
+  },
+  {
+    "name": "component/checkbox/bg",
+    "id": "VariableID:3410:22114"
+  },
+  {
+    "name": "component/checkbox/border-fg",
+    "id": "VariableID:3410:22115"
+  },
+  {
+    "name": "component/checkbox/checked-bg",
+    "id": "VariableID:3410:22116"
+  },
+  {
+    "name": "component/checkbox/checked-border-fg",
+    "id": "VariableID:3410:22117"
+  },
+  {
+    "name": "component/checkbox/checked-fg",
+    "id": "VariableID:3410:22118"
+  },
+  {
+    "name": "component/checkbox/error-border-fg",
+    "id": "VariableID:3410:22119"
+  },
+  {
+    "name": "component/checkbox/error-fg",
+    "id": "VariableID:3410:22120"
+  },
+  {
+    "name": "component/checkbox/fg",
+    "id": "VariableID:3410:22121"
+  },
+  {
+    "name": "component/checkout-drawer/bg",
+    "id": "VariableID:3410:22122"
+  },
+  {
+    "name": "component/checkout-drawer/checkout-points-fg",
+    "id": "VariableID:3410:22123"
+  },
+  {
+    "name": "component/checkout-drawer/divider-fg",
+    "id": "VariableID:3410:22124"
+  },
+  {
+    "name": "component/checkout-drawer/fg",
+    "id": "VariableID:3410:22125"
+  },
+  {
+    "name": "component/checkout-drawer/heading-fg",
+    "id": "VariableID:3410:22126"
+  },
+  {
+    "name": "component/checkout-drawer/item-fg",
+    "id": "VariableID:3410:22127"
+  },
+  {
+    "name": "component/checkout-drawer/item-points-fg",
+    "id": "VariableID:3410:22128"
+  },
+  {
+    "name": "component/checkout-drawer/meta-fg",
+    "id": "VariableID:3410:22129"
+  },
+  {
+    "name": "component/checkout/cart-mobile-bg",
+    "id": "VariableID:3410:22130"
+  },
+  {
+    "name": "component/classroom-associated-content/bg",
+    "id": "VariableID:3410:22131"
+  },
+  {
+    "name": "component/classroom-associated-content/shadow-fg",
+    "id": "VariableID:3410:22132"
+  },
+  {
+    "name": "component/classroom-card/bg",
+    "id": "VariableID:3410:22133"
+  },
+  {
+    "name": "component/classroom-card/live-info-until-fg",
+    "id": "VariableID:3410:22134"
+  },
+  {
+    "name": "component/classroom-carousel/fg",
+    "id": "VariableID:3410:22135"
+  },
+  {
+    "name": "component/classroom-carousel/status-ended-bg",
+    "id": "VariableID:3410:22136"
+  },
+  {
+    "name": "component/classroom-carousel/status-ended-fg",
+    "id": "VariableID:3410:22137"
+  },
+  {
+    "name": "component/classroom-carousel/status-fg",
+    "id": "VariableID:3410:22138"
+  },
+  {
+    "name": "component/classroom-carousel/status-live-bg",
+    "id": "VariableID:3410:22139"
+  },
+  {
+    "name": "component/classroom-carousel/status-on-demand-fg",
+    "id": "VariableID:3410:22140"
+  },
+  {
+    "name": "component/classroom-comments/bg",
+    "id": "VariableID:3410:22141"
+  },
+  {
+    "name": "component/classroom-comments/fg",
+    "id": "VariableID:3410:22142"
+  },
+  {
+    "name": "component/classroom-comments/input-container-bg",
+    "id": "VariableID:3410:22143"
+  },
+  {
+    "name": "component/classroom-comments/input-container-shadow-fg",
+    "id": "VariableID:3410:22144"
+  },
+  {
+    "name": "component/classroom-comments/shadow-fg",
+    "id": "VariableID:3410:22145"
+  },
+  {
+    "name": "component/classroom-dashboard/divider-fg",
+    "id": "VariableID:3410:22146"
+  },
+  {
+    "name": "component/classroom-dashboard/heading-fg",
+    "id": "VariableID:3410:22147"
+  },
+  {
+    "name": "component/classroom-description/divider-fg",
+    "id": "VariableID:3410:22148"
+  },
+  {
+    "name": "component/classroom-info/bg",
+    "id": "VariableID:3410:22149"
+  },
+  {
+    "name": "component/classroom-info/divider-fg",
+    "id": "VariableID:3410:22150"
+  },
+  {
+    "name": "component/classroom-info/fg",
+    "id": "VariableID:3410:22151"
+  },
+  {
+    "name": "component/classroom-knowledge-checks/bg",
+    "id": "VariableID:3410:22152"
+  },
+  {
+    "name": "component/classroom-knowledge-checks/divider-fg",
+    "id": "VariableID:3410:22153"
+  },
+  {
+    "name": "component/classroom-knowledge-checks/fg",
+    "id": "VariableID:3410:22154"
+  },
+  {
+    "name": "component/classroom-live-participation/bg",
+    "id": "VariableID:3410:22155"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-bg",
+    "id": "VariableID:3410:22156"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-border-fg",
+    "id": "VariableID:3410:22157"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-active-bg",
+    "id": "VariableID:3410:22158"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-active-border-fg",
+    "id": "VariableID:3410:22159"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-badge-bg",
+    "id": "VariableID:3410:22160"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-badge-fg",
+    "id": "VariableID:3410:22161"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-badge-qa-bg",
+    "id": "VariableID:3410:22162"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-bg",
+    "id": "VariableID:3410:22163"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-border-fg",
+    "id": "VariableID:3410:22164"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-hover-bg",
+    "id": "VariableID:3410:22165"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-hover-border-fg",
+    "id": "VariableID:3410:22166"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-shadow-fg",
+    "id": "VariableID:3410:22167"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-tooltip-bg",
+    "id": "VariableID:3410:22168"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-icon-tooltip-shadow-fg",
+    "id": "VariableID:3410:22169"
+  },
+  {
+    "name": "component/classroom-live-participation/navigation-shadow-fg",
+    "id": "VariableID:3410:22170"
+  },
+  {
+    "name": "component/classroom-live-participation/shadow-fg",
+    "id": "VariableID:3410:22171"
+  },
+  {
+    "name": "component/classroom-notepad/bg",
+    "id": "VariableID:3410:22172"
+  },
+  {
+    "name": "component/classroom-notepad/divider-fg",
+    "id": "VariableID:3410:22173"
+  },
+  {
+    "name": "component/classroom-notepad/fg",
+    "id": "VariableID:3410:22174"
+  },
+  {
+    "name": "component/classroom-people/bg",
+    "id": "VariableID:3410:22175"
+  },
+  {
+    "name": "component/classroom-people/fg",
+    "id": "VariableID:3410:22176"
+  },
+  {
+    "name": "component/classroom-people/instructor-border-fg",
+    "id": "VariableID:3410:22177"
+  },
+  {
+    "name": "component/classroom-polls/bg",
+    "id": "VariableID:3410:22178"
+  },
+  {
+    "name": "component/classroom-polls/divider-fg",
+    "id": "VariableID:3410:22179"
+  },
+  {
+    "name": "component/classroom-polls/fg",
+    "id": "VariableID:3410:22180"
+  },
+  {
+    "name": "component/classroom-questions/bg",
+    "id": "VariableID:3410:22181"
+  },
+  {
+    "name": "component/classroom-questions/divider-fg",
+    "id": "VariableID:3410:22182"
+  },
+  {
+    "name": "component/classroom-questions/fg",
+    "id": "VariableID:3410:22183"
+  },
+  {
+    "name": "component/classroom-questions/input-container-bg",
+    "id": "VariableID:3410:22184"
+  },
+  {
+    "name": "component/classroom-questions/input-container-shadow-fg",
+    "id": "VariableID:3410:22185"
+  },
+  {
+    "name": "component/classroom-questions/overlay-bg",
+    "id": "VariableID:3410:22186"
+  },
+  {
+    "name": "component/classroom-questions/reply-context-bg",
+    "id": "VariableID:3410:22187"
+  },
+  {
+    "name": "component/classroom-questions/reply-context-fg",
+    "id": "VariableID:3410:22188"
+  },
+  {
+    "name": "component/classroom-questions/shadow-fg",
+    "id": "VariableID:3410:22189"
+  },
+  {
+    "name": "component/classroom/banner-bg",
+    "id": "VariableID:3410:22190"
+  },
+  {
+    "name": "component/classroom/banner-coaching-session-bg",
+    "id": "VariableID:3410:22191"
+  },
+  {
+    "name": "component/classroom/banner-fg",
+    "id": "VariableID:3410:22192"
+  },
+  {
+    "name": "component/classroom/banner-learning-session-bg",
+    "id": "VariableID:3410:22193"
+  },
+  {
+    "name": "component/classroom/banner-lecture-hall-bg",
+    "id": "VariableID:3410:22194"
+  },
+  {
+    "name": "component/classroom/divider-fg",
+    "id": "VariableID:3410:22195"
+  },
+  {
+    "name": "component/classroom/-associated-content-bg",
+    "id": "VariableID:3410:22196"
+  },
+  {
+    "name": "component/collapsible/bg",
+    "id": "VariableID:3410:22197"
+  },
+  {
+    "name": "component/collapsible/fg",
+    "id": "VariableID:3410:22198"
+  },
+  {
+    "name": "component/collapsible/header-bg",
+    "id": "VariableID:3410:22199"
+  },
+  {
+    "name": "component/collapsible/header-fg",
+    "id": "VariableID:3410:22200"
+  },
+  {
+    "name": "component/course-card/bg",
+    "id": "VariableID:3410:22201"
+  },
+  {
+    "name": "component/course-card/divider-fg",
+    "id": "VariableID:3410:22202"
+  },
+  {
+    "name": "component/course-card/fg",
+    "id": "VariableID:3410:22203"
+  },
+  {
+    "name": "component/course-card/status-ended-bg",
+    "id": "VariableID:3410:22204"
+  },
+  {
+    "name": "component/course-card/status-ended-fg",
+    "id": "VariableID:3410:22205"
+  },
+  {
+    "name": "component/course-card/status-fg",
+    "id": "VariableID:3410:22206"
+  },
+  {
+    "name": "component/course-card/status-live-bg",
+    "id": "VariableID:3410:22207"
+  },
+  {
+    "name": "component/course-card/status-on-demand-bg",
+    "id": "VariableID:3410:22208"
+  },
+  {
+    "name": "component/course/divider-fg",
+    "id": "VariableID:3410:22209"
+  },
+  {
+    "name": "component/dashboard/banner-fg",
+    "id": "VariableID:3410:22210"
+  },
+  {
+    "name": "component/dashboard/carousel-fg",
+    "id": "VariableID:3410:22211"
+  },
+  {
+    "name": "component/dashboard/heading-fg",
+    "id": "VariableID:3410:22212"
+  },
+  {
+    "name": "component/dashboard/stats-badges-bg",
+    "id": "VariableID:3410:22213"
+  },
+  {
+    "name": "component/dashboard/stats-fg",
+    "id": "VariableID:3410:22214"
+  },
+  {
+    "name": "component/dashboard/stats-points-bg",
+    "id": "VariableID:3410:22215"
+  },
+  {
+    "name": "component/dashboard/stats-shadow-fg",
+    "id": "VariableID:3410:22216"
+  },
+  {
+    "name": "component/datepicker/bg",
+    "id": "VariableID:3410:22217"
+  },
+  {
+    "name": "component/datepicker/cell-active-bg",
+    "id": "VariableID:3410:22218"
+  },
+  {
+    "name": "component/datepicker/cell-active-fg",
+    "id": "VariableID:3410:22219"
+  },
+  {
+    "name": "component/datepicker/cell-hover-bg",
+    "id": "VariableID:3410:22220"
+  },
+  {
+    "name": "component/datepicker/cell-hover-fg",
+    "id": "VariableID:3410:22221"
+  },
+  {
+    "name": "component/datepicker/cell-secondary-bg",
+    "id": "VariableID:3410:22222"
+  },
+  {
+    "name": "component/datepicker/cell-secondary-fg",
+    "id": "VariableID:3410:22223"
+  },
+  {
+    "name": "component/datepicker/cell-secondary-hover-bg",
+    "id": "VariableID:3410:22224"
+  },
+  {
+    "name": "component/datepicker/fg",
+    "id": "VariableID:3410:22225"
+  },
+  {
+    "name": "component/dropdown/bg",
+    "id": "VariableID:3410:22226"
+  },
+  {
+    "name": "component/dropdown/border-error-fg",
+    "id": "VariableID:3410:22227"
+  },
+  {
+    "name": "component/dropdown/border-fg",
+    "id": "VariableID:3410:22228"
+  },
+  {
+    "name": "component/dropdown/fg",
+    "id": "VariableID:3410:22229"
+  },
+  {
+    "name": "component/dropdown/lined-border-fg",
+    "id": "VariableID:3410:22230"
+  },
+  {
+    "name": "component/dropdown/list-shadow",
+    "id": "VariableID:3410:22231"
+  },
+  {
+    "name": "component/dropdown/option-hovered-bg",
+    "id": "VariableID:3410:22232"
+  },
+  {
+    "name": "component/dropdown/option-hovered-fg",
+    "id": "VariableID:3410:22233"
+  },
+  {
+    "name": "component/dropdown/option-selected-bg",
+    "id": "VariableID:3410:22234"
+  },
+  {
+    "name": "component/dropdown/option-selected-fg",
+    "id": "VariableID:3410:22235"
+  },
+  {
+    "name": "component/dropdown/option-selected-hovered-bg",
+    "id": "VariableID:3410:22236"
+  },
+  {
+    "name": "component/dropdown/option-selected-hovered-fg",
+    "id": "VariableID:3410:22237"
+  },
+  {
+    "name": "component/dropdown/options-bg",
+    "id": "VariableID:3410:22238"
+  },
+  {
+    "name": "component/dropdown/options-border-fg",
+    "id": "VariableID:3410:22239"
+  },
+  {
+    "name": "component/dropdown/outlined-border-fg",
+    "id": "VariableID:3410:22240"
+  },
+  {
+    "name": "component/dropdown/placeholder-fg",
+    "id": "VariableID:3410:22241"
+  },
+  {
+    "name": "component/dropdown/radius",
+    "id": "VariableID:3410:22242"
+  },
+  {
+    "name": "component/file-upload/action-divider-fg",
+    "id": "VariableID:3410:22243"
+  },
+  {
+    "name": "component/file-upload/cropper-modal-header-bg",
+    "id": "VariableID:3410:22244"
+  },
+  {
+    "name": "component/file-upload/cropper-overlay-bg",
+    "id": "VariableID:3410:22245"
+  },
+  {
+    "name": "component/file-upload/view-modal-bg",
+    "id": "VariableID:3410:22246"
+  },
+  {
+    "name": "component/filter/annotation-bg",
+    "id": "VariableID:3410:22247"
+  },
+  {
+    "name": "component/filter/annotation-fg",
+    "id": "VariableID:3410:22248"
+  },
+  {
+    "name": "component/filter/modal-bg",
+    "id": "VariableID:3410:22249"
+  },
+  {
+    "name": "component/filter/modal-divider-fg",
+    "id": "VariableID:3410:22250"
+  },
+  {
+    "name": "component/filter/modal-header-fg",
+    "id": "VariableID:3410:22251"
+  },
+  {
+    "name": "component/filter/toggle-fg",
+    "id": "VariableID:3410:22252"
+  },
+  {
+    "name": "component/filter/toggle-open-bg",
+    "id": "VariableID:3410:22253"
+  },
+  {
+    "name": "component/flyout/bg",
+    "id": "VariableID:3410:22254"
+  },
+  {
+    "name": "component/flyout/fg",
+    "id": "VariableID:3410:22255"
+  },
+  {
+    "name": "component/flyout/radius",
+    "id": "VariableID:3410:22256"
+  },
+  {
+    "name": "component/footer/link-divider-fg",
+    "id": "VariableID:3410:22257"
+  },
+  {
+    "name": "component/footer/link-fg",
+    "id": "VariableID:3410:22258"
+  },
+  {
+    "name": "component/footer/link-hover-fg",
+    "id": "VariableID:3410:22259"
+  },
+  {
+    "name": "component/footer/version-fg",
+    "id": "VariableID:3410:22260"
+  },
+  {
+    "name": "component/header/bg",
+    "id": "VariableID:3410:22261"
+  },
+  {
+    "name": "component/header/divider-fg",
+    "id": "VariableID:3410:22262"
+  },
+  {
+    "name": "component/header/fg",
+    "id": "VariableID:3410:22263"
+  },
+  {
+    "name": "component/header/icon-fg",
+    "id": "VariableID:3410:22264"
+  },
+  {
+    "name": "component/image-badge/loading-bg",
+    "id": "VariableID:3410:22265"
+  },
+  {
+    "name": "component/input/bg",
+    "id": "VariableID:3410:22266"
+  },
+  {
+    "name": "component/input/border-fg",
+    "id": "VariableID:3410:22267"
+  },
+  {
+    "name": "component/input/border-focus-fg",
+    "id": "VariableID:3410:22268"
+  },
+  {
+    "name": "component/input/disabled-bg",
+    "id": "VariableID:3410:22269"
+  },
+  {
+    "name": "component/input/disabled-fg",
+    "id": "VariableID:3410:22270"
+  },
+  {
+    "name": "component/input/fg",
+    "id": "VariableID:3410:22271"
+  },
+  {
+    "name": "component/input/placeholder-fg",
+    "id": "VariableID:3410:22272"
+  },
+  {
+    "name": "component/input/radius",
+    "id": "VariableID:3410:22273"
+  },
+  {
+    "name": "component/keyword/bg",
+    "id": "VariableID:3410:22274"
+  },
+  {
+    "name": "component/keyword/fg",
+    "id": "VariableID:3410:22275"
+  },
+  {
+    "name": "component/knowledge-check-results/bg",
+    "id": "VariableID:3410:22276"
+  },
+  {
+    "name": "component/knowledge-check-results/divider-fg",
+    "id": "VariableID:3410:22277"
+  },
+  {
+    "name": "component/knowledge-check/bg",
+    "id": "VariableID:3410:22278"
+  },
+  {
+    "name": "component/knowledge-check/divider-fg",
+    "id": "VariableID:3410:22279"
+  },
+  {
+    "name": "component/leaderboard/skeleton-row-bg",
+    "id": "VariableID:3410:22280"
+  },
+  {
+    "name": "component/leaderboard/skeleton-row-border-fg",
+    "id": "VariableID:3410:22281"
+  },
+  {
+    "name": "component/leaderboard/table-header-bg",
+    "id": "VariableID:3410:22282"
+  },
+  {
+    "name": "component/leaderboard/table-header-fg",
+    "id": "VariableID:3410:22283"
+  },
+  {
+    "name": "component/leaderboard/table-row-bg",
+    "id": "VariableID:3410:22284"
+  },
+  {
+    "name": "component/leaderboard/table-row-border-fg",
+    "id": "VariableID:3410:22285"
+  },
+  {
+    "name": "component/leaderboard/table-row-break-bg",
+    "id": "VariableID:3410:22286"
+  },
+  {
+    "name": "component/leaderboard/table-row-current-user-bg",
+    "id": "VariableID:3410:22287"
+  },
+  {
+    "name": "component/leaderboard/table-row-fg",
+    "id": "VariableID:3410:22288"
+  },
+  {
+    "name": "component/leaderboard/table-row-hover-bg",
+    "id": "VariableID:3410:22289"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/comments-bg",
+    "id": "VariableID:3410:22290"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/comments-shadow-fg",
+    "id": "VariableID:3410:22291"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-bg",
+    "id": "VariableID:3410:22292"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-disabled-border-fg",
+    "id": "VariableID:3410:22293"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-disabled-fg",
+    "id": "VariableID:3410:22294"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-active-bg",
+    "id": "VariableID:3410:22295"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-active-border-fg",
+    "id": "VariableID:3410:22296"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-bg",
+    "id": "VariableID:3410:22297"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-border-fg",
+    "id": "VariableID:3410:22298"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-fg",
+    "id": "VariableID:3410:22299"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-hover-border-fg",
+    "id": "VariableID:3410:22300"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-shadow-fg",
+    "id": "VariableID:3410:22301"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-tooltip-bg",
+    "id": "VariableID:3410:22302"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-icon-tooltip-shadow-fg",
+    "id": "VariableID:3410:22303"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-shadow-fg",
+    "id": "VariableID:3410:22304"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/navigation-white-icon-fg",
+    "id": "VariableID:3410:22305"
+  },
+  {
+    "name": "component/learning-path-asset-sidebar/shadow",
+    "id": "VariableID:3410:22306"
+  },
+  {
+    "name": "component/learning-path-associated-content/bg",
+    "id": "VariableID:3410:22307"
+  },
+  {
+    "name": "component/learning-path-associated-content/shadow",
+    "id": "VariableID:3410:22308"
+  },
+  {
+    "name": "component/learning-path-card/bg",
+    "id": "VariableID:3410:22309"
+  },
+  {
+    "name": "component/learning-path-card/fg",
+    "id": "VariableID:3410:22310"
+  },
+  {
+    "name": "component/learning-path-card/label-bg",
+    "id": "VariableID:3410:22311"
+  },
+  {
+    "name": "component/learning-path-card/label-fg",
+    "id": "VariableID:3410:22312"
+  },
+  {
+    "name": "component/learning-path-overview-card/bg",
+    "id": "VariableID:3410:22313"
+  },
+  {
+    "name": "component/learning-path-overview-card/fg",
+    "id": "VariableID:3410:22314"
+  },
+  {
+    "name": "component/learning-path-overview-card/label-bg",
+    "id": "VariableID:3410:22315"
+  },
+  {
+    "name": "component/learning-path-overview-card/label-fg",
+    "id": "VariableID:3410:22316"
+  },
+  {
+    "name": "component/learning-path-overview-card/meta-fg",
+    "id": "VariableID:3410:22317"
+  },
+  {
+    "name": "component/learning-path-section-asset/expired-fg",
+    "id": "VariableID:3410:22318"
+  },
+  {
+    "name": "component/learning-path-section-asset/incomplete-fg",
+    "id": "VariableID:3410:22319"
+  },
+  {
+    "name": "component/learning-path-section-asset/locked-fg",
+    "id": "VariableID:3410:22320"
+  },
+  {
+    "name": "component/learning-path-section-asset/route-completed-bg",
+    "id": "VariableID:3410:22321"
+  },
+  {
+    "name": "component/learning-path-section-asset/route-line-fg",
+    "id": "VariableID:3410:22322"
+  },
+  {
+    "name": "component/learning-path-section-card/bg",
+    "id": "VariableID:3410:22323"
+  },
+  {
+    "name": "component/learning-path-section-card/divider-fg",
+    "id": "VariableID:3410:22324"
+  },
+  {
+    "name": "component/learning-path-section-card/fg",
+    "id": "VariableID:3410:22325"
+  },
+  {
+    "name": "component/learning-path-section-card/label-bg",
+    "id": "VariableID:3410:22326"
+  },
+  {
+    "name": "component/learning-path-section-card/label-fg",
+    "id": "VariableID:3410:22327"
+  },
+  {
+    "name": "component/learning-path-section-card/meta-fg",
+    "id": "VariableID:3410:22328"
+  },
+  {
+    "name": "component/learning-paths-user/divider-fg",
+    "id": "VariableID:3410:22329"
+  },
+  {
+    "name": "component/learning-paths-user/section-empty-bg",
+    "id": "VariableID:3410:22330"
+  },
+  {
+    "name": "component/live-dashboard/classrooms-card-bg",
+    "id": "VariableID:3410:22331"
+  },
+  {
+    "name": "component/live-dashboard/classrooms-divider-fg",
+    "id": "VariableID:3410:22332"
+  },
+  {
+    "name": "component/live-dashboard/classrooms-live-info-fg",
+    "id": "VariableID:3410:22333"
+  },
+  {
+    "name": "component/live-dashboard/classrooms-no-content-bg",
+    "id": "VariableID:3410:22334"
+  },
+  {
+    "name": "component/live-now-tag/bg",
+    "id": "VariableID:3410:22335"
+  },
+  {
+    "name": "component/live-now-tag/fg",
+    "id": "VariableID:3410:22336"
+  },
+  {
+    "name": "component/lms-modal/meta-fg",
+    "id": "VariableID:3410:22337"
+  },
+  {
+    "name": "component/lms-modal/status-credit-fg",
+    "id": "VariableID:3410:22338"
+  },
+  {
+    "name": "component/lms-modal/status-error-fg",
+    "id": "VariableID:3410:22339"
+  },
+  {
+    "name": "component/lms-modal/status-fg",
+    "id": "VariableID:3410:22340"
+  },
+  {
+    "name": "component/lms-modal/status-icon-fg",
+    "id": "VariableID:3410:22341"
+  },
+  {
+    "name": "component/lms-modal/status-pending-fg",
+    "id": "VariableID:3410:22342"
+  },
+  {
+    "name": "component/loading-overlay/bg",
+    "id": "VariableID:3410:22343"
+  },
+  {
+    "name": "component/loading-overlay/fg",
+    "id": "VariableID:3410:22344"
+  },
+  {
+    "name": "component/login-form/divider-fg",
+    "id": "VariableID:3410:22345"
+  },
+  {
+    "name": "component/login/bg-image",
+    "id": "VariableID:3410:22346"
+  },
+  {
+    "name": "component/login/mobile-bg-image",
+    "id": "VariableID:3410:22347"
+  },
+  {
+    "name": "component/modal/card-bg",
+    "id": "VariableID:3410:22348"
+  },
+  {
+    "name": "component/modal/card-fg",
+    "id": "VariableID:3410:22349"
+  },
+  {
+    "name": "component/modal/icon-bg",
+    "id": "VariableID:3410:22350"
+  },
+  {
+    "name": "component/modal/icon-fg",
+    "id": "VariableID:3410:22351"
+  },
+  {
+    "name": "component/modal/overlay-bg",
+    "id": "VariableID:3410:22352"
+  },
+  {
+    "name": "component/not-found/fg",
+    "id": "VariableID:3410:22353"
+  },
+  {
+    "name": "component/notification-bell/counter-bg",
+    "id": "VariableID:3410:22354"
+  },
+  {
+    "name": "component/notification-bell/counter-fg",
+    "id": "VariableID:3410:22355"
+  },
+  {
+    "name": "component/notification-history-item/meta-fg",
+    "id": "VariableID:3410:22356"
+  },
+  {
+    "name": "component/notification-history/skeleton-row-bg",
+    "id": "VariableID:3410:22357"
+  },
+  {
+    "name": "component/notification-history/table-bg",
+    "id": "VariableID:3410:22358"
+  },
+  {
+    "name": "component/notification-history/table-header-bg",
+    "id": "VariableID:3410:22359"
+  },
+  {
+    "name": "component/notification-history/table-header-fg",
+    "id": "VariableID:3410:22360"
+  },
+  {
+    "name": "component/notification-history/table-meta-fg",
+    "id": "VariableID:3410:22361"
+  },
+  {
+    "name": "component/notification-history/table-row-border-fg",
+    "id": "VariableID:3410:22362"
+  },
+  {
+    "name": "component/notification-history/table-row-read-bg",
+    "id": "VariableID:3410:22363"
+  },
+  {
+    "name": "component/notification-history/table-row-unread-bg",
+    "id": "VariableID:3410:22364"
+  },
+  {
+    "name": "component/notification-history/table-shadow-fg",
+    "id": "VariableID:3410:22365"
+  },
+  {
+    "name": "component/notification-item/meta-fg",
+    "id": "VariableID:3410:22366"
+  },
+  {
+    "name": "component/notification-item/read-icon-fg",
+    "id": "VariableID:3410:22367"
+  },
+  {
+    "name": "component/notification-item/read-icon-hover-fg",
+    "id": "VariableID:3410:22368"
+  },
+  {
+    "name": "component/notifications/bg",
+    "id": "VariableID:3410:22369"
+  },
+  {
+    "name": "component/notifications/divider-fg",
+    "id": "VariableID:3410:22370"
+  },
+  {
+    "name": "component/notifications/fg",
+    "id": "VariableID:3410:22371"
+  },
+  {
+    "name": "component/notifications/shadow",
+    "id": "VariableID:3410:22372"
+  },
+  {
+    "name": "component/pagination/fg",
+    "id": "VariableID:3410:22373"
+  },
+  {
+    "name": "component/people-grid/admin-border-fg",
+    "id": "VariableID:3410:22374"
+  },
+  {
+    "name": "component/people-grid/person-bg",
+    "id": "VariableID:3410:22375"
+  },
+  {
+    "name": "component/people-grid/person-fg",
+    "id": "VariableID:3410:22376"
+  },
+  {
+    "name": "component/people-grid/person-hover-bg",
+    "id": "VariableID:3410:22377"
+  },
+  {
+    "name": "component/people-grid/person-shadow-fg",
+    "id": "VariableID:3410:22378"
+  },
+  {
+    "name": "component/poll-results/progress-bar-border-fg",
+    "id": "VariableID:3410:22379"
+  },
+  {
+    "name": "component/poll-results/progress-bar-fg",
+    "id": "VariableID:3410:22380"
+  },
+  {
+    "name": "component/poll/divider-fg",
+    "id": "VariableID:3410:22381"
+  },
+  {
+    "name": "component/poll/meta-fg",
+    "id": "VariableID:3410:22382"
+  },
+  {
+    "name": "component/poll/presentation-url-fg",
+    "id": "VariableID:3410:22383"
+  },
+  {
+    "name": "component/profile-avatar/action-hover-bg",
+    "id": "VariableID:3410:22384"
+  },
+  {
+    "name": "component/profile-avatar/action-shadow",
+    "id": "VariableID:3410:22385"
+  },
+  {
+    "name": "component/profile-avatar/bg",
+    "id": "VariableID:3410:22386"
+  },
+  {
+    "name": "component/profile-avatar/border-fg",
+    "id": "VariableID:3410:22387"
+  },
+  {
+    "name": "component/profile-avatar/shadow-fg",
+    "id": "VariableID:3410:22388"
+  },
+  {
+    "name": "component/profile-banner/bg-image",
+    "id": "VariableID:3410:22389"
+  },
+  {
+    "name": "component/profile-banner/divider-fg",
+    "id": "VariableID:3410:22390"
+  },
+  {
+    "name": "component/profile-banner/info-bg",
+    "id": "VariableID:3410:22391"
+  },
+  {
+    "name": "component/profile-banner/mobile-bg-image",
+    "id": "VariableID:3410:22392"
+  },
+  {
+    "name": "component/profile-banner/photo-border-fg",
+    "id": "VariableID:3410:22393"
+  },
+  {
+    "name": "component/profile-banner/photo-shadow-fg",
+    "id": "VariableID:3410:22394"
+  },
+  {
+    "name": "component/profile-banner/socials-fg",
+    "id": "VariableID:3410:22395"
+  },
+  {
+    "name": "component/profile-banner/socials-hover-fg",
+    "id": "VariableID:3410:22396"
+  },
+  {
+    "name": "component/profile-card/bg",
+    "id": "VariableID:3410:22397"
+  },
+  {
+    "name": "component/profile-card/divider-fg",
+    "id": "VariableID:3410:22398"
+  },
+  {
+    "name": "component/profile-card/shadow-fg",
+    "id": "VariableID:3410:22399"
+  },
+  {
+    "name": "component/profile-connect/icon-hover-bg",
+    "id": "VariableID:3410:22400"
+  },
+  {
+    "name": "component/profile-connect/icon-text-fg",
+    "id": "VariableID:3410:22401"
+  },
+  {
+    "name": "component/profile-notepad-card/bg",
+    "id": "VariableID:3410:22402"
+  },
+  {
+    "name": "component/profile-notepad-card/fg",
+    "id": "VariableID:3410:22403"
+  },
+  {
+    "name": "component/profile/divider-fg",
+    "id": "VariableID:3410:22404"
+  },
+  {
+    "name": "component/profile/edit-banner-bg",
+    "id": "VariableID:3410:22405"
+  },
+  {
+    "name": "component/profile/edit-banner-fg",
+    "id": "VariableID:3410:22406"
+  },
+  {
+    "name": "component/profile/edit-banner-highlight-fg",
+    "id": "VariableID:3410:22407"
+  },
+  {
+    "name": "component/progress-bar/bg",
+    "id": "VariableID:3410:22408"
+  },
+  {
+    "name": "component/progress-bar/failed-bg",
+    "id": "VariableID:3410:22409"
+  },
+  {
+    "name": "component/progress-bar/failed-fg",
+    "id": "VariableID:3410:22410"
+  },
+  {
+    "name": "component/progress-bar/fg",
+    "id": "VariableID:3410:22411"
+  },
+  {
+    "name": "component/progress-bar/percentage-fg",
+    "id": "VariableID:3410:22412"
+  },
+  {
+    "name": "component/progress-circle/bg",
+    "id": "VariableID:3410:22413"
+  },
+  {
+    "name": "component/progress-circle/progress-bg",
+    "id": "VariableID:3410:22414"
+  },
+  {
+    "name": "component/progress-circle/progress-endcap-type",
+    "id": "VariableID:3410:22415"
+  },
+  {
+    "name": "component/progress-circle/progress-fg",
+    "id": "VariableID:3410:22416"
+  },
+  {
+    "name": "component/registration/bg",
+    "id": "VariableID:3410:22417"
+  },
+  {
+    "name": "component/registration/bg-image",
+    "id": "VariableID:3410:22418"
+  },
+  {
+    "name": "component/registration/mobile-bg",
+    "id": "VariableID:3410:22419"
+  },
+  {
+    "name": "component/registration/mobile-bg-image",
+    "id": "VariableID:3410:22420"
+  },
+  {
+    "name": "component/reset-password/divider-fg",
+    "id": "VariableID:3410:22421"
+  },
+  {
+    "name": "component/reset-password/helper-fg",
+    "id": "VariableID:3410:22422"
+  },
+  {
+    "name": "component/settings/table-bg",
+    "id": "VariableID:3410:22423"
+  },
+  {
+    "name": "component/settings/table-disabled-bg",
+    "id": "VariableID:3410:22424"
+  },
+  {
+    "name": "component/settings/table-disabled-fg",
+    "id": "VariableID:3410:22425"
+  },
+  {
+    "name": "component/settings/table-divider-fg",
+    "id": "VariableID:3410:22426"
+  },
+  {
+    "name": "component/settings/table-fg",
+    "id": "VariableID:3410:22427"
+  },
+  {
+    "name": "component/settings/table-header-bg",
+    "id": "VariableID:3410:22428"
+  },
+  {
+    "name": "component/settings/table-header-disabled-bg",
+    "id": "VariableID:3410:22429"
+  },
+  {
+    "name": "component/settings/table-header-disabled-fg",
+    "id": "VariableID:3410:22430"
+  },
+  {
+    "name": "component/settings/table-header-fg",
+    "id": "VariableID:3410:22431"
+  },
+  {
+    "name": "component/settings/table-shadow",
+    "id": "VariableID:3410:22432"
+  },
+  {
+    "name": "component/sidenav/bg",
+    "id": "VariableID:3410:22433"
+  },
+  {
+    "name": "component/sidenav/close-icon-fg",
+    "id": "VariableID:3410:22434"
+  },
+  {
+    "name": "component/sidenav/divider-fg",
+    "id": "VariableID:3410:22435"
+  },
+  {
+    "name": "component/sidenav/link-active-bg",
+    "id": "VariableID:3410:22436"
+  },
+  {
+    "name": "component/sidenav/link-active-fg",
+    "id": "VariableID:3410:22437"
+  },
+  {
+    "name": "component/sidenav/link-fg",
+    "id": "VariableID:3410:22438"
+  },
+  {
+    "name": "component/sidenav/link-hover-bg",
+    "id": "VariableID:3410:22439"
+  },
+  {
+    "name": "component/sidenav/link-hover-fg",
+    "id": "VariableID:3410:22440"
+  },
+  {
+    "name": "component/sidenav/subnav-link-fg",
+    "id": "VariableID:3410:22441"
+  },
+  {
+    "name": "component/sidenav/subnav-link-hover-fg",
+    "id": "VariableID:3410:22442"
+  },
+  {
+    "name": "component/skeleton/bg",
+    "id": "VariableID:3410:22443"
+  },
+  {
+    "name": "component/skeleton/fg",
+    "id": "VariableID:3410:22444"
+  },
+  {
+    "name": "component/slider/fg",
+    "id": "VariableID:3410:22445"
+  },
+  {
+    "name": "component/slider/pagination-inactive-fg",
+    "id": "VariableID:3410:22446"
+  },
+  {
+    "name": "component/slider/slide-bg",
+    "id": "VariableID:3410:22447"
+  },
+  {
+    "name": "component/status/ended-bg",
+    "id": "VariableID:3410:22448"
+  },
+  {
+    "name": "component/status/ended-fg",
+    "id": "VariableID:3410:22449"
+  },
+  {
+    "name": "component/status/on-demand-bg",
+    "id": "VariableID:3410:22450"
+  },
+  {
+    "name": "component/status/on-demand-fg",
+    "id": "VariableID:3410:22451"
+  },
+  {
+    "name": "component/store-cart-button/badge-bg",
+    "id": "VariableID:3410:22452"
+  },
+  {
+    "name": "component/store-cart-button/badge-fg",
+    "id": "VariableID:3410:22453"
+  },
+  {
+    "name": "component/store-grid/item-fg",
+    "id": "VariableID:3410:22454"
+  },
+  {
+    "name": "component/store-item/description-fg",
+    "id": "VariableID:3410:22455"
+  },
+  {
+    "name": "component/store-item/fg",
+    "id": "VariableID:3410:22456"
+  },
+  {
+    "name": "component/store/checkout-drawer-header-mobile-bg",
+    "id": "VariableID:3410:22457"
+  },
+  {
+    "name": "component/store/checkout-drawer-header-mobile-fg",
+    "id": "VariableID:3410:22458"
+  },
+  {
+    "name": "component/switch/thumb-bg",
+    "id": "VariableID:3410:22459"
+  },
+  {
+    "name": "component/switch/thumb-border-checked-fg",
+    "id": "VariableID:3410:22460"
+  },
+  {
+    "name": "component/switch/thumb-border-fg",
+    "id": "VariableID:3410:22461"
+  },
+  {
+    "name": "component/switch/thumb-checked-bg",
+    "id": "VariableID:3410:22462"
+  },
+  {
+    "name": "component/switch/track-bg",
+    "id": "VariableID:3410:22463"
+  },
+  {
+    "name": "component/switch/track-border-checked-fg",
+    "id": "VariableID:3410:22464"
+  },
+  {
+    "name": "component/switch/track-border-fg",
+    "id": "VariableID:3410:22465"
+  },
+  {
+    "name": "component/switch/track-checked-bg",
+    "id": "VariableID:3410:22466"
+  },
+  {
+    "name": "component/tag/bg",
+    "id": "VariableID:3410:22467"
+  },
+  {
+    "name": "component/tag/fg",
+    "id": "VariableID:3410:22468"
+  },
+  {
+    "name": "component/thumbnail/badge-bg",
+    "id": "VariableID:3410:22469"
+  },
+  {
+    "name": "component/thumbnail/badge-fg",
+    "id": "VariableID:3410:22470"
+  },
+  {
+    "name": "component/thumbnail/badge-new-bg",
+    "id": "VariableID:3410:22471"
+  },
+  {
+    "name": "component/thumbnail/badge-new-fg",
+    "id": "VariableID:3410:22472"
+  },
+  {
+    "name": "component/thumbnail/bg",
+    "id": "VariableID:3410:22473"
+  },
+  {
+    "name": "component/thumbnail/placeholder-bg",
+    "id": "VariableID:3410:22474"
+  },
+  {
+    "name": "component/thumbnail/placeholder-challenge-bg",
+    "id": "VariableID:3410:22475"
+  },
+  {
+    "name": "component/thumbnail/placeholder-coaching-session-bg",
+    "id": "VariableID:3410:22476"
+  },
+  {
+    "name": "component/thumbnail/placeholder-course-bg",
+    "id": "VariableID:3410:22477"
+  },
+  {
+    "name": "component/thumbnail/placeholder-image-bg",
+    "id": "VariableID:3410:22478"
+  },
+  {
+    "name": "component/thumbnail/placeholder-learning-session-bg",
+    "id": "VariableID:3410:22479"
+  },
+  {
+    "name": "component/thumbnail/placeholder-lecture-hall-bg",
+    "id": "VariableID:3410:22480"
+  },
+  {
+    "name": "component/thumbnail/placeholder-lms-asset-bg",
+    "id": "VariableID:3410:22481"
+  },
+  {
+    "name": "component/thumbnail/placeholder-pdf-bg",
+    "id": "VariableID:3410:22482"
+  },
+  {
+    "name": "component/thumbnail/placeholder-presentation-bg",
+    "id": "VariableID:3410:22483"
+  },
+  {
+    "name": "component/thumbnail/placeholder-quiz-bg",
+    "id": "VariableID:3410:22484"
+  },
+  {
+    "name": "component/thumbnail/placeholder-video-bg",
+    "id": "VariableID:3410:22485"
+  },
+  {
+    "name": "component/thumbnail/placeholder-website-bg",
+    "id": "VariableID:3410:22486"
+  },
+  {
+    "name": "component/tooltip/bg",
+    "id": "VariableID:3410:22487"
+  },
+  {
+    "name": "component/tooltip/fg",
+    "id": "VariableID:3410:22488"
+  },
+  {
+    "name": "component/tooltip/radius",
+    "id": "VariableID:3410:22489"
+  },
+  {
+    "name": "component/tooltip/shadow",
+    "id": "VariableID:3410:22490"
+  },
+  {
+    "name": "component/user-notepad/card-bg",
+    "id": "VariableID:3410:22491"
+  },
+  {
+    "name": "component/user-notepad/card-shadow",
+    "id": "VariableID:3410:22492"
+  },
+  {
+    "name": "component/user-notepad/divider-fg",
+    "id": "VariableID:3410:22493"
+  },
+  {
+    "name": "component/user-stats/bg",
+    "id": "VariableID:3410:22494"
+  },
+  {
+    "name": "component/user-stats/fg",
+    "id": "VariableID:3410:22495"
+  },
+  {
+    "name": "component/user-stats/title-badges-bg",
+    "id": "VariableID:3410:22496"
+  },
+  {
+    "name": "component/user-stats/title-fg",
+    "id": "VariableID:3410:22497"
+  },
+  {
+    "name": "component/user-stats/title-lifetime-bg",
+    "id": "VariableID:3410:22498"
+  },
+  {
+    "name": "component/user-stats/title-reward-bg",
+    "id": "VariableID:3410:22499"
+  },
+  {
+    "name": "component/verify-email/fg",
+    "id": "VariableID:3410:22500"
+  },
+  {
+    "name": "core/signal/error-hover",
+    "id": "VariableID:3426:35329"
+  },
+  {
+    "name": "component/button/secondary-stroke",
+    "id": "VariableID:3430:40966"
+  },
+  {
+    "name": "component/button/secondary-fg",
+    "id": "VariableID:3430:40967"
+  },
+  {
+    "name": "component/button/secondary-bg",
+    "id": "VariableID:3430:40968"
+  },
+  {
+    "name": "component/button/secondary-hover-stroke",
+    "id": "VariableID:3430:40969"
+  },
+  {
+    "name": "component/button/secondary-hover-fg",
+    "id": "VariableID:3430:40970"
+  },
+  {
+    "name": "component/button/secondary-hover-bg",
+    "id": "VariableID:3430:40971"
+  },
+  {
+    "name": "component/input/border-disabled-fg",
+    "id": "VariableID:3431:41120"
+  },
+  {
+    "name": "component/form/field-label-fg",
+    "id": "VariableID:3433:41121"
+  },
+  {
+    "name": "component/form/field-label-disabled-fg",
+    "id": "VariableID:3433:41122"
+  },
+  {
+    "name": "component/editor/header-bg",
+    "id": "VariableID:3433:41732"
+  },
+  {
+    "name": "component/editor/header-fg",
+    "id": "VariableID:3433:41733"
+  },
+  {
+    "name": "component/editor/header-border-fg",
+    "id": "VariableID:3433:41734"
+  },
+  {
+    "name": "component/editor/button-stroke",
+    "id": "VariableID:3433:42293"
+  },
+  {
+    "name": "component/editor/button-bg",
+    "id": "VariableID:3433:42294"
+  },
+  {
+    "name": "component/editor/button-fg",
+    "id": "VariableID:3433:42295"
+  },
+  {
+    "name": "component/editor/button-hover-fg",
+    "id": "VariableID:3433:42296"
+  },
+  {
+    "name": "component/editor/button-hover-stroke",
+    "id": "VariableID:3433:42297"
+  },
+  {
+    "name": "component/editor/button-hover-bg",
+    "id": "VariableID:3433:42298"
+  },
+  {
+    "name": "component/editor/button-active-stroke",
+    "id": "VariableID:3433:42299"
+  },
+  {
+    "name": "component/editor/button-active-fg",
+    "id": "VariableID:3433:42300"
+  },
+  {
+    "name": "component/editor/button-active-bg",
+    "id": "VariableID:3433:42301"
+  },
+  {
+    "name": "core/transparent",
+    "id": "VariableID:3433:42302"
+  },
+  {
+    "name": "component/table/header-stroke",
+    "id": "VariableID:3442:17878"
+  },
+  {
+    "name": "component/table/stroke",
+    "id": "VariableID:3442:18427"
+  },
+  {
+    "name": "component/card/header-bg",
+    "id": "VariableID:3442:18428"
+  },
+  {
+    "name": "component/card/header-fg",
+    "id": "VariableID:3442:18429"
+  },
+  {
+    "name": "component/card/header-stroke",
+    "id": "VariableID:3442:18430"
+  },
+  {
+    "name": "component/card/stroke",
+    "id": "VariableID:3442:18431"
+  },
+  {
+    "name": "component/annotation/bg",
+    "id": "VariableID:3442:22903"
+  },
+  {
+    "name": "component/annotation/fg",
+    "id": "VariableID:3442:22904"
+  },
+  {
+    "name": "component/checkbox/hover-bg",
+    "id": "VariableID:3442:24244"
+  },
+  {
+    "name": "component/checkbox/hover-border-fg",
+    "id": "VariableID:3442:24245"
+  },
+  {
+    "name": "core/disabled/fg",
+    "id": "VariableID:3442:26463"
+  },
+  {
+    "name": "component/checkbox/disabled-bg",
+    "id": "VariableID:3442:26464"
+  },
+  {
+    "name": "component/checkbox/disabled-border-fg",
+    "id": "VariableID:3442:26465"
+  },
+  {
+    "name": "component/radio/stroke",
+    "id": "VariableID:3442:26466"
+  },
+  {
+    "name": "component/radio/bg",
+    "id": "VariableID:3442:26467"
+  },
+  {
+    "name": "component/radio/fg",
+    "id": "VariableID:3442:26468"
+  },
+  {
+    "name": "component/radio/checked-bg",
+    "id": "VariableID:3442:26469"
+  },
+  {
+    "name": "component/radio/checked-stroke",
+    "id": "VariableID:3442:26470"
+  },
+  {
+    "name": "component/radio/hover-stroke",
+    "id": "VariableID:3442:26471"
+  }
+]

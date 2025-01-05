@@ -1,9 +1,13 @@
 <template>
-  <GButton v-bind="{ ...$attrs, ...$props }" class="styled-button">
+  <GButton v-bind="{ disabled: loading || undefined, ...$attrs, ...$props }" class="styled-button" :class="{ loading }" >
+    <template v-slot:iconRight>
+      <span v-if="loading" class="loading-spinner"></span>
+    </template>
     <!-- Apply any slots defaults above this line -->
     <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
       <slot :name="name" v-bind="slotData" />
     </template>
+
   </GButton>
 </template>
 
@@ -18,6 +22,10 @@ defineProps({
     default: () => ['primary', 'secondary', 'danger', 'highlight'],
   },
   // Apply any new props below this line
+  loading: {
+    type: Boolean,
+    default: false,
+  },
 });
 // Expose entire instance so I can use ref in parent. maybe I should expose only props since thats what I need.
 const instance = getCurrentInstance();
@@ -38,6 +46,25 @@ export default {
   padding: 0 30px;
   border-radius: 6px;
   transition: background-color 100ms ease-in-out;
+  gap: 10px;
+
+  &.loading {
+    .loading-spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid currentColor;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin: 0 auto;
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
 
 
   &.default {
@@ -156,12 +183,12 @@ export default {
 
 
     &.primary {
-      color: var(--button-primary-accent);
+      color: var(--button-primary-main);
 
       &:not(:disabled) {
         &:hover,
         &:focus-visible {
-          color: var(--button-primary-hover-accent);
+          color: var(--button-primary-hover-main);
         }
       }
     }

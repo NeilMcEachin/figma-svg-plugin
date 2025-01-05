@@ -8,7 +8,8 @@ const config = defineConfig(({ mode }) => {
       outDir: 'plugin/src/code',
       minify: !isDev,
       watch: isDev ? {} : null,
-      sourcemap: isDev,
+      sourcemap: false,
+      emptyOutDir: false,
       lib: {
         entry: './src/code/index.ts',
         name: packageJson.name,

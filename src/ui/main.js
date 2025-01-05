@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import Grimoire from '@twentyfourg/grimoire/plugin';
 import ui from './ui.vue';
 
 window.onmessage = async (event) => {
@@ -20,4 +21,4 @@ window.onmessage = async (event) => {
 };
 
 
-createApp(ui).mount('#ui');
+createApp(ui).use(Grimoire).mount('#ui');

@@ -7,7 +7,7 @@ import path from 'path'
 const config = defineConfig(({ mode }) => {
   const isDev = mode === 'development'
   return {
-    plugins: [vue(), viteSingleFile({removeViteModuleLoader: true})],
+    plugins: [vue(), viteSingleFile()],
     resolve: {
       alias: {
         '~': fileURLToPath(new URL('./node_modules', import.meta.url)),

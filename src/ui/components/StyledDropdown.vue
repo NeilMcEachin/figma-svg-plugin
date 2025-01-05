@@ -20,7 +20,11 @@
       </div>
     </template> -->
     <template v-slot:clear="{ clear }"
-      ><StyledButton class="multiselect__clear" icon="lxp:x-icon" variant="unstyled" @click="clear()"
+      ><StyledButton
+        class="multiselect__clear"
+        icon="lxp:x-icon"
+        variant="unstyled"
+        @click="clear()"
     /></template>
     <!-- Apply any slots defaults above this line -->
     <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
@@ -30,13 +34,13 @@
 </template>
 
 <script setup>
-import { ref, useAttrs } from 'vue';
-import { GDropdown } from '@twentyfourg/grimoire';
+import { ref, useAttrs } from 'vue'
+import { GDropdown } from '@twentyfourg/grimoire'
 // import CaretIcon from '@theme/icons/carat-light.svg';
-import StyledButton from './StyledButton.vue';
+import StyledButton from './StyledButton.vue'
 // import StyledTag from './StyledTag.vue';
 
-const attrs = useAttrs();
+const attrs = useAttrs()
 defineProps({
   ...GDropdown.props,
   // Apply prop overrides below this line
@@ -55,22 +59,24 @@ defineProps({
     validator: (value) => ['default', 'outlined', 'lined'].includes(value),
   },
   // Apply any new props below this line
-});
+})
 
-const dropdownRef = ref(null);
+const dropdownRef = ref(null)
 
-const conditionalProps = {};
-if (attrs.hideSelected) conditionalProps.hideSelected = attrs.hideSelected;
-else if (attrs.mode === 'tags' || attrs.mode === 'multiple') conditionalProps.hideSelected = false;
+const conditionalProps = {}
+if (attrs.hideSelected) conditionalProps.hideSelected = attrs.hideSelected
+else if (attrs.mode === 'tags' || attrs.mode === 'multiple')
+  conditionalProps.hideSelected = false
 
-if (attrs.closeOnSelect) conditionalProps.closeOnSelect = attrs.closeOnSelect;
-else if (attrs.mode === 'tags' || attrs.mode === 'multiple') conditionalProps.closeOnSelect = false;
+if (attrs.closeOnSelect) conditionalProps.closeOnSelect = attrs.closeOnSelect
+else if (attrs.mode === 'tags' || attrs.mode === 'multiple')
+  conditionalProps.closeOnSelect = false
 </script>
 
 <script>
 export default {
   inheritAttrs: false,
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -99,7 +105,9 @@ export default {
 
   // --ms-option-bg-disabled: #fff;
   // --ms-option-color-disabled: #d1d5db;
-  --ms-option-color-selected-pointed: var(--dropdown-option-selected-hovered-fg);
+  --ms-option-color-selected-pointed: var(
+    --dropdown-option-selected-hovered-fg
+  );
   --ms-option-bg-selected-pointed: var(--dropdown-option-selected-hovered-bg);
 
   // --ms-option-bg-selected-disabled: #fff;
@@ -109,7 +117,9 @@ export default {
   --ms-tag-mx: 4px;
 
   min-height: 50px;
-  color: var(--dropdown-fg);
+  :deep() {
+    color: var(--dropdown-fg) !important;
+  }
 
   &.is-disabled {
     pointer-events: none;
@@ -138,6 +148,9 @@ export default {
   &.error {
     --dropdown-border-fg: var(--dropdown-border-error-fg);
   }
+  &.is-open {
+    z-index: 5;
+  }
 
   .caret-container {
     pointer-events: none;
@@ -151,7 +164,6 @@ export default {
           color: var(--ms-placeholder-color);
           opacity: 0.5;
         }
-
       }
 
       &-placeholder {
@@ -165,8 +177,10 @@ export default {
       &-option {
         font-size: var(--ms-option-font-size, inherit);
         line-height: var(--ms-option-line-height, inherit);
-        color: var(--dropdown-option-fg, var(--dropdown-fg));
-        
+        color: var(
+          --dropdown-option-fg,
+          var(--dropdown-options-fg, var(--dropdown-fg))
+        );
 
         &.is-disabled {
           color: inherit;
@@ -212,11 +226,6 @@ export default {
         margin: 2.5px;
       }
     }
-  }
-
-  :deep(.multiselect-dropdown) {
-    z-index: 5;
-    box-shadow: var(--dropdown-list-shadow);
   }
 }
 </style>

@@ -2,9 +2,8 @@
   "name": "figma-variable-exporter",
   "version": "0.0.1",
   "license": "MIT",
-  "author": "Ishan Sharma <ishan@flek.ai>",
+  "author": "Neil McEachin",
   "description": "Quick start a Figma plugin using Vite",
-  "repository": "git@github.com:ishan-flek-ai/figma-plugin-vite.git",
   "publishConfig": {
     "access": "public"
   },
@@ -30,14 +29,16 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "@twentyfourg/grimoire": "^2.5.0",
-    "@vitejs/plugin-vue": "^5.1.4",
+    "@figma-plugin/helpers": "^0.15.2",
+    "@twentyfourg/grimoire": "^2.5.1",
     "chroma-js": "^2.4.2",
     "file-saver": "^2.0.5",
     "jszip": "^3.10.1",
+    "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "matrix-inverse": "^2.0.0",
+    "mitt": "^3.0.1",
+    "openai": "^4.66.1"
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.39.1",
@@ -46,7 +47,7 @@
     "@types/lodash-es": "^4.17.5",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-vue": "^4.6.2",
     "chokidar": "^3.5.2",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
@@ -57,17 +58,17 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "^7.27.1",
     "esno": "0.10.0",
     "fs-extra": "^10.0.0",
     "husky": "^7.0.2",
     "kolorist": "^1.5.0",
     "lint-staged": "^11.1.2",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.0.1",
+    "sass": "^1.79.2",
     "sass-embedded": "^1.79.1",
     "typescript": "^4.4.3",
-    "vite": "^5",
-    "vite-plugin-singlefile": "^2"
+    "vite": "^4.5.5",
+    "vite-plugin-singlefile": "^0.13.5"
   }
 }
