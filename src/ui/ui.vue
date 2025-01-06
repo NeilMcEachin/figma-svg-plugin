@@ -108,6 +108,10 @@ watch(nestedCollectionId, () => {
   getCollectionVariables()
 })
 
+window.onfocus = () => {
+  getCollectionVariables()
+}
+
 const getCollectionVariables = () => {
   postMessage({
     type: 'getCollectionVariables',
