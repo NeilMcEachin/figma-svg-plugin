@@ -104,7 +104,6 @@ export default {
       gap: 8px;
       margin-top: 24px;
       padding-top: 24px;
-      border-top: 1px solid var(--modal-card-fg);
     }
   }
 }

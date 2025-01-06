@@ -277,6 +277,23 @@ figma.on('selectionchange', async () => {
   getSelection()
 })
 
+const refreshCollectionVariables = async () => {
+  const collections = await figma.variables.getLocalVariableCollectionsAsync()
+
+  const variables = await getCollectionVariables(collections[1].id)
+  // console.log(variables);
+
+  figma.ui.postMessage({
+    type: 'returnCollectionVariables',
+    payload: JSON.stringify(variables),
+  })
+}
+
+figma.on('documentchange', async () => {
+  console.log('documentchange')
+  refreshCollectionVariables()
+})
+
 // Calls to "parent.postMessage" from within the HTML page will trigger this
 // callback. The callback will be passed the "pluginMessage" property of the
 // posted message.
@@ -285,23 +302,15 @@ figma.ui.onmessage = async (msg) => {
     getCollections()
   }
   if (msg.type === 'getCollectionVariables') {
-    const collections = await figma.variables.getLocalVariableCollectionsAsync()
-
-    const variables = await getCollectionVariables(collections[1].id)
-    // console.log(variables);
-
-    figma.ui.postMessage({
-      type: 'returnCollectionVariables',
-      payload: JSON.stringify(variables),
-    })
+    refreshCollectionVariables()
   }
   if (msg.type === 'getCollectionModes') {
     const collections = await figma.variables.getLocalVariableCollectionsAsync()
     const modes = await getModes(collections[1].id)
-    
+
     figma.ui.postMessage({
       type: 'returnCollectionModes',
-      payload: JSON.stringify(modes)
+      payload: JSON.stringify(modes),
     })
   }
   if (msg.type === 'deleteVariables') {
