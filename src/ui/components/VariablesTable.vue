@@ -8,7 +8,6 @@ import {
   onBeforeUnmount,
   watch,
 } from 'vue'
-import { GCollapsible, GInput } from '@twentyfourg/grimoire'
 import StyledButton from './StyledButton.vue'
 import StyledInput from './StyledInput.vue'
 import StyledModal from './StyledModal.vue'
@@ -16,7 +15,13 @@ import { postMessage } from '../utils'
 import emitter from '../eventBus'
 import VariableNavTree from './VariableNavTree.vue'
 import VariableDropdown from './VariableDropdown.vue'
-import { log } from 'scripts/utils'
+import {
+  isColorTerm,
+  isNumberTerm,
+  colorsMatch,
+  numbersMatch,
+  normalizeHexInput,
+} from '../utils/variableSearch'
 
 interface VariableValue {
   r?: number
@@ -80,7 +85,39 @@ const filteredVariables = computed(() => {
 
   return variables.value.filter((variable) => {
     const name = variable.name.toLowerCase()
-    return terms.every((term) => name.includes(term))
+    
+    return terms.every(term => {
+      // First check if it's in the name
+      if (name.includes(term)) return true
+      
+      // Then check values
+      return Object.entries(variable.valuesByMode).some(([modeId, value]) => {
+        // If it's a color term and this is a color variable
+        if (isColorTerm(term) && variable.resolvedType === 'COLOR') {
+          if (typeof value === 'object' && value !== null) {
+            const searchTerm = normalizeHexInput(term)
+            return colorsMatch(searchTerm, value)
+          }
+        }
+        
+        // If it's a number term and this is a float variable
+        if (isNumberTerm(term) && variable.resolvedType === 'FLOAT') {
+          return numbersMatch(term, value)
+        }
+        
+        // Check if it's an alias and search in the referenced variable name
+        if (typeof value === 'object' && value !== null && 'type' in value && value.type === 'VARIABLE_ALIAS' && 'id' in value) {
+          const referencedVariable = variables.value.find(v => v.id === value.id)
+          if (referencedVariable) {
+            return referencedVariable.name.toLowerCase().includes(term)
+          }
+        }
+        
+        // For regular text, check the string representation
+        const stringValue = getVariableValue(variable, modeId).toLowerCase()
+        return stringValue.includes(term)
+      })
+    })
   })
 })
 
