@@ -7,6 +7,15 @@ interface VariableValue {
   [key: string]: any
 }
 
+interface Variable {
+  id: string
+  name: string
+  resolvedType: 'COLOR' | 'FLOAT' | 'STRING'
+  valuesByMode: {
+    [mode: string]: VariableValue | string | number
+  }
+}
+
 export const normalizeColor = (color: string): string => {
   // Remove all spaces and convert to lowercase
   color = color.toLowerCase().replace(/\s/g, '')
@@ -148,4 +157,53 @@ export const numbersMatch = (searchTerm: string, value: string | number | Variab
   }
   
   return false
+}
+
+export const valuesMatchAcrossModes = (
+  sourceVariable: Variable,
+  targetVariable: Variable,
+  modes: string[]
+): boolean => {
+  // Must be same type
+  if (sourceVariable.resolvedType !== targetVariable.resolvedType) return false
+
+  return modes.every(modeId => {
+    const sourceValue = sourceVariable.valuesByMode[modeId]
+    const targetValue = targetVariable.valuesByMode[modeId]
+
+    // Handle color values
+    if (sourceVariable.resolvedType === 'COLOR') {
+      if (typeof sourceValue === 'object' && sourceValue !== null &&
+          typeof targetValue === 'object' && targetValue !== null) {
+        // Compare the RGB values directly
+        if ('r' in sourceValue && 'g' in sourceValue && 'b' in sourceValue &&
+            'r' in targetValue && 'g' in targetValue && 'b' in targetValue &&
+            typeof sourceValue.r === 'number' && typeof sourceValue.g === 'number' && typeof sourceValue.b === 'number' &&
+            typeof targetValue.r === 'number' && typeof targetValue.g === 'number' && typeof targetValue.b === 'number') {
+          return sourceValue.r === targetValue.r &&
+                 sourceValue.g === targetValue.g &&
+                 sourceValue.b === targetValue.b &&
+                 (sourceValue.a === targetValue.a || (!sourceValue.a && !targetValue.a))
+        }
+      }
+      return false
+    }
+
+    // Handle number values
+    if (sourceVariable.resolvedType === 'FLOAT') {
+      if (typeof sourceValue === 'number' && typeof targetValue === 'number') {
+        return Math.abs(sourceValue - targetValue) < 0.0001
+      }
+      if (typeof sourceValue === 'string' && typeof targetValue === 'string') {
+        const sourceNum = parseFloat(sourceValue)
+        const targetNum = parseFloat(targetValue)
+        if (!isNaN(sourceNum) && !isNaN(targetNum)) {
+          return Math.abs(sourceNum - targetNum) < 0.0001
+        }
+      }
+    }
+
+    // Handle string values and everything else
+    return JSON.stringify(sourceValue) === JSON.stringify(targetValue)
+  })
 } 

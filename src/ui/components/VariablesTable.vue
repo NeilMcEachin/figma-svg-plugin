@@ -21,6 +21,7 @@ import {
   colorsMatch,
   numbersMatch,
   normalizeHexInput,
+  valuesMatchAcrossModes,
 } from '../utils/variableSearch'
 
 interface VariableValue {
@@ -76,6 +77,8 @@ const modalType = ref<'alias' | 'raw' | null>(null)
 const selectedVariable = ref<Variable | null>(null)
 const selectedTargetVariableId = ref<string | null>(null)
 const selectedVariableIds = ref<Set<string>>(new Set())
+const similarMatches = ref<Variable[]>([])
+const showSimilarModal = ref(false)
 
 const filteredVariables = computed(() => {
   if (!searchQuery.value) return variables.value
@@ -620,6 +623,49 @@ const currentOpenPath = computed(() => {
   if (!searchQuery.value) return selectedPath.value
   return findDeepestCommonParent(Object.keys(selectedVariables.value))
 })
+
+const handleFindSimilar = (sourceVariable: Variable) => {
+  // Get all mode IDs
+  const modeIds = modes.value.map(mode => mode.modeId)
+  
+  // Find variables with matching values
+  const matches = variables.value.filter(targetVariable => 
+    targetVariable.id !== sourceVariable.id && // Don't match self
+    valuesMatchAcrossModes(sourceVariable, targetVariable, modeIds)
+  )
+  
+  // If we found matches, show the modal
+  if (matches.length > 0) {
+    selectedVariable.value = sourceVariable
+    similarMatches.value = matches
+    showSimilarModal.value = true
+  } else {
+    // If no matches, show a message
+    console.log('No variables found with matching values')
+  }
+}
+
+const handleSimilarModalConfirm = () => {
+  if (!selectedTargetVariableId.value || !selectedVariable.value) return
+
+  // Create an alias from the selected similar variable
+  postMessage({
+    type: 'assignAliasToVariable',
+    payload: JSON.stringify({
+      variableIds: [selectedVariable.value.id],
+      aliasVariableId: selectedTargetVariableId.value,
+    }),
+  })
+
+  showSimilarModal.value = false
+  selectedVariable.value = null
+  selectedTargetVariableId.value = null
+  
+  // Refresh variables after action
+  setTimeout(() => {
+    refreshVariables()
+  }, 100)
+}
 </script>
 
 <template>
@@ -717,6 +763,13 @@ const currentOpenPath = computed(() => {
                       variable.name.split('/').pop()
                     }}</span>
                     <div class="actions">
+                      <button
+                        class="action-button"
+                        title="Find similar values"
+                        @click.stop="handleFindSimilar(variable)"
+                      >
+                        <span class="icon">🔍</span>
+                      </button>
                       <button
                         class="action-button"
                         title="Create alias"
@@ -868,6 +921,71 @@ const currentOpenPath = computed(() => {
           "
           @refMounted="targetDropdownRef = $event"
         />
+      </div>
+    </StyledModal>
+
+    <!-- Similar Variables Modal -->
+    <StyledModal
+      v-model:show="showSimilarModal"
+      overflowScroll="overlay"
+      @close="showSimilarModal = false"
+      @confirm="handleSimilarModalConfirm"
+      :disabled="!selectedTargetVariableId"
+    >
+      <template #title>Similar Variables Found</template>
+
+      <div class="source-variable">
+        <strong>Source Variable:</strong>
+        <div class="selected-variable">
+          {{ selectedVariable?.name }}
+        </div>
+      </div>
+
+      <div class="similar-variables">
+        <strong>Select a variable to create alias from:</strong>
+        <div class="similar-list">
+          <div
+            v-for="variable in similarMatches"
+            :key="variable.id"
+            class="similar-variable"
+            :class="{ selected: selectedTargetVariableId === variable.id }"
+            @click="selectedTargetVariableId = variable.id"
+          >
+            <div class="variable-info">
+              <span class="variable-name">{{ variable.name }}</span>
+              <div class="variable-values">
+                <div
+                  v-for="mode in modes"
+                  :key="mode.modeId"
+                  class="mode-value"
+                >
+                  <div
+                    class="value-preview"
+                    :class="{
+                      'is-alias': isVariableAlias(variable, mode.modeId),
+                    }"
+                    :style="{
+                      backgroundColor:
+                        variable.resolvedType === 'COLOR' &&
+                        !isVariableAlias(variable, mode.modeId)
+                          ? getVariableValue(variable, mode.modeId)
+                          : undefined,
+                    }"
+                  >
+                    <span
+                      v-if="
+                        !isVariableAlias(variable, mode.modeId) &&
+                        variable.resolvedType !== 'COLOR'
+                      "
+                    >
+                      {{ getVariableValue(variable, mode.modeId) }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </StyledModal>
   </div>
@@ -1231,6 +1349,71 @@ const currentOpenPath = computed(() => {
   .target-dropdown {
     margin-top: 16px;
     width: 100%;
+  }
+}
+
+.similar-variables {
+  margin-top: 16px;
+  width: 100%;
+
+  .similar-list {
+    margin-top: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .similar-variable {
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 8px;
+    transition: all 0.2s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &.selected {
+      background: rgba(0, 102, 255, 0.2);
+      border-color: rgba(0, 102, 255, 0.4);
+    }
+
+    .variable-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .variable-name {
+      font-family: monospace;
+      font-size: 12px;
+    }
+
+    .variable-values {
+      display: flex;
+      gap: 8px;
+
+      .mode-value {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .value-preview {
+        height: 20px;
+        width: 20px;
+        flex-shrink: 0;
+        padding: 2px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: monospace;
+      }
+    }
   }
 }
 </style>
