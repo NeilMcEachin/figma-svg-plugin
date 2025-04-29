@@ -279,9 +279,20 @@ figma.on('selectionchange', async () => {
 
 const refreshCollectionVariables = async () => {
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
+  if (collections.length === 0) return
+  let variables = []
+  const nestedCollectionIndex = collections.findIndex(
+    (c) => c.name === 'Nested Collection'
+  )
+  if (nestedCollectionIndex > -1) {
+    variables = await getCollectionVariables(
+      collections[nestedCollectionIndex].id
+    )
+  } else {
+    variables = await getCollectionVariables(collections[0].id)
+  }
 
-  const variables = await getCollectionVariables(collections[1].id)
-  // console.log(variables);
+  console.log(variables)
 
   figma.ui.postMessage({
     type: 'returnCollectionVariables',
@@ -386,13 +397,20 @@ figma.ui.onmessage = async (msg) => {
   if (msg.type === 'getStyles') {
     const paintStyles = await figma.getLocalPaintStylesAsync()
     const effectStyles = await figma.getLocalEffectStylesAsync()
+    const textStyles = await figma.getLocalTextStylesAsync()
     console.log('paintStyles:')
+    console.log(paintStyles)
+    console.log('effectStyles:')
+    console.log(effectStyles)
+    console.log('textStyles:')
+    console.log(textStyles[38])
+
     const node = figma.currentPage.selection[0]
-    console.log(node.fills[0], node.width, node.height)
-    const css = await node.getCSSAsync()
-    console.log(css.background || css.fill)
-    const gradient = figmaGradientToCSS(node.fills[0], node.width, node.height)
-    console.log(gradient)
+    // console.log(node.fills[0], node.width, node.height)
+    // const css = await node.getCSSAsync()
+    // console.log(css.background || css.fill)
+    // const gradient = figmaGradientToCSS(node.fills[0], node.width, node.height)
+    // console.log(gradient)
 
     // console.log(paintStyles)
     // console.log(extractLinearGradientParamsFromTransform)
@@ -410,8 +428,6 @@ figma.ui.onmessage = async (msg) => {
     // }
     // }
     // }
-    console.log('effectStyles:')
-    console.log(effectStyles)
   }
 
   if (msg.type === 'getUnusedVariables') {
@@ -466,7 +482,7 @@ figma.ui.onmessage = async (msg) => {
     // console.log(results)
 
     // return
-    let boundVariables = await dfsRecursiveFind(figma.currentPage)
+    const boundVariables = await dfsRecursiveFind(figma.currentPage)
     // console.log(nodesWithBoundVariables)
     Object.keys(results).forEach((key) => {
       const variable = results[key]
@@ -689,7 +705,7 @@ figma.ui.onmessage = async (msg) => {
       (variable) =>
         !ignoreList.includes(variable.name) && variable.resolvedType === 'COLOR'
     )
-    let nodes = await getNodesWithBoundVariables(
+    const nodes = await getNodesWithBoundVariables(
       figma.currentPage,
       () => true,
       false,
@@ -784,8 +800,8 @@ figma.ui.onmessage = async (msg) => {
     }
 
     const collections = await figma.variables.getLocalVariableCollectionsAsync()
-    let oldCollection = await getCollectionVariables(collections[0].id)
-    let newCollection = await getCollectionVariables(collections[1].id)
+    const oldCollection = await getCollectionVariables(collections[0].id)
+    const newCollection = await getCollectionVariables(collections[1].id)
 
     const idMap = {}
     const oldCollectionKeys = Object.keys(remap)
@@ -795,7 +811,7 @@ figma.ui.onmessage = async (msg) => {
       idMap[oldVar.id] = newVar.id
     }
 
-    let nodes = await getNodesWithBoundVariables(
+    const nodes = await getNodesWithBoundVariables(
       figma.currentPage,
       () => true,
       false
@@ -837,16 +853,16 @@ figma.ui.onmessage = async (msg) => {
     ]
 
     const collections = await figma.variables.getLocalVariableCollectionsAsync()
-    let nestedCollection = await getCollectionVariables(collections[1].id)
+    const nestedCollection = await getCollectionVariables(collections[1].id)
     let collectionVariables = await getCollectionVariables(collections[0].id)
     collectionVariables = collectionVariables.filter(
       (variable) =>
         variable.resolvedType === 'COLOR' && !ignoreList.includes(variable.name)
     )
-    let nodes = await getNodesWithBoundVariables(
+    const nodes = await getNodesWithBoundVariables(
       figma.currentPage,
       () => true,
-      false,
+      msg.payload.includeImages,
       msg.payload.includeInstanceNodes
     )
 
@@ -882,7 +898,7 @@ figma.ui.onmessage = async (msg) => {
   }
   if (msg.type === 'getBoundNodes') {
     console.log(figma.currentPage)
-    let nodes = await getNodesWithBoundVariables(
+    const nodes = await getNodesWithBoundVariables(
       figma.currentPage,
       () => true,
       false
@@ -1004,8 +1020,16 @@ figma.ui.onmessage = async (msg) => {
     figma.viewport.scrollAndZoomIntoView([node])
   }
 
+  if (msg.type === 'focusNodes') {
+    const { nodes } = JSON.parse(msg.payload)
+    // const nodes = await figma.currentPage.getNodesByIdsAsync(nodeIds)
+    figma.currentPage.selection = nodes
+    figma.viewport.scrollAndZoomIntoView(nodes)
+  }
+
   if (msg.type === 'getNodesBoundToCollection') {
-    exportNodesBoundToCollection()
+    console.log('getNodesBoundToCollection', msg.payload.includeInstanceNodes)
+    exportNodesBoundToCollection(msg.payload.includeInstanceNodes)
   }
 
   if (msg.type === 'exportCollectionVariables') {
@@ -1020,8 +1044,8 @@ figma.ui.onmessage = async (msg) => {
     importBoundNodes(JSON.parse(msg.payload))
   }
 
-  if (msg.type === 'migrateVariables') {
-  }
+  // if (msg.type === 'migrateVariables') {
+  // }
 
   if (msg.type === 'toggleMinimize') {
     if (windowHeight === minimizedHeight) {

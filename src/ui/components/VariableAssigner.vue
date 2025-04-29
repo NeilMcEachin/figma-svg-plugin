@@ -8,7 +8,7 @@
     <StyledButton
       :label="actionText"
       @click="$emit('changeRequested', replacementVariableId)"
-      :disabled="!replacementVariableId"
+      :disabled="!replacementVariableId || disabled"
     />
     <StyledDropdown
       v-model="replacementVariableId"
@@ -40,6 +40,10 @@ const props = defineProps({
   actionText: {
     type: String,
     default: 'Change To',
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
   },
 })
 defineEmits(['changeRequested'])

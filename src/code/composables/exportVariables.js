@@ -1,9 +1,8 @@
-import {
-  getVariables,
-  getCollectionVariables,
-  getRawValue,
-} from './variableData'
 import { figmaRGBToHex } from './convertColor.ts'
+import {
+  getCollectionVariables,
+  getRawValue
+} from './variableData'
 function sortVariables(items) {
   items.sort((a, b) => {
     // First, sort by whether it's 'core/' or 'component'
@@ -22,7 +21,7 @@ export async function exportVariablestoSCSS(id, modeMap) {
   const collection = await figma.variables.getVariableCollectionByIdAsync(id)
   const modes = collection.modes
   let collectionVariables = await getCollectionVariables(id)
-  collectionVariables = collectionVariables.filter(v => v.name.startsWith('core/') || v.name.startsWith('component/'))
+  // collectionVariables = collectionVariables.filter(v => v.name.startsWith('core/') || v.name.startsWith('component/'))
   sortVariables(collectionVariables)
   let variableConfig = ''
 
@@ -47,7 +46,7 @@ export async function exportVariablestoSCSS(id, modeMap) {
 
       console.log(variable.name.split('/'))
 
-      const name = `--${variable.name.split('/').slice(1).join('-')}`
+      const name = `--${variable.name.split('/').join('-')}`
       variableConfig += `${name}: ${color};\n`
     }
     variableConfig += `}\n\n`

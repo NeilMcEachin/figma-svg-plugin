@@ -1,4 +1,3 @@
-
 export function createNestedCollection() {
   // I'll give it a list of all variables names as keys in css var format
   // and I'll give it an array of each variable group that should exist in figma or does in lxp variables

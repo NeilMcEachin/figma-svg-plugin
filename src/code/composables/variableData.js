@@ -132,7 +132,7 @@ async function getBoundVariables(
         }
       }
     } catch (e) {
-      console.log(`error with ${JSON.stringify(boundVars)}`)
+      console.log(`error with ${node.id}:${node.name}: ${JSON.stringify(boundVars)}`)
     }
   }
 

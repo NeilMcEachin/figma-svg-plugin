@@ -2,7 +2,8 @@
 import { onMounted, ref, watch, computed } from 'vue'
 import { postMessage, copyToClipboard, saveFile } from './utils'
 import emitter from './eventBus'
-import StyledButton from '@/components/StyledButton.vue'
+import StyledButton from './components/StyledButton.vue'
+import StyledDropdown from './components/StyledDropdown.vue'
 import VariableSwapper from './components/VariableSwapper.vue'
 import ResizableContainer from './components/ResizableContainer.vue'
 import BoundNodeSearch from './components/BoundNodeSearch.vue'
@@ -17,7 +18,7 @@ import {
 import VariablesPage from '@/components/VariablesPage.vue'
 import MigrationTools from './views/MigrationTools.vue'
 import VariablesTable from './components/VariablesTable.vue'
-
+import ModeTools from './views/ModeTools.vue'
 // import relations from './correctResponses'
 // import { copy } from 'fs-extra'
 // const chunkArray = (array, chunkSize) => {
@@ -44,7 +45,7 @@ const localVariables = ref([])
 const colorNodes = ref([])
 const colorNodeSuggestions = ref([])
 const includeInstanceNodes = ref(false)
-
+const selectedCollection = ref(null)
 const localVariableNames = computed(() => {
   const varNames = localVariables.value.map((variable) => variable.name)
   // console.log(varNames);
@@ -87,12 +88,12 @@ const focusNode = (nodeId) => {
 const exportVariablestoSCSS = () => {
   postMessage({
     type: 'exportVariablestoSCSS',
-    payload: JSON.stringify({ collectionId: nestedCollectionId.value }),
+    payload: JSON.stringify({ collectionId: selectedCollection.value }),
   })
 }
 
 const boundNodeGroups = computed(() => {
-  return [];
+  return []
   const groups = {}
   boundNodes.value.forEach((node) => {
     if (!groups[node.variable.name]) {
@@ -253,6 +254,7 @@ const tabs = ref([
   { label: 'Migration Tools' },
   { label: 'Bound Node Search' },
   { label: 'Variables Table' },
+  { label: 'Mode Tools' },
 ])
 </script>
 
@@ -276,7 +278,10 @@ const tabs = ref([
               style="width: 200px"
               placeholder="Focus Node"
             />
-            <StyledButton label="Focus Node" @click.stop="focusNode(focusNodeId)" />
+            <StyledButton
+              label="Focus Node"
+              @click.stop="focusNode(focusNodeId)"
+            />
           </div>
           <StyledButton
             label="Get Styles"
@@ -290,7 +295,9 @@ const tabs = ref([
           />
           <StyledButton label="Get List of Pages" @click="getFrames" />
           <div class="frames">
-            <div>{{ totalNodes - numNodesToChange }} / {{ totalNodes }} Done</div>
+            <div>
+              {{ totalNodes - numNodesToChange }} / {{ totalNodes }} Done
+            </div>
             <div>{{ numNodesToChange }} left to do</div>
             <template v-for="frame of mappedFrames" :key="frame.id">
               <GCollapsible v-if="frame.progress < 1">
@@ -399,7 +406,11 @@ const tabs = ref([
             :disabled="varsToDelete.length === 0"
             @click="deleteUnusedVariables"
           />
-          <div v-for="variable of unusedVariables2" :key="variable.id" class="row">
+          <div
+            v-for="variable of unusedVariables2"
+            :key="variable.id"
+            class="row"
+          >
             <GCheckbox
               v-model="varsToDelete"
               :label="variable.name"
@@ -434,7 +445,11 @@ const tabs = ref([
               })
             "
           />
-          <div v-for="variable of variablesToRemap" :key="variable.id" class="row">
+          <div
+            v-for="variable of variablesToRemap"
+            :key="variable.id"
+            class="row"
+          >
             <GCollapsible>
               <template #title>
                 <StyledButton
@@ -452,7 +467,10 @@ const tabs = ref([
           <StyledButton
             label="Get Bound Nodes"
             @click="
-              postMessage({ type: 'getBoundNodes', payload: nestedCollectionId })
+              postMessage({
+                type: 'getBoundNodes',
+                payload: nestedCollectionId,
+              })
             "
           />
 
@@ -471,7 +489,10 @@ const tabs = ref([
             </div>
           </GCollapsible>
           <hr />
-          <StyledButton label="Refresh Variables" @click="getCollectionVariables" />
+          <StyledButton
+            label="Refresh Variables"
+            @click="getCollectionVariables"
+          />
           <!-- {{ localVariableNames }} -->
           <div class="nodes">
             <div v-for="node in colorNodes" class="node" :key="node.name">
@@ -506,7 +527,17 @@ const tabs = ref([
             </div>
           </div>
           <hr />
-          <StyledButton label="Export Variables to SCSS" @click="exportVariablestoSCSS" />
+          <StyledDropdown
+            :options="collections"
+            v-model="selectedCollection"
+            valueProp="id"
+            trackBy="name"
+            label="name"
+          />
+          <StyledButton
+            label="Export Variables to SCSS"
+            @click="exportVariablestoSCSS"
+          />
         </div>
       </div>
       <!-- {{ nestedCollectionId }} -->
@@ -514,8 +545,8 @@ const tabs = ref([
         <VariablesPage v-bind="{ nestedCollectionId }" />
       </div>
       <MigrationTools v-show="activePage === 2" />
-      <BoundNodeSearch 
-        v-show="activePage === 3" 
+      <BoundNodeSearch
+        v-show="activePage === 3"
         :nestedCollectionId="nestedCollectionId"
         :boundNodes="boundNodes"
       />
@@ -523,6 +554,7 @@ const tabs = ref([
         v-show="activePage === 4"
         :nestedCollectionId="nestedCollectionId"
       />
+      <ModeTools v-show="activePage === 5" />
     </div>
   </ResizableContainer>
 </template>
@@ -579,6 +611,18 @@ body {
   --modal-card-fg: var(--body-fg);
   --modal-overlay-bg: rgba(0, 0, 0, 0.5);
   --shadow-2: 2px 3px 6px rgba(0, 0, 0, 0.25);
+
+  // Checkbox
+  --checkbox-bg: #fff0;
+  --checkbox-border-fg: #ffffff40;
+  --checkbox-checked-bg: #ffffff40;
+  --checkbox-checked-border-fg: #fff;
+  --checkbox-disabled-bg: #4d4f52;
+  --checkbox-disabled-border-fg: #4d4f52;
+  --checkbox-disabled-fg: #9fa5aa;
+  --checkbox-fg: #fff;
+  --checkbox-hover-bg: #ffffff1a;
+  --checkbox-hover-border-fg: #fffc;
 }
 
 .styled-button.toggle-ui-size {
@@ -657,7 +701,7 @@ body {
 
 .bound-node-search {
   padding: 20px;
-  
+
   .search-header {
     display: flex;
     gap: 10px;

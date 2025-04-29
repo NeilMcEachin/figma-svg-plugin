@@ -12,16 +12,22 @@ let VARIABLE_COLLECTION_ID = null
 //  Export functions
 // ------------------------------
 
-export async function getNodesBoundToCollection(collectionId) {
+export async function getNodesBoundToCollection(
+  collectionId,
+  includeInstanceNodes = false
+) {
+  // console.log(figma.root)
+  console.log(includeInstanceNodes)
   const nodes = await getNodesWithBoundVariables(
-    figma.currentPage,
+    figma.root,
     (name, variable, type) => {
       return (
         variable.variableCollectionId === collectionId &&
         variable.resolvedType === 'COLOR'
       )
     },
-    false
+    false,
+    includeInstanceNodes
   )
   return nodes
 }
@@ -113,13 +119,19 @@ const sortFunction = (a, b) => {
   return a.name.localeCompare(b.name)
 }
 
-export async function exportNodesBoundToCollection() {
+export async function exportNodesBoundToCollection(
+  includeInstanceNodes = false
+) {
+  console.log('exportNodesBoundToCollection', includeInstanceNodes)
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
   const newCollection = collections.find(
     (collection) => collection.name === 'Nested Collection'
   )
-  const nodes = await getNodesBoundToCollection(newCollection.id)
-
+  const nodes = await getNodesBoundToCollection(
+    newCollection.id,
+    includeInstanceNodes
+  )
+  console.log(`exported ${nodes.length} nodes`)
   const fileData = JSON.stringify({
     data: JSON.stringify(nodes, null, 2),
     name: 'nodesToMigrate.json',
@@ -265,7 +277,7 @@ async function importVariables(variables, collection, variableMap, modeMap) {
  * @returns {Object} Map of variable IDs to variable names
  * Example: {
  *   "var123": "colors/primary",
- *   "var456": "spacing/large" 
+ *   "var456": "spacing/large"
  * }
  */
 
@@ -277,8 +289,7 @@ function createVariableMap(variables) {
   return variableMap
 }
 
-async function setVariableToStyle(variable, style){
-}
+async function setVariableToStyle(variable, style) {}
 
 /**
  * Updates variable bindings in a paint object based on provided mappings
@@ -293,10 +304,12 @@ function updatePaintVariables(paint, importedPaint, oldNewVariableMap) {
 
   // Handle all bound variables on the paint
   if (updatedPaint.boundVariables) {
-    Object.keys(updatedPaint.boundVariables).forEach(key => {
+    Object.keys(updatedPaint.boundVariables).forEach((key) => {
       const importedVar = importedPaint?.boundVariables?.[key]
       if (importedVar?.id) {
-        updatedPaint.boundVariables[key].id = oldNewVariableMap[importedVar.id] || updatedPaint.boundVariables[key].id
+        updatedPaint.boundVariables[key].id =
+          oldNewVariableMap[importedVar.id] ||
+          updatedPaint.boundVariables[key].id
       }
     })
   }
@@ -306,10 +319,11 @@ function updatePaintVariables(paint, importedPaint, oldNewVariableMap) {
     updatedPaint.gradientStops.forEach((stop, stopIndex) => {
       const importedStop = importedPaint?.gradientStops?.[stopIndex]
       if (stop.boundVariables) {
-        Object.keys(stop.boundVariables).forEach(key => {
+        Object.keys(stop.boundVariables).forEach((key) => {
           const importedVar = importedStop?.boundVariables?.[key]
           if (importedVar?.id) {
-            stop.boundVariables[key].id = oldNewVariableMap[importedVar.id] || stop.boundVariables[key].id
+            stop.boundVariables[key].id =
+              oldNewVariableMap[importedVar.id] || stop.boundVariables[key].id
           }
         })
       }
@@ -332,10 +346,12 @@ function updateEffectVariables(effect, importedEffect, oldNewVariableMap) {
 
   // Handle all bound variables on the effect
   if (updatedEffect.boundVariables) {
-    Object.keys(updatedEffect.boundVariables).forEach(key => {
+    Object.keys(updatedEffect.boundVariables).forEach((key) => {
       const importedVar = importedEffect?.boundVariables?.[key]
       if (importedVar?.id) {
-        updatedEffect.boundVariables[key].id = oldNewVariableMap[importedVar.id] || updatedEffect.boundVariables[key].id
+        updatedEffect.boundVariables[key].id =
+          oldNewVariableMap[importedVar.id] ||
+          updatedEffect.boundVariables[key].id
       }
     })
   }
@@ -355,14 +371,20 @@ async function migrateStyleVariables(importedStyles, oldNewVariableMap) {
   const stylesInDocument = [...paintStyles, ...effectStyles]
 
   for (const importedStyle of importedStyles) {
-    const styleInDocument = stylesInDocument.find(s => s.name === importedStyle.name)
-    
+    const styleInDocument = stylesInDocument.find(
+      (s) => s.name === importedStyle.name
+    )
+
     if (!styleInDocument) continue
 
     // Handle paint styles
     if (styleInDocument.paints) {
-      const updatedPaints = styleInDocument.paints.map((paint, index) => 
-        updatePaintVariables(paint, importedStyle.paints?.[index], oldNewVariableMap)
+      const updatedPaints = styleInDocument.paints.map((paint, index) =>
+        updatePaintVariables(
+          paint,
+          importedStyle.paints?.[index],
+          oldNewVariableMap
+        )
       )
       styleInDocument.paints = updatedPaints
     }
@@ -370,55 +392,72 @@ async function migrateStyleVariables(importedStyles, oldNewVariableMap) {
     // Handle effect styles
     if (styleInDocument.effects) {
       const updatedEffects = styleInDocument.effects.map((effect, index) =>
-        updateEffectVariables(effect, importedStyle.effects?.[index], oldNewVariableMap)
+        updateEffectVariables(
+          effect,
+          importedStyle.effects?.[index],
+          oldNewVariableMap
+        )
       )
       styleInDocument.effects = updatedEffects
     }
   }
 }
 
-async function createOldNewVariableMap(importedVariables, collectionId){
+async function createOldNewVariableMap(importedVariables, collectionId) {
   const importedVariableMap = {}
   for (const variable of importedVariables) {
     importedVariableMap[variable.name] = variable.id
   }
 
-  const collectionVariables = await getCollectionVariables(collectionId);
+  const collectionVariables = await getCollectionVariables(collectionId)
   const oldNewVariableMap = {}
   for (const variable of collectionVariables) {
     oldNewVariableMap[importedVariableMap[variable.name]] = variable.id
   }
-  return oldNewVariableMap;
+  return oldNewVariableMap
 }
 
-export async function importCollectionVariables(variableCollection) {
+export async function importCollectionVariables(
+  variableCollection,
+  createNewCollection = true
+) {
   // Create collection
-  const collection = await createCollection(variableCollection.collectionName)
-  const styles = [...variableCollection.paintStyles, ...variableCollection.effectStyles];
-  const oldNewVariableMap = await createOldNewVariableMap(variableCollection.variables, collection.id);
-  console.log(oldNewVariableMap);
-  await migrateStyleVariables(styles, oldNewVariableMap);
-  return;
-  // Create Modes and return map { oldId: newId }
-  const modeMap = await createModes(collection, variableCollection.modes)
-  // Return variable map for reference { oldId: newName }
-  const variableMap = createVariableMap(variableCollection.variables)
-  // Sort variables coming in
-  const incomingVariables = variableCollection.variables.sort(sortFunction)
-  // Returns map of names to new variable ids { name: id }
-  const collectionMap = await importVariables(
-    incomingVariables,
-    collection,
-    variableMap,
-    modeMap
-  )
+  // console.log(variableCollection)
+
+  if (createNewCollection) {
+    const collection = await createCollection(variableCollection.collectionName)
+    // Create Modes and return map { oldId: newId }
+    const modeMap = await createModes(collection, variableCollection.modes)
+    // Return variable map for reference { oldId: newName }
+    const variableMap = createVariableMap(variableCollection.variables)
+    // Sort variables coming in
+    const incomingVariables = variableCollection.variables.sort(sortFunction)
+    // Returns map of names to new variable ids { name: id }
+    const collectionMap = await importVariables(
+      incomingVariables,
+      collection,
+      variableMap,
+      modeMap
+    )
+
+    const styles = [
+      ...variableCollection.paintStyles,
+      ...variableCollection.effectStyles,
+    ]
+    const oldNewVariableMap = await createOldNewVariableMap(
+      variableCollection.variables,
+      collection.id
+    )
+    // console.log(oldNewVariableMap)
+    await migrateStyleVariables(styles, oldNewVariableMap)
+  }
 }
 
 /**
  * Migrates node variables from one collection to another
  * @param {Array} nodes - Array of nodes with their bound variables and types. Example:
  * [{
- *   id: "node123", 
+ *   id: "node123",
  *   name: "Rectangle 1",
  *   type: "fills",
  *   variable: {
@@ -439,13 +478,13 @@ export async function migrateNodeVariables(nodes, collectionId) {
       if (node.variable) {
         // Get the name of the variable currently bound to this node
         const boundVariableName = node.variable.name
-        
+
         // Find the matching variable in the target collection by name
         const variable = variables.find((v) => v.name === boundVariableName)
-        
+
         // Get reference to the actual Figma node
         const figmaNode = await figma.getNodeByIdAsync(node.id)
-        
+
         // Skip if node doesn't exist in the document
         if (!figmaNode) {
           console.log(`Node ${node.id} not found, Skipping`)
@@ -458,14 +497,14 @@ export async function migrateNodeVariables(nodes, collectionId) {
     } catch (e) {
       // Log any errors along with the problematic node
       console.log(node)
-      console.log(e) 
+      console.log(e)
     }
   }
 }
 
 /**
  * Imports nodes with bound variables from a JSON file and migrates them to a target collection
- * 
+ *
  * @param {Array} nodesToMigrate - Array of node objects containing:
  *   - id: Node ID in the Figma document
  *   - name: Display name of the node
@@ -473,19 +512,19 @@ export async function migrateNodeVariables(nodes, collectionId) {
  *   - variable: Object containing variable info:
  *     - id: Original variable ID
  *     - name: Variable name used for matching
- * 
+ *
  * @todo Update hardcoded 'Nested Collection' name to be configurable
  * @todo Add error handling for collection not found case
  */
 export async function importBoundNodes(nodesToMigrate) {
   // Get all variable collections in the document
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
-  
+
   // Find the target collection to migrate variables into
   const collection = collections.find(
     (collection) => collection.name === 'Nested Collection'
   )
-  
+
   // Migrate the node bindings to variables in the target collection
   await migrateNodeVariables(nodesToMigrate, collection.id)
 }

@@ -79,6 +79,9 @@ const selectedTargetVariableId = ref<string | null>(null)
 const selectedVariableIds = ref<Set<string>>(new Set())
 const similarMatches = ref<Variable[]>([])
 const showSimilarModal = ref(false)
+const editingPath = ref<string | null>(null)
+const editingVariable = ref<string | null>(null)
+const editingValue = ref('')
 
 const filteredVariables = computed(() => {
   if (!searchQuery.value) return variables.value
@@ -88,11 +91,11 @@ const filteredVariables = computed(() => {
 
   return variables.value.filter((variable) => {
     const name = variable.name.toLowerCase()
-    
-    return terms.every(term => {
+
+    return terms.every((term) => {
       // First check if it's in the name
       if (name.includes(term)) return true
-      
+
       // Then check values
       return Object.entries(variable.valuesByMode).some(([modeId, value]) => {
         // If it's a color term and this is a color variable
@@ -102,20 +105,28 @@ const filteredVariables = computed(() => {
             return colorsMatch(searchTerm, value)
           }
         }
-        
+
         // If it's a number term and this is a float variable
         if (isNumberTerm(term) && variable.resolvedType === 'FLOAT') {
           return numbersMatch(term, value)
         }
-        
+
         // Check if it's an alias and search in the referenced variable name
-        if (typeof value === 'object' && value !== null && 'type' in value && value.type === 'VARIABLE_ALIAS' && 'id' in value) {
-          const referencedVariable = variables.value.find(v => v.id === value.id)
+        if (
+          typeof value === 'object' &&
+          value !== null &&
+          'type' in value &&
+          value.type === 'VARIABLE_ALIAS' &&
+          'id' in value
+        ) {
+          const referencedVariable = variables.value.find(
+            (v) => v.id === value.id
+          )
           if (referencedVariable) {
             return referencedVariable.name.toLowerCase().includes(term)
           }
         }
-        
+
         // For regular text, check the string representation
         const stringValue = getVariableValue(variable, modeId).toLowerCase()
         return stringValue.includes(term)
@@ -179,6 +190,7 @@ const selectedVariables = computed(() => {
       }
       result[parentPath].push(variable)
     })
+
 
     return result
   }
@@ -626,14 +638,15 @@ const currentOpenPath = computed(() => {
 
 const handleFindSimilar = (sourceVariable: Variable) => {
   // Get all mode IDs
-  const modeIds = modes.value.map(mode => mode.modeId)
-  
+  const modeIds = modes.value.map((mode) => mode.modeId)
+
   // Find variables with matching values
-  const matches = variables.value.filter(targetVariable => 
-    targetVariable.id !== sourceVariable.id && // Don't match self
-    valuesMatchAcrossModes(sourceVariable, targetVariable, modeIds)
+  const matches = variables.value.filter(
+    (targetVariable) =>
+      targetVariable.id !== sourceVariable.id && // Don't match self
+      valuesMatchAcrossModes(sourceVariable, targetVariable, modeIds)
   )
-  
+
   // If we found matches, show the modal
   if (matches.length > 0) {
     selectedVariable.value = sourceVariable
@@ -660,11 +673,66 @@ const handleSimilarModalConfirm = () => {
   showSimilarModal.value = false
   selectedVariable.value = null
   selectedTargetVariableId.value = null
-  
+
   // Refresh variables after action
   setTimeout(() => {
     refreshVariables()
   }, 100)
+}
+
+const startEditing = (path: string, type: 'path' | 'variable') => {
+  if (type === 'path') {
+    editingPath.value = path
+    editingValue.value = path
+  } else {
+    editingVariable.value = path
+    editingValue.value = path
+  }
+}
+
+const handleRename = (type: 'path' | 'variable', variables: undefined) => {
+  const oldPath = type === 'path' ? editingPath.value : editingVariable.value
+  const newPath = editingValue.value.trim()
+
+  if (!oldPath || !newPath || oldPath === newPath) {
+    editingPath.value = null
+    editingVariable.value = null
+    return
+  }
+
+  console.log('renameVariable', variables)
+
+  postMessage({
+    type: 'renameVariable',
+    payload: JSON.stringify({
+      oldPath,
+      newPath,
+      isGroup: type === 'path',
+    }),
+  })
+
+  editingPath.value = null
+  editingVariable.value = null
+
+  // Refresh variables after rename
+  setTimeout(() => {
+    refreshVariables()
+  }, 100)
+}
+
+const handleEditKeyDown = (
+  e: KeyboardEvent,
+  type: 'path' | 'variable',
+  variables: undefined
+) => {
+  if (e.key === 'Enter') {
+    e.preventDefault()
+    handleRename(type, variables)
+  } else if (e.key === 'Escape') {
+    e.preventDefault()
+    editingPath.value = null
+    editingVariable.value = null
+  }
 }
 </script>
 
@@ -731,7 +799,23 @@ const handleSimilarModalConfirm = () => {
             <thead>
               <tr>
                 <th class="group-header" colspan="100%">
-                  {{ path }}
+                  <template v-if="editingPath === path">
+                    <input
+                      v-model="editingValue"
+                      class="edit-input"
+                      @keydown="
+                        (e) => handleEditKeyDown(e, 'path', groupVariables)
+                      "
+                      @blur="handleRename('path', groupVariables)"
+                    />
+                  </template>
+                  <span
+                    v-else
+                    class="editable-text"
+                    @dblclick="startEditing(path as string, 'path')"
+                  >
+                    {{ path }}
+                  </span>
                 </th>
               </tr>
               <tr>
@@ -751,7 +835,10 @@ const handleSimilarModalConfirm = () => {
                 :key="variable.id"
                 :data-variable-id="variable.id"
                 class="variable-row"
-                :class="{ selected: selectedVariableIds.has(variable.id), 'disable-text-selection': selectedVariableIds.size > 1 }"
+                :class="{
+                  selected: selectedVariableIds.has(variable.id),
+                  'disable-text-selection': selectedVariableIds.size > 1,
+                }"
                 @click.stop="toggleVariableSelection(variable.id, $event)"
               >
                 <td class="name-cell">
@@ -759,9 +846,21 @@ const handleSimilarModalConfirm = () => {
                     <span class="variable-icon">{{
                       getVariableIcon(variable.resolvedType)
                     }}</span>
-                    <span class="variable-name">{{
-                      variable.name.split('/').pop()
-                    }}</span>
+                    <template v-if="editingVariable === variable.name">
+                      <input
+                        v-model="editingValue"
+                        class="edit-input"
+                        @keydown="(e) => handleEditKeyDown(e, 'variable')"
+                        @blur="handleRename('variable')"
+                      />
+                    </template>
+                    <span
+                      v-else
+                      class="variable-name editable-text"
+                      @dblclick.stop="startEditing(variable.name, 'variable')"
+                    >
+                      {{ variable.name.split('/').pop() }}
+                    </span>
                     <div class="actions">
                       <button
                         class="action-button"
@@ -1349,6 +1448,33 @@ const handleSimilarModalConfirm = () => {
   .target-dropdown {
     margin-top: 16px;
     width: 100%;
+  }
+}
+
+.editable-text {
+  cursor: text;
+  padding: 2px 4px;
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.edit-input {
+  background: var(--body-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: var(--body-fg);
+  padding: 2px 4px;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  max-width: 300px;
+
+  &:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
   }
 }
 
