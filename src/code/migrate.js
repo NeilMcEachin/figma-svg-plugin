@@ -170,6 +170,11 @@ export async function exportCollectionVariables() {
   })
 }
 
+export async function exportCollectionModeVariables(collectionId, modeId) {
+  const variables = await getCollectionVariables(collectionId, modeId)
+  console.log(variables)
+}
+
 async function createModes(collection, modes) {
   const modeMap = {}
   for (let i = 0; i < modes.length; i++) {

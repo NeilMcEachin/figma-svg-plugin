@@ -32,6 +32,7 @@ import {
 import {
   exportNodesBoundToCollection,
   exportCollectionVariables,
+  exportCollectionModeVariables,
   importCollectionVariables,
   // importStyles,
   importBoundNodes,
@@ -277,20 +278,22 @@ figma.on('selectionchange', async () => {
   getSelection()
 })
 
-const refreshCollectionVariables = async () => {
+const refreshCollectionVariables = async (collectionId) => {
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
   if (collections.length === 0) return
   let variables = []
-  const nestedCollectionIndex = collections.findIndex(
-    (c) => c.name === 'Nested Collection'
-  )
-  if (nestedCollectionIndex > -1) {
-    variables = await getCollectionVariables(
-      collections[nestedCollectionIndex].id
+  let localCollectionId = collectionId
+  if (!localCollectionId) {
+    const nestedCollectionIndex = collections.findIndex(
+      (c) => c.name === 'Nested Collection'
     )
-  } else {
-    variables = await getCollectionVariables(collections[0].id)
+    if (nestedCollectionIndex > -1) {
+      localCollectionId = collections[nestedCollectionIndex].id
+    } else {
+      localCollectionId = collections[0].id
+    }
   }
+  variables = await getCollectionVariables(localCollectionId)
 
   console.log(variables)
 
@@ -313,11 +316,11 @@ figma.ui.onmessage = async (msg) => {
     getCollections()
   }
   if (msg.type === 'getCollectionVariables') {
-    refreshCollectionVariables()
+    refreshCollectionVariables(msg.payload?.collectionId)
   }
   if (msg.type === 'getCollectionModes') {
-    const collections = await figma.variables.getLocalVariableCollectionsAsync()
-    const modes = await getModes(collections[1].id)
+    const { collectionId } = msg.payload
+    const modes = await getModes(collectionId)
 
     figma.ui.postMessage({
       type: 'returnCollectionModes',
@@ -1030,6 +1033,10 @@ figma.ui.onmessage = async (msg) => {
   if (msg.type === 'getNodesBoundToCollection') {
     console.log('getNodesBoundToCollection', msg.payload.includeInstanceNodes)
     exportNodesBoundToCollection(msg.payload.includeInstanceNodes)
+  }
+
+  if (msg.type === 'exportCollectionModeVariables') {
+    exportCollectionModeVariables(msg.payload.collectionId, msg.payload.modeId)
   }
 
   if (msg.type === 'exportCollectionVariables') {

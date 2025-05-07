@@ -79,6 +79,23 @@ export async function getCollectionVariables(collectionId) {
   return filteredVariables
 }
 
+
+export async function getCollectionModeVariables(collectionId, modeId) {
+  const variables = await getVariables()
+
+  const filteredVariables = variables
+    .filter((v) => v.variableCollectionId === collectionId)
+    .map((v) => ({
+      name: v.name,
+      id: v.id,
+      valuesByMode: v.valuesByMode,
+      resolvedType: v.resolvedType,
+    }))
+
+  return filteredVariables
+}
+
+
 async function getBoundVariables(
   node,
   condition = () => true,

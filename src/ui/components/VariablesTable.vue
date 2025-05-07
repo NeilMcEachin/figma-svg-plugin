@@ -11,6 +11,7 @@ import {
 import StyledButton from './StyledButton.vue'
 import StyledInput from './StyledInput.vue'
 import StyledModal from './StyledModal.vue'
+import StyledDropdown from './StyledDropdown.vue'
 import { postMessage } from '../utils'
 import emitter from '../eventBus'
 import VariableNavTree from './VariableNavTree.vue'
@@ -82,6 +83,9 @@ const showSimilarModal = ref(false)
 const editingPath = ref<string | null>(null)
 const editingVariable = ref<string | null>(null)
 const editingValue = ref('')
+
+const collections = ref([])
+const selectedCollection = ref(null)
 
 const filteredVariables = computed(() => {
   if (!searchQuery.value) return variables.value
@@ -190,7 +194,6 @@ const selectedVariables = computed(() => {
       }
       result[parentPath].push(variable)
     })
-
 
     return result
   }
@@ -389,20 +392,30 @@ const handleKeyDown = (e: KeyboardEvent) => {
 
 const refreshVariables = () => {
   postMessage({
-    type: 'getCollectionVariables',
+    type: 'getCollectionModes',
+    payload: { collectionId: selectedCollection.value },
   })
   postMessage({
-    type: 'getCollectionModes',
-    payload: { collectionId: props.nestedCollectionId },
+    type: 'getCollectionVariables',
+    payload: { collectionId: selectedCollection.value },
   })
 }
 
 emitter.on('msg', (async (msg: { type: string; payload: string }) => {
   if (msg.type === 'returnCollectionVariables') {
     variables.value = JSON.parse(msg.payload)
+    console.log(variables.value)
   }
   if (msg.type === 'returnCollectionModes') {
     modes.value = JSON.parse(msg.payload)
+  }
+  if (msg.type === 'returnCollections') {
+    collections.value = JSON.parse(msg.payload)
+    
+    const nestedCollection = collections.value.find(
+      (collection) => collection.name === 'Nested Collection'
+    )
+    selectedCollection.value = nestedCollection.id
   }
 }) as any)
 
@@ -739,6 +752,14 @@ const handleEditKeyDown = (
 <template>
   <div class="variables-table">
     <div class="sidebar">
+      <StyledDropdown
+        v-model="selectedCollection"
+        :options="collections"
+        placeholder="Select Collection"
+        valueProp="id"
+        trackBy="name"
+        label="name"
+      />
       <div class="search-container">
         <StyledInput
           v-model="searchQuery"
