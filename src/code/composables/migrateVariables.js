@@ -69,7 +69,7 @@ const sortFunction = (a, b) => {
 
 export async function createVariableSet(collectionId) {
   const newVariablesList = await getCollectionVariables(collectionId)
-  const oldVariables = [...variables].sort(sortFunction)
+  const oldVariables = variables.slice().sort(sortFunction)
 
   const modes = await getModes(collectionId)
   for (const oldVariable of oldVariables) {

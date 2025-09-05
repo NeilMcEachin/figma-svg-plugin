@@ -116,7 +116,15 @@ async function getBoundVariables(
     if (!boundVars) continue
     try {
       for (const element of boundVars) {
-        const variable = await figma.variables.getVariableByIdAsync(element.id)
+        let variable
+        try {
+          variable = await figma.variables.getVariableByIdAsync(element.id)
+        } catch (error) {
+          // Variable was deleted - skip it
+          continue
+        }
+        
+        if (!variable) continue
         // console.log(variable)
 
         // console.log(condition);
@@ -182,7 +190,7 @@ export async function getNodesWithBoundVariables(
 
   const variables = await getBoundVariables(node, condition, includeImage)
   if (variables.length) {
-    nodesWithBoundVariables.push(...variables)
+    nodesWithBoundVariables = nodesWithBoundVariables.concat(variables)
   }
 
   if (node.children) {

@@ -15,7 +15,7 @@ import {
   GCheckbox,
   GSwitch,
 } from '@twentyfourg/grimoire'
-import VariablesPage from '@/components/VariablesPage.vue'
+import VariablesPage from './components/VariablesPage.vue'
 import MigrationTools from './views/MigrationTools.vue'
 import VariablesTable from './components/VariablesTable.vue'
 import ModeTools from './views/ModeTools.vue'
@@ -54,7 +54,7 @@ const localVariableNames = computed(() => {
 
 const nestedCollectionId = computed(() => {
   return collections.value.find(
-    (collection) => collection.name === 'Nested Collection'
+    (collection) => collection.name === 'ENG VARIABLES'
   )?.id
 })
 
@@ -363,12 +363,12 @@ const tabs = ref([
           <hr />
           {{ nestedCollectionId }}
           <StyledButton
-            label="Delete Nested Collection"
+            label="Delete ENG VARIABLES"
             :disabled="!nestedCollectionId"
             @click.once="deleteNestedCollection"
           />
           <StyledButton
-            label="Create Nested Collection"
+            label="Create ENG VARIABLES"
             :disabled="!!nestedCollectionId"
             @click.once="createNestedCollection"
           />

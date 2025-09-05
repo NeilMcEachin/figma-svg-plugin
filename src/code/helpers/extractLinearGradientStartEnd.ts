@@ -14,7 +14,7 @@ export function extractLinearGradientParamsFromTransform(
 	shapeHeight: number,
 	t: Transform
 ) {
-	const transform = t.length === 2 ? [...t, [0, 0, 1]] : [...t]
+	const transform = t.length === 2 ? t.concat([[0, 0, 1]]) : t.slice()
 	const mxInv = matrixInverse(transform)
 	const startEnd = [
 		[0, 0.5],

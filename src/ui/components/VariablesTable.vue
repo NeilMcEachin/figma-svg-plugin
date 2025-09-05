@@ -62,7 +62,8 @@ interface HistoryEntry {
 const props = defineProps({
   nestedCollectionId: {
     type: String,
-    required: true,
+    required: false,
+    default: null,
   },
 })
 
@@ -83,6 +84,10 @@ const showSimilarModal = ref(false)
 const editingPath = ref<string | null>(null)
 const editingVariable = ref<string | null>(null)
 const editingValue = ref('')
+
+// Copy variables functionality
+const showCopyModal = ref(false)
+const targetPathPrefix = ref('')
 
 const collections = ref([])
 const selectedCollection = ref(null)
@@ -413,7 +418,7 @@ emitter.on('msg', (async (msg: { type: string; payload: string }) => {
     collections.value = JSON.parse(msg.payload)
     
     const nestedCollection = collections.value.find(
-      (collection) => collection.name === 'Nested Collection'
+      (collection) => collection.name === 'ENG VARIABLES'
     )
     selectedCollection.value = nestedCollection.id
   }
@@ -472,6 +477,9 @@ const handleVariableAction = (action: string, variable: Variable) => {
     case 'assignRawValues':
       modalType.value = 'raw'
       showModal.value = true
+      break
+    case 'copyVariables':
+      showCopyModal.value = true
       break
   }
 }
@@ -669,6 +677,42 @@ const handleFindSimilar = (sourceVariable: Variable) => {
     // If no matches, show a message
     console.log('No variables found with matching values')
   }
+}
+
+const handleCopyModalConfirm = () => {
+  if (!targetPathPrefix.value.trim()) return
+
+  // Get all visible variables from the current view
+  const visibleVariables = Object.values(selectedVariables.value).flat()
+
+  const variablesToProcess = selectedVariable.value
+    ? [selectedVariable.value] // Single variable case
+    : visibleVariables.filter((v) => selectedVariableIds.value.has(v.id)) // Multi-select case
+
+  if (variablesToProcess.length === 0) return
+
+  postMessage({
+    type: 'copyVariables',
+    payload: JSON.stringify({
+      variables: variablesToProcess.map((v) => ({
+        id: v.id,
+        name: v.name,
+        resolvedType: v.resolvedType,
+        valuesByMode: v.valuesByMode
+      })),
+      targetPathPrefix: targetPathPrefix.value.trim(),
+    }),
+  })
+
+  showCopyModal.value = false
+  targetPathPrefix.value = ''
+  selectedVariable.value = null
+  selectedVariableIds.value.clear()
+
+  // Refresh variables after action
+  setTimeout(() => {
+    refreshVariables()
+  }, 100)
 }
 
 const handleSimilarModalConfirm = () => {
@@ -908,6 +952,15 @@ const handleEditKeyDown = (
                       >
                         <span class="icon">⎘</span>
                       </button>
+                      <button
+                        class="action-button"
+                        title="Copy variables to new path"
+                        @click.stop="
+                          handleVariableAction('copyVariables', variable)
+                        "
+                      >
+                        <span class="icon">📋</span>
+                      </button>
                     </div>
                   </div>
                 </td>
@@ -1106,6 +1159,63 @@ const handleEditKeyDown = (
             </div>
           </div>
         </div>
+      </div>
+    </StyledModal>
+
+    <!-- Copy Variables Modal -->
+    <StyledModal
+      v-model:show="showCopyModal"
+      @close="showCopyModal = false"
+      @confirm="handleCopyModalConfirm"
+      :disabled="!targetPathPrefix.trim()"
+    >
+      <template #title>Copy Variables to New Path</template>
+
+      <div class="source-variable">
+        <strong
+          >Variable{{ selectedVariableIds.size > 0 || !selectedVariable ? 's' : '' }} to Copy:</strong
+        >
+        <template v-if="selectedVariable && selectedVariableIds.size === 0">
+          <div class="selected-variable">
+            {{ selectedVariable.name }}
+          </div>
+        </template>
+        <template v-else-if="selectedVariableIds.size > 0">
+          <div class="selected-variables">
+            <div
+              v-for="id in selectedVariableIds"
+              :key="id"
+              class="selected-variable"
+            >
+              {{ variables.find((v) => v.id === id)?.name }}
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <div class="selected-variables">
+            <div
+              v-for="variable in Object.values(selectedVariables).flat()"
+              :key="variable.id"
+              class="selected-variable"
+            >
+              {{ variable.name }}
+            </div>
+          </div>
+        </template>
+      </div>
+      
+      <div class="target-selection">
+        <strong>Target Path Prefix:</strong>
+        <p class="help-text">
+          Enter the new path prefix. New variables will be created as aliases to the selected variables.
+          <br />
+          Example: <code>component/login</code> creates <code>component/login/button/primary-bg</code> → <code>component/button/primary-bg</code>
+        </p>
+        <StyledInput
+          v-model="targetPathPrefix"
+          placeholder="e.g., component/login"
+          class="target-input"
+        />
       </div>
     </StyledModal>
   </div>
@@ -1562,5 +1672,25 @@ const handleEditKeyDown = (
       }
     }
   }
+}
+
+.help-text {
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 8px 0;
+  line-height: 1.4;
+  
+  code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 11px;
+  }
+}
+
+.target-input {
+  margin-top: 8px;
+  width: 100%;
 }
 </style>

@@ -22,7 +22,11 @@ import StyledInput from '@/components/StyledInput.vue'
 import emitter from '../eventBus'
 
 const props = defineProps({
-  nestedCollectionId: String,
+  nestedCollectionId: {
+    type: String,
+    required: false,
+    default: null,
+  },
 })
 const localVariables = ref([])
 

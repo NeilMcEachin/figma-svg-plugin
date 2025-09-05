@@ -125,7 +125,7 @@ export async function exportNodesBoundToCollection(
   console.log('exportNodesBoundToCollection', includeInstanceNodes)
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
   const newCollection = collections.find(
-    (collection) => collection.name === 'Nested Collection'
+    (collection) => collection.name === 'ENG VARIABLES'
   )
   const nodes = await getNodesBoundToCollection(
     newCollection.id,
@@ -146,7 +146,7 @@ export async function exportNodesBoundToCollection(
 export async function exportCollectionVariables() {
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
   const newCollection = collections.find(
-    (collection) => collection.name === 'Nested Collection'
+    (collection) => collection.name === 'ENG VARIABLES'
   )
   const variables = await getCollectionVariables(newCollection.id)
   const styles = await getStylesBoundToCollection(newCollection.id)
@@ -373,7 +373,7 @@ function updateEffectVariables(effect, importedEffect, oldNewVariableMap) {
 async function migrateStyleVariables(importedStyles, oldNewVariableMap) {
   const paintStyles = await figma.getLocalPaintStylesAsync()
   const effectStyles = await figma.getLocalEffectStylesAsync()
-  const stylesInDocument = [...paintStyles, ...effectStyles]
+  const stylesInDocument = paintStyles.concat(effectStyles)
 
   for (const importedStyle of importedStyles) {
     const styleInDocument = stylesInDocument.find(
@@ -445,10 +445,9 @@ export async function importCollectionVariables(
       modeMap
     )
 
-    const styles = [
-      ...variableCollection.paintStyles,
-      ...variableCollection.effectStyles,
-    ]
+    const styles = variableCollection.paintStyles.concat(
+      variableCollection.effectStyles
+    )
     const oldNewVariableMap = await createOldNewVariableMap(
       variableCollection.variables,
       collection.id
@@ -518,7 +517,7 @@ export async function migrateNodeVariables(nodes, collectionId) {
  *     - id: Original variable ID
  *     - name: Variable name used for matching
  *
- * @todo Update hardcoded 'Nested Collection' name to be configurable
+ * @todo Update hardcoded 'ENG VARIABLES' name to be configurable
  * @todo Add error handling for collection not found case
  */
 export async function importBoundNodes(nodesToMigrate) {
@@ -527,7 +526,7 @@ export async function importBoundNodes(nodesToMigrate) {
 
   // Find the target collection to migrate variables into
   const collection = collections.find(
-    (collection) => collection.name === 'Nested Collection'
+    (collection) => collection.name === 'ENG VARIABLES'
   )
 
   // Migrate the node bindings to variables in the target collection

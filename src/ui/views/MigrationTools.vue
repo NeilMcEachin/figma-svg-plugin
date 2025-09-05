@@ -46,6 +46,24 @@
           label="Refresh Variables"
           @click="postMessage({ type: 'getCollectionVariables' })"
         />
+        
+        <div class="filter-controls">
+          <StyledDropdown
+            v-model="selectedSourceCollection"
+            :options="collections"
+            placeholder="Select Source Collection"
+            valueProp="id"
+            trackBy="name"
+            label="name"
+          />
+          
+          <StyledInput
+            v-model="variablePathFilter"
+            placeholder="Filter by path (e.g., component/button, core/primary)"
+            class="path-filter"
+          />
+        </div>
+        
         <StyledButton
           label="Get Variables to Remap"
           :loading="isLoading"
@@ -194,6 +212,8 @@ import { postMessage, copyToClipboard } from '../utils'
 import { ref, computed, nextTick, reactive } from 'vue'
 import StyledButton from '@/components/StyledButton.vue'
 import StyledCheckbox from '@/components/StyledCheckbox.vue'
+import StyledInput from '@/components/StyledInput.vue'
+import StyledDropdown from '@/components/StyledDropdown.vue'
 import VariableDropdown from '@/components/VariableDropdown.vue'
 import { GSwitch } from '@twentyfourg/grimoire'
 import VariableAssigner from '@/components/VariableAssigner.vue'
@@ -215,8 +235,15 @@ const rawReplacementVariableId = ref(null)
 const selectedNodes = ref([])
 const expandedVariables = reactive({})
 const includeExportInstanceNodes = ref(false)
+const selectedSourceCollection = ref(null)
+const variablePathFilter = ref('')
+const collections = ref([])
 const props = defineProps({
-  nestedCollectionId: String,
+  nestedCollectionId: {
+    type: String,
+    required: false,
+    default: null,
+  },
 })
 
 const getLastPartOfName = (name) => {
@@ -308,11 +335,13 @@ const getVariablesToRemap = async () => {
   setTimeout(() => {
     postMessage({
       type: 'getVariablesToRemap',
-      payload: {
+      payload: JSON.stringify({
         nestedCollectionId: props.nestedCollectionId,
+        sourceCollectionId: selectedSourceCollection.value,
+        variablePathFilter: variablePathFilter.value,
         includeInstanceNodes: includeInstanceNodes.value,
         includeImages: includeImages.value,
-      },
+      }),
     })
   }, 200)
 }
@@ -357,10 +386,14 @@ emitter.on('msg', async (msg) => {
   if (msg.type === 'returnCollectionVariables') {
     localVariables.value = JSON.parse(msg.payload)
   }
+  if (msg.type === 'returnCollections') {
+    collections.value = JSON.parse(msg.payload)
+  }
 })
 
 onMounted(() => {
-  // importBoundNodesFileUpload.addEventListener
+  // Load collections on mount
+  postMessage({ type: 'refreshCollections' })
 })
 </script>
 
@@ -372,6 +405,19 @@ onMounted(() => {
 
   .toolset {
     padding: 30px;
+    
+    .filter-controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      
+      .path-filter {
+        min-width: 300px;
+        flex: 1;
+      }
+    }
   }
   .flex {
     display: flex;

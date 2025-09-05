@@ -486,8 +486,8 @@ async function exportVariables(id, modeMap2) {
       } else if (typeof color === "object" && "r" in color && "g" in color && "b" in color) {
         color = figmaRGBToHex(color);
       }
-      console.log(variable.name.split("/"));
       const name = `--${variable.name.split("/").slice(1).join("-")}`;
+      console.log(name);
       variableConfig += `${name}: ${color};
 `;
     }
@@ -128134,7 +128134,7 @@ const sortFunction = (a, b) => {
 async function exportNodesBoundToCollection() {
   const collections = await figma.variables.getLocalVariableCollectionsAsync();
   const newCollection = collections.find(
-    (collection) => collection.name === "Nested Collection"
+    (collection) => collection.name === "ENG VARIABLES"
   );
   const nodes2 = await getNodesBoundToCollection(newCollection.id);
   const fileData = JSON.stringify({
@@ -128150,7 +128150,7 @@ async function exportNodesBoundToCollection() {
 async function exportCollectionVariables() {
   const collections = await figma.variables.getLocalVariableCollectionsAsync();
   const newCollection = collections.find(
-    (collection) => collection.name === "Nested Collection"
+    (collection) => collection.name === "ENG VARIABLES"
   );
   const variables2 = await getCollectionVariables(newCollection.id);
   const styles = await getStylesBoundToCollection(newCollection.id);
@@ -128294,7 +128294,7 @@ async function importBoundNodes(nodesToMigrate) {
   console.log(nodesToMigrate);
   const collections = await figma.variables.getLocalVariableCollectionsAsync();
   const collection = collections.find(
-    (collection2) => collection2.name === "Nested Collection"
+    (collection2) => collection2.name === "ENG VARIABLES"
   );
   await migrateNodeVariables(nodesToMigrate, collection.id);
 }
@@ -128443,7 +128443,7 @@ figma.ui.onmessage = async (msg) => {
     getSelection();
   }
   if (msg.type === "createNestedCollection") {
-    const collection = figma.variables.createVariableCollection("Nested Collection");
+    const collection = figma.variables.createVariableCollection("ENG VARIABLES");
     collection.renameMode(collection.modes[0].modeId, "Drive--dark");
     collection.addMode("Drive--light");
     collection.addMode("Cadi--dark");
@@ -128464,6 +128464,7 @@ figma.ui.onmessage = async (msg) => {
       "Cadi--dark": "Cadillac test"
     };
     const variableConfig = await exportVariables(collectionId, modeMap2);
+    console.log(variableConfig);
     const fileData = JSON.stringify({
       data: variableConfig,
       name: "variables.scss",

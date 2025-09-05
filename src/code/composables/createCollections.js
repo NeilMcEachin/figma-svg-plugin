@@ -7,7 +7,7 @@ export function createNestedCollection() {
   // I need to check if there is a my version again version that include mine in them and confirm they don't get in the way
   const newMap = {}
   const collection =
-    figma.variables.createVariableCollection('Nested Collection')
+    figma.variables.createVariableCollection('ENG VARIABLES')
   const cssVarNames = Object.keys(cssVarMap)
 
   Object.entries(variableGroups).forEach(([groupName, variables]) => {

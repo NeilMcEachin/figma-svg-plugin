@@ -81,7 +81,7 @@ async function getCollections() {
       collections.map((c) => ({
         id: c.id,
         name: c.name,
-        modes: [...c.modes],
+        modes: c.modes.slice(),
       }))
     ),
   })
@@ -159,7 +159,7 @@ async function getSelection() {
         node,
         (name) => !name.startsWith('core/') && !name.startsWith('component/')
       )
-      nodes.push(...condenseNodes(boundNodes))
+      nodes = nodes.concat(condenseNodes(boundNodes))
     }
     for (const node of nodes) {
       node.variablePrediction = await getPrediction(node)
@@ -274,9 +274,10 @@ async function dfsRecursiveFind(node, results = {}, visited = new Set()) {
   return results
 }
 
-figma.on('selectionchange', async () => {
-  getSelection()
-})
+// Disabled to prevent chain reactions and performance issues
+// figma.on('selectionchange', async () => {
+//   getSelection()
+// })
 
 const refreshCollectionVariables = async (collectionId) => {
   const collections = await figma.variables.getLocalVariableCollectionsAsync()
@@ -285,7 +286,7 @@ const refreshCollectionVariables = async (collectionId) => {
   let localCollectionId = collectionId
   if (!localCollectionId) {
     const nestedCollectionIndex = collections.findIndex(
-      (c) => c.name === 'Nested Collection'
+      (c) => c.name === 'ENG VARIABLES'
     )
     if (nestedCollectionIndex > -1) {
       localCollectionId = collections[nestedCollectionIndex].id
@@ -364,7 +365,7 @@ figma.ui.onmessage = async (msg) => {
   if (msg.type === 'createNestedCollection') {
     // createNestedCollection()
     const collection =
-      figma.variables.createVariableCollection('Nested Collection')
+      figma.variables.createVariableCollection('ENG VARIABLES')
     collection.renameMode(collection.modes[0].modeId, 'Drive--dark')
     collection.addMode('Drive--light')
     collection.addMode('Cadi--dark')
@@ -438,7 +439,7 @@ figma.ui.onmessage = async (msg) => {
     const effectStyles = await figma.getLocalEffectStylesAsync()
     // console.log(paintStyles)
     // console.log(effectStyles)
-    const styles = [...paintStyles, ...effectStyles]
+    const styles = paintStyles.concat(effectStyles)
 
     const results = {}
 
@@ -597,7 +598,7 @@ figma.ui.onmessage = async (msg) => {
     const effectStyles = await figma.getLocalEffectStylesAsync()
     // console.log(paintStyles)
     // console.log(effectStyles)
-    const styles = [...paintStyles, ...effectStyles]
+    const styles = paintStyles.concat(effectStyles)
 
     const results = {}
 
@@ -845,7 +846,13 @@ figma.ui.onmessage = async (msg) => {
     }
   }
   if (msg.type === 'getVariablesToRemap') {
-    // const results = await getStyles()
+    const { 
+      sourceCollectionId, 
+      variablePathFilter = '', 
+      includeImages = false, 
+      includeInstanceNodes = false 
+    } = JSON.parse(msg.payload)
+    
     const ignoreList = [
       'url bar (ignore)/url-bar-bg',
       'url bar (ignore)/url-bar-black',
@@ -856,47 +863,63 @@ figma.ui.onmessage = async (msg) => {
     ]
 
     const collections = await figma.variables.getLocalVariableCollectionsAsync()
-    const nestedCollection = await getCollectionVariables(collections[1].id)
-    let collectionVariables = await getCollectionVariables(collections[0].id)
+    
+    // Use selected collection or fallback to existing logic
+    const targetCollectionId = sourceCollectionId || collections[0]?.id
+    if (!targetCollectionId) {
+      figma.ui.postMessage({
+        type: 'returnVariablesToRemap',
+        payload: JSON.stringify([]),
+      })
+      return
+    }
+    
+    let collectionVariables = await getCollectionVariables(targetCollectionId)
+    
+    // Filter by variable type (keep existing COLOR filter)
     collectionVariables = collectionVariables.filter(
       (variable) =>
         variable.resolvedType === 'COLOR' && !ignoreList.includes(variable.name)
     )
+    
+    // Filter by path if provided
+    if (variablePathFilter.trim()) {
+      const pathFilters = variablePathFilter.split(',').map(f => f.trim().toLowerCase())
+      collectionVariables = collectionVariables.filter((variable) => {
+        const variableName = variable.name.toLowerCase()
+        return pathFilters.some(filter => 
+          variableName.startsWith(filter) || 
+          variableName.includes(filter)
+        )
+      })
+    }
+    
     const nodes = await getNodesWithBoundVariables(
       figma.currentPage,
       () => true,
-      msg.payload.includeImages,
-      msg.payload.includeInstanceNodes
+      includeImages,
+      includeInstanceNodes
     )
 
-    const unusedVars = []
+    const variablesWithNodes = []
     for (const variable of collectionVariables) {
-      const obj = variable
-      obj.nodes = []
+      const obj = Object.assign({}, variable, { nodes: [] })
 
       nodes.forEach((node) => {
         if (node.variable.id === variable.id) {
           obj.nodes.push(node)
         }
       })
-      nestedCollection.forEach((v) => {
-        if (
-          Object.values(v.valuesByMode).some(
-            (value) => value.id && value.id === variable.id
-          )
-        ) {
-          obj.nodes.push(v)
-        }
-      })
-      if (obj.nodes.length) {
-        unusedVars.push(obj)
+      
+      // Only include variables that have bound nodes
+      if (obj.nodes.length > 0) {
+        variablesWithNodes.push(obj)
       }
     }
-    // console.log(unusedVars)
 
     figma.ui.postMessage({
       type: 'returnVariablesToRemap',
-      payload: JSON.stringify(unusedVars),
+      payload: JSON.stringify(variablesWithNodes),
     })
   }
   if (msg.type === 'getBoundNodes') {
@@ -1011,6 +1034,7 @@ figma.ui.onmessage = async (msg) => {
     const node = await figma.getNodeByIdAsync(nodeId)
     if (!node) return
 
+    // Switch to the correct page if needed
     let parentNode = node.parent
     while (parentNode && parentNode.type !== 'PAGE') {
       parentNode = parentNode.parent
@@ -1018,16 +1042,119 @@ figma.ui.onmessage = async (msg) => {
     if (parentNode) {
       await figma.setCurrentPageAsync(parentNode)
     }
-    // console.log(node);
+    
     figma.currentPage.selection = [node]
-    figma.viewport.scrollAndZoomIntoView([node])
+    
+    // Smart positioning to avoid plugin UI overlap
+    const nodeBounds = node.absoluteBoundingBox
+    if (nodeBounds) {
+      // Get current viewport
+      const currentBounds = figma.viewport.bounds
+      
+      // Calculate position: 30% from left edge (avoids center where plugin usually is)
+      const targetCenterX = currentBounds.x + (currentBounds.width * 0.7) // 70% from left = 30% from right
+      const targetCenterY = currentBounds.y + (currentBounds.height * 0.5) // Center vertically
+      
+      // Calculate zoom level to fit node nicely
+      const padding = 100 // pixels of padding around node
+      const zoomToFitWidth = (currentBounds.width * 0.4) / (nodeBounds.width + padding)
+      const zoomToFitHeight = (currentBounds.height * 0.6) / (nodeBounds.height + padding)
+      const targetZoom = Math.min(zoomToFitWidth, zoomToFitHeight, 1) // Don't zoom in beyond 100%
+      
+      // Use scrollAndZoomIntoView first, then adjust with pan
+      figma.viewport.scrollAndZoomIntoView([node])
+      
+      // Wait longer for zoom to complete, then recalculate with new bounds
+      setTimeout(() => {
+        // Get NEW bounds after zoom operation
+        const newBounds = figma.viewport.bounds
+        const viewportWidth = newBounds.width
+        const viewportHeight = newBounds.height
+        const aspectRatio = viewportWidth / viewportHeight
+        
+        // Adaptive positioning based on screen layout
+        let panOffsetX, panOffsetY = 0
+        
+        if (aspectRatio > 2) {
+          // Ultra-wide screen - plugin likely on left, node goes far right
+          panOffsetX = viewportWidth * 0.35
+        } else if (aspectRatio > 1.5) {
+          // Wide screen - plugin probably left-center, node goes right
+          panOffsetX = viewportWidth * 0.25
+        } else if (aspectRatio < 0.8) {
+          // Tall screen - plugin might be top/bottom, node goes up
+          panOffsetX = viewportWidth * 0.15
+          panOffsetY = -viewportHeight * 0.2
+        } else {
+          // Normal screen - standard right offset
+          panOffsetX = viewportWidth * 0.2
+        }
+        
+        figma.viewport.center = {
+          x: figma.viewport.center.x + panOffsetX,
+          y: figma.viewport.center.y + panOffsetY
+        }
+      }, 150) // Increased delay for zoom operations
+    } else {
+      // Fallback: just do normal focus
+      figma.viewport.scrollAndZoomIntoView([node])
+    }
   }
 
   if (msg.type === 'focusNodes') {
     const { nodes } = JSON.parse(msg.payload)
-    // const nodes = await figma.currentPage.getNodesByIdsAsync(nodeIds)
-    figma.currentPage.selection = nodes
-    figma.viewport.scrollAndZoomIntoView(nodes)
+    const figmaNodes = []
+    
+    for (const nodeData of nodes) {
+      try {
+        const figmaNode = await figma.getNodeByIdAsync(nodeData.id)
+        if (figmaNode) {
+          figmaNodes.push(figmaNode)
+        }
+      } catch (error) {
+        console.log(`error with ${nodeData.id}:${nodeData.name}:`, nodeData.variable)
+      }
+    }
+    
+    if (figmaNodes.length > 0) {
+      figma.currentPage.selection = figmaNodes
+      
+      // Smart positioning: show nodes on right side to avoid plugin overlap
+      const currentBounds = figma.viewport.bounds
+      const targetCenterX = currentBounds.x + (currentBounds.width * 0.7)
+      const targetCenterY = currentBounds.y + (currentBounds.height * 0.5)
+      
+      // For multiple nodes, use default zoom but offset position
+      figma.viewport.scrollAndZoomIntoView(figmaNodes)
+      
+      // Wait for zoom to complete, then recalculate with new bounds
+      setTimeout(() => {
+        // Get NEW bounds after zoom operation
+        const newBounds = figma.viewport.bounds
+        const viewportWidth = newBounds.width
+        const viewportHeight = newBounds.height  
+        const aspectRatio = viewportWidth / viewportHeight
+        
+        // Same adaptive logic for multiple nodes
+        let panOffsetX, panOffsetY = 0
+        
+        if (aspectRatio > 2) {
+          panOffsetX = viewportWidth * 0.35 // Ultra-wide
+        } else if (aspectRatio > 1.5) {
+          panOffsetX = viewportWidth * 0.25 // Wide screen
+        } else if (aspectRatio < 0.8) {
+          panOffsetX = viewportWidth * 0.15 // Tall screen
+          panOffsetY = -viewportHeight * 0.2
+        } else {
+          panOffsetX = viewportWidth * 0.2 // Normal screen
+        }
+        
+        figma.viewport.center = {
+          x: figma.viewport.center.x + panOffsetX,
+          y: figma.viewport.center.y + panOffsetY
+        }
+      }, 150) // Increased delay for zoom operations
+    }
   }
 
   if (msg.type === 'getNodesBoundToCollection') {

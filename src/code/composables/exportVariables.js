@@ -44,9 +44,12 @@ export async function exportVariablestoSCSS(id, modeMap) {
       }
       // console.log(color)
 
-      console.log(variable.name.split('/'))
 
-      const name = `--${variable.name.split('/').join('-')}`
+      let nameParts = variable.name.split('/');
+      if(nameParts.length > 1 && nameParts[0] === 'core' || nameParts[0] === 'component'){
+        nameParts = nameParts.slice(1);
+      }
+      const name = `--${nameParts.join('-')}`
       variableConfig += `${name}: ${color};\n`
     }
     variableConfig += `}\n\n`
